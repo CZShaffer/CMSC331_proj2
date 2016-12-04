@@ -62,7 +62,7 @@ if ($_POST) {
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
 
-  <label>E-mail</label><input type="text" name="email">
+  <label>E-mail</label><input type="text" name="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : ''); ?>">
   <span class="error"> <?php echo $login_error;?></span>
   <br>
   <br>

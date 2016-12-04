@@ -163,31 +163,31 @@ float: left;
  <h1>Welcome! Please complete the registration form.</h1>
 
 <br>
-  <label>Email</label><input type="text" name="email">
+  <label>Email</label><input type="text" name="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : ''); ?>">
   <span class="error"> <?php echo $email_error_message;?></span>
 <br>
 
 <br>
-  <label>First Name</label><input type="text" name="fName">
+  <label>First Name</label><input type="text" name="fName" value="<?php echo (isset($_POST['fName']) ? $_POST['fName'] : ''); ?>">
   <span class="error"> <?php echo $fName_error_message;?></span>
 <br>
 
 <br>
- <label>Middle Name</label><input type="text" name="mName">
+ <label>Middle Name</label><input type="text" name="mName" value="<?php echo (isset($_POST['mName']) ? $_POST['mName'] : ''); ?>">
 <br>
 
 <br>
-  <label>Last Name</label><input type="text" name="lName">
+  <label>Last Name</label><input type="text" name="lName" value="<?php echo (isset($_POST['lName']) ? $_POST['lName'] : ''); ?>">
   <span class="error"> <?php echo $lName_error_message;?></span>
 <br>
 
 <br>
-  <label>School ID</label><input type="varchar" name="schoolID">
+  <label>School ID</label><input type="varchar" name="schoolID" value="<?php echo (isset($_POST['schoolID']) ? $_POST['schoolID'] : ''); ?>">
   <span class="error"> <?php echo $schoolID_error_message;?></span>
 <br>
 
 <br>
-  <label>Major</label><!--<input type="text" name="major">-->
+  <label>Major</label><!--<input type="text" name="major" >-->
 	  <select name="major">
 	  <option value="">Please choose a major</option>
           <option value="BioSciBA">Biological Sciences BA</option>
