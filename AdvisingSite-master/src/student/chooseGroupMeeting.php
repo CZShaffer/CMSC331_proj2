@@ -36,7 +36,6 @@ if ($_POST) {
 VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
   $rs=$COMMON->executequery($create_meeting,$fileName);
   
-  
   //changes the number of people registered for the meeting, increases them by 1
 
   $changeNumRegistered = "UPDATE Meeting SET numStudents = numStudents+1 WHERE meetingID = $theMeetingID";
