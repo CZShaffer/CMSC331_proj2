@@ -100,7 +100,7 @@ function findStudentsInMeeting($meetingID)
 <div id="content">
 
 <h1>
-    Adviser Home
+    Advisor Home
 </h1>
 
 <?php if ($_SESSION["HAS_LOGGED_IN"]) { ?>
@@ -113,16 +113,132 @@ function findStudentsInMeeting($meetingID)
     </a>
 
     <hr>
+    
+
+
+<?php
+
+function build_calendar($month,$year) {
+
+     // Create array containing abbreviations of days of week.
+     $daysOfWeek = array('S','M','T','W','T','F','S');
+
+     // What is the first day of the month in question?
+     $firstDayOfMonth = mktime(0,0,0,$month,1,$year);
+
+     // How many days does this month contain?
+     $numberDays = date('t',$firstDayOfMonth);
+
+     // Retrieve some information about the first day of the
+     // month in question.
+     $dateComponents = getdate($firstDayOfMonth);
+
+     // What is the name of the month in question?
+     $monthName = $dateComponents['month'];
+
+     // What is the index value (0-6) of the first day of the
+     // month in question.
+     $dayOfWeek = $dateComponents['wday'];
+
+     // Create the table tag opener and day headers
+
+     $calendar = "<table id='calendar'>";
+     $calendar .= "<div class='month'>$monthName $year</div>";
+     $calendar .= "<tr>";
+
+     // Create the calendar headers
+
+     foreach($daysOfWeek as $day) {
+          $calendar .= "<th class='header'>$day</th>";
+     } 
+
+     // Create the rest of the calendar
+
+     // Initiate the day counter, starting with the 1st.
+
+     $currentDay = 1;
+
+     $calendar .= "</tr><tr>";
+
+     // The variable $dayOfWeek is used to
+     // ensure that the calendar
+     // display consists of exactly 7 columns.
+
+     if ($dayOfWeek > 0) { 
+          $calendar .= "<td colspan='$dayOfWeek'>&nbsp;</td>"; 
+     }
+     
+     $month = str_pad($month, 2, "0", STR_PAD_LEFT);
+  
+     while ($currentDay <= $numberDays) {
+
+          // Seventh column (Saturday) reached. Start a new row.
+
+          if ($dayOfWeek == 7) {
+
+               $dayOfWeek = 0;
+               $calendar .= "</tr><tr>";
+
+          }
+          
+          $currentDayRel = str_pad($currentDay, 2, "0", STR_PAD_LEFT);
+          
+          $date = "$year-$month-$currentDayRel";
+
+          $calendar .= "<td class='day' rel='$date'>$currentDay</td>";
+
+          // Increment counters
+ 
+          $currentDay++;
+          $dayOfWeek++;
+
+     }
+     
+     
+
+     // Complete the row of the last week in month, if necessary
+
+     if ($dayOfWeek != 7) { 
+     
+          $remainingDays = 7 - $dayOfWeek;
+          $calendar .= "<td colspan='$remainingDays'>&nbsp;</td>"; 
+
+     }
+     
+     $calendar .= "</tr>";
+
+     $calendar .= "</table>";
+
+     return $calendar;
+
+}
+
+
+     $dateComponents = getdate();
+
+     $month = $dateComponents['mon']; 			     
+     $year = $dateComponents['year'];
+
+     echo build_calendar($month,$year);
+
+?>
+
+
+
+
+
+
+
 
     <?php foreach ($allRows as $aRow) { ?>
-        <h4>Meeting</h4>
+        <h4>Meeting <?php echo htmlspecialchars($aRow["meetingID"]) ?></h4>
 
         <div class="meetingInfo">
             <ul>
                 <form action="../utils/forms/deleteMeeting.php" method="POST">
-                    <input name="meetingID" value="<?php echo htmlspecialchars($aRow["meetingID"]) ?>" hidden>
+                    
 
-                    <input type="submit" value="Delete Meeting">
+                    <br><input type="submit" value="Delete Meeting"><br>
                 </form>
 
                 <!-- Will need to use this value for selecting future values -->
@@ -195,59 +311,52 @@ function findStudentsInMeeting($meetingID)
         <h4>
             Create a Meeting
         </h4>
-        <ul>
-            <li>
+        
                 <label>
-                    Meeting Start Date
+                    Meeting Start Date </label>
                     <input type="datetime-local" name="meetingStartTime">
-                </label>
+               
                 <?php
                 if (isset($_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"])) {
                     echo $_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"];
                     unset($_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>
-                    Building Name
+                    Building Name</label>
                     <input type="text" name="buildingName">
-                </label>
+                
                 <?php
                 if (isset($_SESSION["ERROR_ADVISOR_MEETING_BUILDING"])) {
                     echo $_SESSION["ERROR_ADVISOR_MEETING_BUILDING"];
                     unset($_SESSION["ERROR_ADVISOR_MEETING_BUILDING"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>
-                    Room Number
+                    Room Number</label>
                     <input type="text" name="roomNumber">
-                </label>
+                
                 <?php
                 if (isset($_SESSION["ERROR_ADVISOR_MEETING_ROOM"])) {
                     echo $_SESSION["ERROR_ADVISOR_MEETING_ROOM"];
                     unset($_SESSION["ERROR_ADVISOR_MEETING_ROOM"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>
-                    Type of Meeting:
+                    Type of Meeting:</label>
                     <select name="meetingType">
                         <option value="individual">Individual</option>
                         <option value="group">Group</option>
                     </select>
-                </label>
-            </li>
-            <label>
+                
+            
+            
                 <input type="submit">
-            </label>
-        </ul>
+            
+       
 
     </form>
 
