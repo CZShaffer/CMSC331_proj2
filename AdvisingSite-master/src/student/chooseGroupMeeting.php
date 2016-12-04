@@ -37,6 +37,21 @@ VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
   $rs=$COMMON->executequery($changeNumRegistered,$fileName);
   
  $_SESSION['MEETING_ID']= $theMeetingID;
+    $command = "SELECT * FROM Meeting WHERE meetingID=".$theMeetingID;
+    $meetingInfo=$COMMON->executequery($command,$fileName);
+    $command = "SELECT * FROM Student WHERE StudentID=".$_SESSION['STUDENT_ID'];
+    $studentInfo = $COMMON->executequery($command,$fileName);
+    $to = $studentInfo[1];
+    $subject = $studentInfo[2].' '.$studentInfo[4].' Adivising Meeting';
+    $email_from = 'sampleadmin@umbc.edu';
+    $additional_headers = "From: ".$email_from. "\r\n";
+    $message = "Dear "."$studentInfo[2]".":\n\n\t You have a meeting scheduled for ".$meetingInfo[1]." at ".$meetingInfo[3]." in room ".$meetingInfo[4].".";
+    $sent=mail($to, $subject, $message, $additional_headers, null);
+    if($sent){
+        echo("<p>email sent<p>");
+    }else{
+        echo("<p>email failed<p>");
+    }
   header('Location:homePage.php');
 }
 
