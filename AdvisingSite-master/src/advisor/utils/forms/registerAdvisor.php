@@ -6,11 +6,18 @@ if ($_POST) {
 
     // Parse values from form
     $fName = $_POST["fName"];
+    $_SESSION["fName"] = $_POST["fName"];
     $mName = $_POST["mName"];
+    $_SESSION["mName"] = $_POST["mName"];
     $lName = $_POST["lName"];
+    $_SESSION["lName"] = $_POST["lName"];
     $email = $_POST["email"];
+    $_SESSION["email"] = $_POST["email"];
     $bldgName = $_POST["bldgName"];
+    $_SESSION["bldgName"] = $_POST["bldgName"];
     $officeRm = $_POST["officeRm"];
+    $_SESSION["officeRm"] = $_POST["officeRm"];
+
 
     $regexToCheckIfValidEmail = "/^[A-Za-z0-9_.]+@[A-Za-z0-9]+\.[A-za-z0-9]{3}$/";
 
@@ -38,6 +45,7 @@ if ($_POST) {
 
     if ($officeRm == "") {
         $_SESSION["ERROR_ADVISOR_REGISTRATION_OFFICERM"] = "Error: You need to provide office room number.";
+	$numOfErrors += 1;
     }
 
     if ($numOfErrors == 0) {

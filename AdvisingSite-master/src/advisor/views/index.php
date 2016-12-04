@@ -32,7 +32,7 @@ if (isset($_SESSION["HAS_LOGGED_IN"])) {
     	
             <label>
                 First Name:
-            </label> <input type="text" name="fName">
+            </label> <input type="text" name="fName" value="<?php echo (isset($_SESSION['fName']) ? $_SESSION['fName'] : ''); ?>">
             <?php
             if (isset($_SESSION["ERROR_ADVISOR_REGISTRATION_FNAME"])) {
                 echo $_SESSION["ERROR_ADVISOR_REGISTRATION_FNAME"];
@@ -42,11 +42,11 @@ if (isset($_SESSION["HAS_LOGGED_IN"])) {
      	<p><br></p>
             <label>
                 Middle Name: 
-            </label><input type="text" name="mName">
+            </label><input type="text" name="mName" value="<?php echo (isset($_SESSION['mName']) ? $_SESSION['mName'] : ''); ?>">
       <p><br></p>
             <label>
                 Last Name:
-            </label> <input type="text" name="lName">
+            </label> <input type="text" name="lName" value="<?php echo (isset($_SESSION['lName']) ? $_SESSION['lName'] : ''); ?>">
             <?php
             if (isset($_SESSION["ERROR_ADVISOR_REGISTRATION_LNAME"])) {
                 echo $_SESSION["ERROR_ADVISOR_REGISTRATION_LNAME"];
@@ -55,7 +55,7 @@ if (isset($_SESSION["HAS_LOGGED_IN"])) {
             ?>
      	<p><br></p>
             <label>E-mail:</label> 
-	    <input type="email" name="email">
+	    <input type="email" name="email" value="<?php echo (isset($_SESSION['email']) ? $_SESSION['email'] : ''); ?>">
             <?php
             if (isset($_SESSION["ERROR_ADVISOR_REGISTRATION_EMAIL"])) {
                 echo $_SESSION["ERROR_ADVISOR_REGISTRATION_EMAIL"];
@@ -66,7 +66,7 @@ if (isset($_SESSION["HAS_LOGGED_IN"])) {
 	<p><br></p>
             <label>
                 Office Building Name:
-            </label> <input type="text" name="bldgName">	
+            </label> <input type="text" name="bldgName" value="<?php echo (isset($_SESSION['bldgName']) ? $_SESSION['bldgName'] : ''); ?>">	
             <?php
             if (isset($_SESSION["ERROR_ADVISOR_REGISTRATION_BLDGNAME"])) {
                 echo $_SESSION["ERROR_ADVISOR_REGISTRATION_BLDGNAME"];
@@ -77,7 +77,7 @@ if (isset($_SESSION["HAS_LOGGED_IN"])) {
 	<p><br></p>
             <label>
                 Office Room:
-            </label> <input type="text" name="officeRm">
+            </label> <input type="text" name="officeRm" value="<?php echo (isset($_SESSION['officeRm']) ? $_SESSION['officeRm'] : ''); ?>">
             <?php
             if (isset($_SESSION["ERROR_ADVISOR_REGISTRATION_OFFICERM"])) {
                 echo $_SESSION["ERROR_ADVISOR_REGISTRATION_OFFICERM"];

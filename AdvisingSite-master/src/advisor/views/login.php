@@ -70,7 +70,8 @@ if ($_POST) {
     <label>
         <!-- Only email needs an error, the rest is handled by HTML 5 -->
         E-mail:
-    </label> <input type="text" name="email" required>
+    </label> <input type="text" name="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : ''); ?>";
+required>
         <br>
     <br>
         <input type="submit">
