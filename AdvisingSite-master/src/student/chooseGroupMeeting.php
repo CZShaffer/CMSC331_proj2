@@ -38,7 +38,7 @@ VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
 
  $_SESSION['MEETING_ID']= $theMeetingID;
 
-    
+
     $command = "SELECT * FROM Meeting WHERE meetingID=".$theMeetingID;
     $meetingInfo=$COMMON->executequery($command,$fileName);
     $command = "SELECT * FROM Student WHERE StudentID=".$_SESSION['STUDENT_ID'];
