@@ -1,27 +1,9 @@
 <?php
 session_start();
-
-if($_SESSION["HAS_LOGGED_IN"]){
-  include '../CommonMethods.php';
-
-  if($_POST){
-    $studentID = $_SESSION["STUDENT_ID"];
-    
-    //connect to database
-    $debug = true;
-    $COMMON = new Common($debug);
-    $filename = "index.php";
-    
-    //declaring variable equal to session variable used for query
-    $studentID = $_SESSION["STUDENT_ID"];
-    
-    //search for scheduled appointment
-    $scheduledAppt = "SELECT MeetingID FROM StudentMeeting WHERE StudentID = 'studentID'";
-    
-    $currentAppt = $COMMON->executequery($scheduledAppt, $filename);
-     
-  }
   
+// redirect user to index.php if they haven't logged in
+if($_SESSION["HAS_LOGGED_IN"] == false){
+  header("Location: index.php");  
 }
 ?>
 

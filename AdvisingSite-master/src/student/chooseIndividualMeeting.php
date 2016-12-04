@@ -1,50 +1,56 @@
 <?php
 include('../CommonMethods.php');
 session_start();
+
+// redirect user to index.php if they haven't logged in
+if($_SESSION["HAS_LOGGED_IN"] == false){
+  header("Location: index.php");
+}
+
 $COMMON = new Common(false);
 $fileName = "chooseIndividualMeeting.php";
 
 //check if the student has a meeting
 $checkForMeeting = "Select * FROM StudentMeeting Where StudentMeeting.StudentID =". $_SESSION['STUDENT_ID'];
-$rs = $COMMON->executequery($checkForMeeting,$fileName);
+$rs = $COMMON->executequery($checkForMeeting, $fileName);
 $numRows = mysql_fetch_array($rs);
 
 if($numRows>0){
 header('Location:meetingChosen.php');
 }
-// Searchs for all the meetings that passed 
-// 
+
+// Searchs for all the meetings that passed
 $search_meeting = "SELECT * FROM Meeting WHERE Meeting.start > NOW() AND Meeting.meetingType = false AND Meeting.numStudents < 1";
 $rs = $COMMON->executequery($search_meeting, $fileName);
 
 $allRows = mysql_num_rows($rs);
-//adds the selected meeting to studentMeeting
+
+// adds the selected meeting to studentMeeting
 if ($_POST) {
-  //adds the selected meeting to studentMeeting
+  // adds the selected meeting to studentMeeting
   $theMeetingID = $_POST['meeting'];
  
+  // echo "The student ID is ".$_SESSION['STUDENT_ID'];
 
-  //echo "The student ID is ".$_SESSION['STUDENT_ID'];
-  //creates a new student meeting
+  // creates a new student meeting
   $create_meeting = "INSERT INTO StudentMeeting(StudentID,MeetingID)
 VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
   $rs=$COMMON->executequery($create_meeting,$fileName);
   
   
-  //changes the number of people registered for the meeting
+  // changes the number of people registered for the meeting
   $changeNumRegistered = "UPDATE Meeting SET numStudents = 1 WHERE meetingID = $theMeetingID";
-  $rs=$COMMON->executequery($changeNumRegistered,$fileName);
+  $rs = $COMMON->executequery($changeNumRegistered,$fileName);
   
- $_SESSION['MEETING_ID']= $theMeetingID;
+  $_SESSION['MEETING_ID']= $theMeetingID;
   header('Location:homePage.php');
 }
-
 ?>
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../Styles/style.css">
-    <title>Choose Your Appointment</title>
+  <link rel="stylesheet" type="text/css" href="../Styles/style.css">
+  <title>Choose Your Appointment</title>
 </head>
 <body>
 <div id="content-container">
