@@ -3,17 +3,37 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../Styles/style.css">
 </head>
+
 <body>
 <div id="content-container">
 <div id="content">
+
 <?php
 include '../CommonMethods.php';  
 
-  //declare and define empty login_error
-  $login_error = "";
-  
-  
+// check if advising season is over
+$debug = true;
+$COMMON = new Common($debug);
+$filename = "login.php";
 
+// get isSeasonOver from AdvisingSeason table
+$select_isSeasonOver  = "SELECT isSeasonOver FROM AdvisingSeason";
+$select_results = $COMMON->executequery($select_isSeasonOver, $filename);
+
+if(mysql_num_rows($select_results) == 0){
+  echo "This error shouldn't happen";
+}
+
+$results_row = mysql_fetch_array($select_results);
+$isSeasonOver = $results_row[0];
+
+// redirect user to seasonOver.html if the season is over
+if($isSeasonOver) {
+  header("Location: seasonOver.html");
+}
+
+//declare and define empty login_error
+$login_error = "";
   
 if ($_POST) {
   $email = strtolower($_POST["email"]);
@@ -62,7 +82,7 @@ if ($_POST) {
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
 
-  <label>E-mail</label><input type="text" name="email">
+  <label>E-mail</label><input type="text" name="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : ''); ?>">
   <span class="error"> <?php echo $login_error;?></span>
   <br>
   <br>
