@@ -28,7 +28,7 @@ body {
 padding: 20px; 
 background-color: #eee;
 /*background-color:#888b8d;*/ 
- height:400px;
+min-height:400px;
     width:960px
 margin: auto; 
 border-radius: 8px; 
@@ -39,13 +39,15 @@ background-position: top right;
 background-repeat: no-repeat; 
 background-image: url('images/paw-bg.png');"
 
+height:auto;
+overflow:visible;
 }
 
 label {
     display: inline-block;  
     float: left;
     clear: left;
-    width: 100px;
+    width: 135px;
     text-align: left;
 }
  
@@ -55,7 +57,7 @@ input {
 }
 
 select{
-    display: inlinr-block;
+    display: inline-block;
     float: left;
     width: 170px;
 }  

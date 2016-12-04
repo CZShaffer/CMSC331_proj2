@@ -93,8 +93,12 @@ function findStudentsInMeeting($meetingID)
 <html>
 <head>
     <title>Advisor Homepage</title>
+<link rel="stylesheet" type="text/css" href="../../Styles/style.css">
 </head>
 <body>
+<div id="content-container">
+<div id="content">
+
 <h1>
     Adviser Home
 </h1>
@@ -248,6 +252,8 @@ function findStudentsInMeeting($meetingID)
     </form>
 
 <?php } ?>
-
+</div>
+</div>
 </body>
+
 </html>

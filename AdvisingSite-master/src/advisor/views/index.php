@@ -11,91 +11,86 @@ if (isset($_SESSION["HAS_LOGGED_IN"])) {
 
 <html>
 <head>
-    <title>
-        Adviser Registration
-    </title>
-</head>
+    
+<link rel="stylesheet" type="text/css" href="../../Styles/style.css">
+<title>Advisor Registration</title>
 
+</head>
 <body>
+<div id="content-container">
+<div id="content">
+
 
 <h1>Advisor Registration Form</h1>
 
-<a href="login.php">
-    <button type="button">Login</button>
-</a>
 
-<hr>
+
+<!--<hr> -->
 
 <!-- Use the htmlspecial chars to protect from XSS and CSSR -->
 <form action="../utils/forms/registerAdvisor.php" method="post">
-    <ul>
-        <li>
+    	
             <label>
-                First Name: <input type="text" name="fName">
-            </label>
+                First Name:
+            </label> <input type="text" name="fName">
             <?php
             if (isset($_SESSION["ERROR_ADVISOR_REGISTRATION_FNAME"])) {
                 echo $_SESSION["ERROR_ADVISOR_REGISTRATION_FNAME"];
                 unset($_SESSION["ERROR_ADVISOR_REGISTRATION_FNAME"]);
             }
             ?>
-        </li>
-
-        <li>
+     	<p><br></p>
             <label>
-                Middle Name: <input type="text" name="mName">
-            </label>
-        </li>
-
-        <li>
+                Middle Name: 
+            </label><input type="text" name="mName">
+      <p><br></p>
             <label>
-                Last Name: <input type="text" name="lName">
-            </label>
+                Last Name:
+            </label> <input type="text" name="lName">
             <?php
             if (isset($_SESSION["ERROR_ADVISOR_REGISTRATION_LNAME"])) {
                 echo $_SESSION["ERROR_ADVISOR_REGISTRATION_LNAME"];
                 unset($_SESSION["ERROR_ADVISOR_REGISTRATION_LNAME"]);
             }
             ?>
-        </li>
-
-        <li>
-            <label>
-                E-mail: <input type="email" name="email">
-            </label>
+     	<p><br></p>
+            <label>E-mail:</label> 
+	    <input type="email" name="email">
             <?php
             if (isset($_SESSION["ERROR_ADVISOR_REGISTRATION_EMAIL"])) {
                 echo $_SESSION["ERROR_ADVISOR_REGISTRATION_EMAIL"];
                 unset($_SESSION["ERROR_ADVISOR_REGISTRATION_EMAIL"]);
             }
             ?>
-        </li>
-
-        <li>
+       	
+	<p><br></p>
             <label>
-                Office Building Name: <input type="text" name="bldgName">
-            </label>
+                Office Building Name:
+            </label> <input type="text" name="bldgName">	
             <?php
             if (isset($_SESSION["ERROR_ADVISOR_REGISTRATION_BLDGNAME"])) {
                 echo $_SESSION["ERROR_ADVISOR_REGISTRATION_BLDGNAME"];
                 unset($_SESSION["ERROR_ADVISOR_REGISTRATION_BLDGNAME"]);
             }
             ?>
-        </li>
-
-        <li>
+       
+	<p><br></p>
             <label>
-                Office Room: <input type="text" name="officeRm">
-            </label>
+                Office Room:
+            </label> <input type="text" name="officeRm">
             <?php
             if (isset($_SESSION["ERROR_ADVISOR_REGISTRATION_OFFICERM"])) {
                 echo $_SESSION["ERROR_ADVISOR_REGISTRATION_OFFICERM"];
                 unset($_SESSION["ERROR_ADVISOR_REGISTRATION_OFFICERM"]);
             }
             ?>
-        </li>
+       <p><br></p>
         <input type="submit" name="Register!">
-    </ul>
+    
 </form>
+</div>
+</div>
+<h3><a href="login.php"> Have you already registered? Log in here. </a></h3>
 </body>
+
 </html>

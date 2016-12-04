@@ -51,31 +51,35 @@ if ($_POST) {
 <html>
 <head>
     <title>Advisor Login Portal</title>
+<link rel="stylesheet" type="text/css" href="../../Styles/style.css">
 </head>
 <body>
+<div id="content-container">
+<div id="content">
+
 
 <h1>
     Advisor Login Page
 </h1>
 
-<a href="index.php">
-    <button type="button">Register</button>
-</a>
 
-<hr>
+
+
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
     <label>
         <!-- Only email needs an error, the rest is handled by HTML 5 -->
-        E-mail: <input type="text" name="email" required>
+        E-mail:
+    </label> <input type="text" name="email" required>
         <br>
-    </label>
-    <label>
+    <br>
         <input type="submit">
-    </label>
+    
 </form>
+</div>
+</div>
 
-
+<h3><a href="index.php">Don't have an account? Register here.</a></h3>
 </body>
 
 </html>
