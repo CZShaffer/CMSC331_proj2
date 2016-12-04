@@ -1,0 +1,61 @@
+html {
+/*background-image:url('images/dot-bg.png');
+    background-repeat:repeat;*/
+    background-color:#F5CA5C;
+    
+}
+
+body {
+
+    max-width:1200px;
+    margin: auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding: 20px; 
+}
+
+#content-container {
+    background-color:#fff;
+    border-width:20px;
+    border-color:#FFFFFF;
+    border-radius: 8px;
+    margin: auto;
+   
+}
+
+#content{
+/*color:#FFFFFF;*/
+padding: 20px; 
+background-color: #eee;
+/*background-color:#888b8d;*/ 
+ height:400px;
+    width:960px
+margin: auto; 
+border-radius: 8px; 
+border-width:20px;
+border-color:#FFFFFF;
+background-size: 256px 256px; 
+background-position: top right; 
+background-repeat: no-repeat; 
+background-image: url('images/paw-bg.png');"
+
+}
+
+label {
+    display: inline-block;  
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: left;
+}
+ 
+input {
+    display: inline-block;
+    float: left;
+}
+
+select{
+    display: inlinr-block;
+    float: left;
+    width: 170px;
+}  
