@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// redirect user to index.php if they haven't logged in
+if($_SESSION["HAS_LOGGED_IN"] == false){
+  header("Location: index.php");
+}
+?>
+
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">

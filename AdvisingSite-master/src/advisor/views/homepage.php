@@ -93,10 +93,14 @@ function findStudentsInMeeting($meetingID)
 <html>
 <head>
     <title>Advisor Homepage</title>
+<link rel="stylesheet" type="text/css" href="../../Styles/style.css">
 </head>
 <body>
+<div id="content-container">
+<div id="content">
+
 <h1>
-    Adviser Home
+    Advisor Home
 </h1>
 
 <?php if ($_SESSION["HAS_LOGGED_IN"]) { ?>
@@ -110,15 +114,16 @@ function findStudentsInMeeting($meetingID)
 
     <hr>
 
+
     <?php foreach ($allRows as $aRow) { ?>
-        <h4>Meeting</h4>
+        <h4>Meeting <?php echo htmlspecialchars($aRow["meetingID"]) ?></h4>
 
         <div class="meetingInfo">
             <ul>
                 <form action="../utils/forms/deleteMeeting.php" method="POST">
-                    <input name="meetingID" value="<?php echo htmlspecialchars($aRow["meetingID"]) ?>" hidden>
+                    
 
-                    <input type="submit" value="Delete Meeting">
+                    <br><input type="submit" value="Delete Meeting"><br>
                 </form>
 
                 <!-- Will need to use this value for selecting future values -->
@@ -191,63 +196,58 @@ function findStudentsInMeeting($meetingID)
         <h4>
             Create a Meeting
         </h4>
-        <ul>
-            <li>
+        
                 <label>
-                    Meeting Start Date
-                    <input type="datetime-local" name="meetingStartTime">
-                </label>
+                    Meeting Start Date </label>
+                    <input type="datetime-local" name="meetingStartTime"><br>
+               
                 <?php
                 if (isset($_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"])) {
                     echo $_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"];
                     unset($_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>
-                    Building Name
-                    <input type="text" name="buildingName">
-                </label>
+                    Building Name</label>
+                    <input type="text" name="buildingName"><br>
+                
                 <?php
                 if (isset($_SESSION["ERROR_ADVISOR_MEETING_BUILDING"])) {
                     echo $_SESSION["ERROR_ADVISOR_MEETING_BUILDING"];
                     unset($_SESSION["ERROR_ADVISOR_MEETING_BUILDING"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>
-                    Room Number
-                    <input type="text" name="roomNumber">
-                </label>
+                    Room Number</label>
+                    <input type="text" name="roomNumber"><br>
+                
                 <?php
                 if (isset($_SESSION["ERROR_ADVISOR_MEETING_ROOM"])) {
                     echo $_SESSION["ERROR_ADVISOR_MEETING_ROOM"];
                     unset($_SESSION["ERROR_ADVISOR_MEETING_ROOM"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>
-                    Type of Meeting:
+                    Type of Meeting:</label>
                     <select name="meetingType">
                         <option value="individual">Individual</option>
                         <option value="group">Group</option>
-                    </select>
-                </label>
-            </li>
-            <label>
+                    </select><br><br><br>
+                
+            
+            
                 <input type="submit">
-            </label>
-        </ul>
+            
+       
 
     </form>
 
 <?php } ?>
-
+</div>
+</div>
 </body>
+
 </html>

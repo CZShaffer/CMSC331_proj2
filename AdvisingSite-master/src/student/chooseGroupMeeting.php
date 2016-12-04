@@ -1,6 +1,12 @@
 <?php
 include('../CommonMethods.php');
 session_start();
+
+// redirect user to index.php if they haven't logged in
+if($_SESSION["HAS_LOGGED_IN"] == false){
+  header("Location: index.php");
+}
+
 $COMMON = new Common(false);
 $fileName = "chooseGroupMeeting.php";
 

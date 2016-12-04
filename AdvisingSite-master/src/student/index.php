@@ -1,13 +1,30 @@
 <?php
+include '../CommonMethods.php';
 
-include('../CommonMethods.php');
- $debug = true;
- $COMMON = new Common($debug);
- $fileName = "index.php";
+// check if advising season is over
+$debug = true;
+$COMMON = new Common($debug);
+$filename = "index.php";
 
- $email_error_message = $fName_error_message = $lName_error_message = "";
- $schoolID_error_message = $major_error_message = "";
- $email = $fName = $lName = $schoolID = $major = "";
+// get isSeasonOver from AdvisingSeason table
+$select_isSeasonOver  = "SELECT isSeasonOver FROM AdvisingSeason";
+$select_results = $COMMON->executequery($select_isSeasonOver, $filename);
+
+if(mysql_num_rows($select_results) == 0){
+  echo "This error shouldn't happen";
+}
+
+$results_row = mysql_fetch_array($select_results);
+$isSeasonOver = $results_row[0];
+
+// redirect user to seasonOver.html if the season is over
+if($isSeasonOver) {
+  header("Location: seasonOver.html");
+}
+
+$email_error_message = $fName_error_message = $lName_error_message = "";
+$schoolID_error_message = $major_error_message = "";
+$email = $fName = $lName = $schoolID = $major = "";
 
 if($_POST){
  
@@ -163,31 +180,31 @@ float: left;
  <h1>Welcome! Please complete the registration form.</h1>
 
 <br>
-  <label>Email</label><input type="text" name="email">
+  <label>Email</label><input type="text" name="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : ''); ?>">
   <span class="error"> <?php echo $email_error_message;?></span>
 <br>
 
 <br>
-  <label>First Name</label><input type="text" name="fName">
+  <label>First Name</label><input type="text" name="fName" value="<?php echo (isset($_POST['fName']) ? $_POST['fName'] : ''); ?>">
   <span class="error"> <?php echo $fName_error_message;?></span>
 <br>
 
 <br>
- <label>Middle Name</label><input type="text" name="mName">
+ <label>Middle Name</label><input type="text" name="mName" value="<?php echo (isset($_POST['mName']) ? $_POST['mName'] : ''); ?>">
 <br>
 
 <br>
-  <label>Last Name</label><input type="text" name="lName">
+  <label>Last Name</label><input type="text" name="lName" value="<?php echo (isset($_POST['lName']) ? $_POST['lName'] : ''); ?>">
   <span class="error"> <?php echo $lName_error_message;?></span>
 <br>
 
 <br>
-  <label>School ID</label><input type="varchar" name="schoolID">
+  <label>School ID</label><input type="varchar" name="schoolID" value="<?php echo (isset($_POST['schoolID']) ? $_POST['schoolID'] : ''); ?>">
   <span class="error"> <?php echo $schoolID_error_message;?></span>
 <br>
 
 <br>
-  <label>Major</label><!--<input type="text" name="major">-->
+  <label>Major</label><!--<input type="text" name="major" >-->
 	  <select name="major">
 	  <option value="">Please choose a major</option>
           <option value="BioSciBA">Biological Sciences BA</option>

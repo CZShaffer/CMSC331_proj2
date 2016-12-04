@@ -10,6 +10,13 @@
 
 <?php
 require_once("basics/navbar.php");
+
+session_start();
+
+// redirect user to index.php if they haven't logged in
+if($_SESSION["HAS_LOGGED_IN"] == false){
+  header("Location: index.php");
+}
 ?>
 
 <header>
