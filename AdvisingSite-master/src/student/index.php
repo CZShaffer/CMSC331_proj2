@@ -1,13 +1,30 @@
 <?php
+include '../CommonMethods.php';
 
-include('../CommonMethods.php');
- $debug = true;
- $COMMON = new Common($debug);
- $fileName = "index.php";
+// check if advising season is over
+$debug = true;
+$COMMON = new Common($debug);
+$filename = "index.php";
 
- $email_error_message = $fName_error_message = $lName_error_message = "";
- $schoolID_error_message = $major_error_message = "";
- $email = $fName = $lName = $schoolID = $major = "";
+// get isSeasonOver from AdvisingSeason table
+$select_isSeasonOver  = "SELECT isSeasonOver FROM AdvisingSeason";
+$select_results = $COMMON->executequery($select_isSeasonOver, $filename);
+
+if(mysql_num_rows($select_results) == 0){
+  echo "This error shouldn't happen";
+}
+
+$results_row = mysql_fetch_array($select_results);
+$isSeasonOver = $results_row[0];
+
+// redirect user to seasonOver.html if the season is over
+if($isSeasonOver) {
+  header("Location: seasonOver.html");
+}
+
+$email_error_message = $fName_error_message = $lName_error_message = "";
+$schoolID_error_message = $major_error_message = "";
+$email = $fName = $lName = $schoolID = $major = "";
 
 if($_POST){
  
