@@ -36,13 +36,30 @@ if ($_POST) {
 VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
   $rs=$COMMON->executequery($create_meeting,$fileName);
   
-  
   //changes the number of people registered for the meeting, increases them by 1
 
   $changeNumRegistered = "UPDATE Meeting SET numStudents = numStudents+1 WHERE meetingID = $theMeetingID";
   $rs=$COMMON->executequery($changeNumRegistered,$fileName);
-  
+
  $_SESSION['MEETING_ID']= $theMeetingID;
+
+
+    $command = "SELECT * FROM Meeting WHERE meetingID=".$theMeetingID;
+    $meetingInfo=$COMMON->executequery($command,$fileName);
+    $command = "SELECT * FROM Student WHERE StudentID=".$_SESSION['STUDENT_ID'];
+    $studentInfo = $COMMON->executequery($command,$fileName);
+    $to = $studentInfo[1];
+    $subject = $studentInfo[2].' '.$studentInfo[4].' Adivising Meeting';
+    $email_from = 'sampleadmin@umbc.edu';
+    $additional_headers = "From: ".$email_from. "\r\n";
+    $additional_parameters = null;
+    $message = "Dear "."$studentInfo[2]".":\n\n\t You have a group meeting scheduled for ".$meetingInfo[1]." at ".$meetingInfo[3]." in room ".$meetingInfo[4].".";
+    $sent=mail($to, $subject, $message, $additional_headers, $additional_parameters);
+    if($sent){
+        echo("<p>email sent<p>");
+    }else{
+        echo("<p>email failed<p>");
+    }
   header('Location:homePage.php');
 }
 

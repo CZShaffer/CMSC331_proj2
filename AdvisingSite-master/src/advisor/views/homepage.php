@@ -91,6 +91,17 @@ function findStudentsInMeeting($meetingID)
 ?>
 
 <html>
+<script type="text/javascript">
+  function showfield(name){
+    if(name=='group')document.getElementById('div1').style.display="block";
+    else document.getElementById('div1').style.display="none";
+  }
+ 
+ function hidefield() {
+ document.getElementById('div1').style.display='none';
+ }
+  
+  </script>
 <head>
     <title>Advisor Homepage</title>
 <link rel="stylesheet" type="text/css" href="../../Styles/style.css">
@@ -104,6 +115,7 @@ function findStudentsInMeeting($meetingID)
 </h1>
 
 <?php if ($_SESSION["HAS_LOGGED_IN"]) { ?>
+
     <h3>
         Welcome <?php echo htmlspecialchars($_SESSION["ADVISOR_FNAME"]); ?>, here are your meetings.
     </h3>
@@ -259,14 +271,24 @@ function findStudentsInMeeting($meetingID)
 
             <li>
                 <label>
+<<<<<<< HEAD
                     Type of Meeting:
                     <select name="meetingType">
+=======
+                    Type of Meeting:</label>
+                    <select name="meetingType" onchange="showfield(this.options[this.selectedIndex].value)">
+>>>>>>> origin/master
                         <option value="individual">Individual</option>
                         <option value="group">Group</option>
 <<<<<<< HEAD
                     </select><br><br><br>
-                
-            
+					<body onload="hidefield()">
+<div id="div1">
+					<label>
+                Max number of Students: </label> 
+		      <input type = "text" name = "maxStudents">  
+					<br><br><br>
+            </div>
             
 =======
                     </select>
