@@ -100,7 +100,7 @@ function findStudentsInMeeting($meetingID)
 <div id="content">
 
 <h1>
-    Advisor Home
+    Adviser Home
 </h1>
 
 <?php if ($_SESSION["HAS_LOGGED_IN"]) { ?>
@@ -113,17 +113,20 @@ function findStudentsInMeeting($meetingID)
     </a>
 
     <hr>
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 3d3d64e... Calendar so far (not much)
 
     <?php foreach ($allRows as $aRow) { ?>
-        <h4>Meeting <?php echo htmlspecialchars($aRow["meetingID"]) ?></h4>
+        <h4>Meeting</h4>
 
         <div class="meetingInfo">
             <ul>
                 <form action="../utils/forms/deleteMeeting.php" method="POST">
-                    
+                    <input name="meetingID" value="<?php echo htmlspecialchars($aRow["meetingID"]) ?>" hidden>
 
-                    <br><input type="submit" value="Delete Meeting"><br>
+                    <input type="submit" value="Delete Meeting">
                 </form>
 
                 <!-- Will need to use this value for selecting future values -->
@@ -196,52 +199,84 @@ function findStudentsInMeeting($meetingID)
         <h4>
             Create a Meeting
         </h4>
-        
+        <ul>
+            <li>
                 <label>
+<<<<<<< HEAD
                     Meeting Start Date </label>
                     <input type="datetime-local" name="meetingStartTime"><br>
                
+=======
+                    Meeting Start Date
+                    <input type="datetime-local" name="meetingStartTime">
+                </label>
+>>>>>>> parent of 3d3d64e... Calendar so far (not much)
                 <?php
                 if (isset($_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"])) {
                     echo $_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"];
                     unset($_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"]);
                 }
                 ?>
-            
+            </li>
+
+            <li>
                 <label>
+<<<<<<< HEAD
                     Building Name</label>
                     <input type="text" name="buildingName"><br>
                 
+=======
+                    Building Name
+                    <input type="text" name="buildingName">
+                </label>
+>>>>>>> parent of 3d3d64e... Calendar so far (not much)
                 <?php
                 if (isset($_SESSION["ERROR_ADVISOR_MEETING_BUILDING"])) {
                     echo $_SESSION["ERROR_ADVISOR_MEETING_BUILDING"];
                     unset($_SESSION["ERROR_ADVISOR_MEETING_BUILDING"]);
                 }
                 ?>
-            
+            </li>
+
+            <li>
                 <label>
+<<<<<<< HEAD
                     Room Number</label>
                     <input type="text" name="roomNumber"><br>
                 
+=======
+                    Room Number
+                    <input type="text" name="roomNumber">
+                </label>
+>>>>>>> parent of 3d3d64e... Calendar so far (not much)
                 <?php
                 if (isset($_SESSION["ERROR_ADVISOR_MEETING_ROOM"])) {
                     echo $_SESSION["ERROR_ADVISOR_MEETING_ROOM"];
                     unset($_SESSION["ERROR_ADVISOR_MEETING_ROOM"]);
                 }
                 ?>
-            
+            </li>
+
+            <li>
                 <label>
-                    Type of Meeting:</label>
+                    Type of Meeting:
                     <select name="meetingType">
                         <option value="individual">Individual</option>
                         <option value="group">Group</option>
+<<<<<<< HEAD
                     </select><br><br><br>
                 
             
             
+=======
+                    </select>
+                </label>
+            </li>
+            <label>
+>>>>>>> parent of 3d3d64e... Calendar so far (not much)
                 <input type="submit">
-            
-       
+            </label>
+        </ul>
 
     </form>
 
