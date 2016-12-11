@@ -17,6 +17,8 @@ if ($_POST) {
     $_SESSION["bldgName"] = $_POST["bldgName"];
     $officeRm = $_POST["officeRm"];
     $_SESSION["officeRm"] = $_POST["officeRm"];
+    $password = $_POST["password"];
+    $_SESSION["password"] = $_POST["password"];
 
 
     $regexToCheckIfValidEmail = "/^[A-Za-z0-9_.]+@[A-Za-z0-9]+\.[A-za-z0-9]{3}$/";
@@ -45,6 +47,11 @@ if ($_POST) {
 
     if ($officeRm == "") {
         $_SESSION["ERROR_ADVISOR_REGISTRATION_OFFICERM"] = "Error: You need to provide office room number.";
+	$numOfErrors += 1;
+    }
+
+    if ($password == "") {
+        $_SESSION["ERROR_ADVISOR_REGISTRATION_PASSWORD"] = "Error: You need to provide a password";
 	$numOfErrors += 1;
     }
 

@@ -85,6 +85,16 @@ if (isset($_SESSION["HAS_LOGGED_IN"])) {
             }
             ?>
        <p><br></p>
+            <label>
+                Password:
+            </label> <input type="password" name="password" value="<?php echo (isset($_SESSION['password']) ? $_SESSION['password'] : ''); ?>">
+            <?php
+            if (isset($_SESSION["ERROR_ADVISOR_REGISTRATION_PASSWORD"])) {
+                echo $_SESSION["ERROR_ADVISOR_REGISTRATION_PASSWORD"];
+                unset($_SESSION["ERROR_ADVISOR_REGISTRATION_PASSWORD"]);
+            }
+            ?>
+       <p><br></p>
         <input type="submit" name="Register!">
     
 </form>

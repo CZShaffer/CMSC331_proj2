@@ -11,6 +11,14 @@ if (isset($_SESSION["HAS_LOGGED_IN"])) {
 }
 
 if ($_POST) {
+  if ($_POST["email"] == "") {
+    $_SESSION["ERROR_ADVISOR_LOGIN_EMAIL"] = "Error: Please enter an email";
+  }
+  if ($_POST["password"] == "") {
+    $_SESSION["ERROR_ADVISOR_LOGIN_PASSWORD"] = "Error: Please enter a password";
+  }
+
+
     $email = strtolower($_POST["email"]);
 
     $open_connection = connectToDB();
@@ -41,7 +49,7 @@ if ($_POST) {
         // Redirecting to homepage.php
         header('Location: homepage.php');
     } else {
-        echo "ERROR: 404, Login FAILED";
+        echo "Login FAILED";
     }
 
     $open_connection->close();
@@ -68,10 +76,24 @@ if ($_POST) {
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
     <label>
-        <!-- Only email needs an error, the rest is handled by HTML 5 -->
         E-mail:
-    </label> <input type="text" name="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : ''); ?>";
-required>
+    </label> <input type="text" name="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : ''); ?>">
+            <?php
+            if (isset($_SESSION["ERROR_ADVISOR_LOGIN_EMAIL"])) {
+                echo $_SESSION["ERROR_ADVISOR_LOGIN_EMAIL"];
+                unset($_SESSION["ERROR_ADVISOR_LOGIN_EMAIL"]);
+            }
+            ?>
+        <br><br>
+    <label>
+        Password:
+    </label> <input type="password" name="password" value="<?php echo (isset($_POST['password']) ? $_POST['password'] : ''); ?>">
+            <?php
+            if (isset($_SESSION["ERROR_ADVISOR_LOGIN_PASSWORD"])) {
+                echo $_SESSION["ERROR_ADVISOR_LOGIN_PASSWORD"];
+                unset($_SESSION["ERROR_ADVISOR_LOGIN_PASSWORD"]);
+            }
+            ?>
         <br>
     <br>
         <input type="submit">
