@@ -52,7 +52,7 @@ if($_POST){
   $student_val_query = "SELECT * FROM Student WHERE email = '$email'";
   
   //query execution
-  $validation_query = $COMMON->executequery($student_val_query, $fileName);
+  $validation_query = $COMMON->executequery($student_val_query, $filename);
 
   //determines if atleast one record exists with entered email
   if(mysql_num_rows($validation_query) > 0){
