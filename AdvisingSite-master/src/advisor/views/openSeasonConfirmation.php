@@ -24,9 +24,15 @@ if(!isset($_SESSION["HAS_LOGGED_IN"])){
     <h2>Close advising season</h2>
     <p>Are you sure you want to open the scheduling site? This can be reversed.</p>
 
-    <form action="openSeason.php" method="POST">
-      <input type="submit" value="Yes">
-      <input type="submit" value="No">
+  <a href="openSeason.php">
+    <button type="button">Open season</button>
+  </a>
+
+  <br><br>
+  <a href="homepage.php">
+    <button type="button">Take me back</button>
+  </a>
+
     </form>
   </body>
 </html>
