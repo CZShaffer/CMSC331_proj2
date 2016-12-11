@@ -11,13 +11,6 @@ if (isset($_SESSION["HAS_LOGGED_IN"])) {
 }
 
 if ($_POST) {
-  if ($_POST["email"] == "") {
-    $_SESSION["ERROR_ADVISOR_LOGIN_EMAIL"] = "Error: Please enter an email";
-  }
-  if ($_POST["password"] == "") {
-    $_SESSION["ERROR_ADVISOR_LOGIN_PASSWORD"] = "Error: Please enter a password";
-  }
-
 
     $email = strtolower($_POST["email"]);
 
@@ -28,11 +21,34 @@ if ($_POST) {
 
     $queryOfSearchAdvisor = $open_connection->query($search_advisor);
 
-    $num_rows = mysqli_num_rows($queryOfSearchAdvisor);
+    $searched_advisor = mysqli_fetch_assoc($queryOfSearchAdvisor);
+
+    //$num_rows = mysqli_num_rows($queryOfSearchAdvisor);
     // Check whether or not there has been a successful adviser creation
 
+    $advisor_exist = false;
 
-    if ($num_rows == 1) {
+    //--------------------login error handling end-----------------------------
+    if ($searched_advisor["password"] == $_POST["password"] and $searched_advisor['email'] == $_POST["email"]) {
+      $advisor_exist = true;
+    }
+    if ($_POST["email"] == "") {
+      $_SESSION["ERROR_ADVISOR_LOGIN_EMAIL"] = "Error: Please enter an email";
+      $advisor_exist = false;
+    }
+    if ($_POST["password"] == "") {
+      $_SESSION["ERROR_ADVISOR_LOGIN_PASSWORD"] = "Error: Please enter a password";
+      $advisor_exist = false;
+    }
+    if ($searched_advisor["password"] != $_POST["password"]) {
+      $_SESSION["ERROR_ADVISOR_LOGIN_PASSWORD"] = "Error: Please enter a valid password";
+    }
+    if ($searched_advisor["email"] != $_POST["email"]) {
+      $_SESSION["ERROR_ADVISOR_LOGIN_EMAIL"] = "Error: Please enter a valid email";
+    }
+    //--------------------login error handling end-----------------------------
+
+    if ($advisor_exist == true) {
         session_start();
         // Translate the SQL Query into a dictioanry
         $advisorDict = mysqli_fetch_assoc($queryOfSearchAdvisor);
@@ -48,9 +64,7 @@ if ($_POST) {
 
         // Redirecting to homepage.php
         header('Location: homepage.php');
-    } else {
-        echo "Login FAILED";
-    }
+    } 
 
     $open_connection->close();
 }
