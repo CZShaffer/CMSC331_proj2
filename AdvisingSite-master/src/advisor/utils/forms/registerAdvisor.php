@@ -65,10 +65,10 @@ if ($_POST) {
 
             $insert_adviser = "
               INSERT INTO Advisor (
-                email, firstName, middleName, lastName, buildingName, roomNumber
+                email, firstName, middleName, lastName, buildingName, roomNumber, password
               )
               VALUES (
-                '$email', '$fName', '$mName', '$lName', '$bldgName', '$officeRm'
+                '$email', '$fName', '$mName', '$lName', '$bldgName', '$officeRm' , '$password'
               )
             ";
             $open_connection->query($insert_adviser);
