@@ -68,6 +68,7 @@ VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
+<link rel="icon" type="image/png" href="../Styles/images/umbc.png">
     <title>Choose Your Appointment</title>
 </head>
 <h1>Choose an Appointment:</h1>

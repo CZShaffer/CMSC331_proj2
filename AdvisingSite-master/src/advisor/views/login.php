@@ -74,6 +74,7 @@ if ($_POST) {
 <head>
     <title>Advisor Login Portal</title>
 <link rel="stylesheet" type="text/css" href="../../Styles/style.css">
+<link rel="icon" type="image/png" href="../../Styles/images/umbc.png">
 </head>
 <body>
 <div id="content-container">

@@ -147,25 +147,7 @@ if($_POST){
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../Styles/style.css">
-<!--<style = "text/css">
-  .error {color: #FF0000;}
-	  select{
-	  display: inlinr-block;
-	  float: left;
-	  width: 170px;
-	  }  
-  label{
-display: inline-block;  
-float: left;
-clear: left;
-width: 100px;
-text-align: left;
-}
-  input {
-display: inline-block;
-float: left;
-}
-</style>   -->
+<link rel="icon" type="image/png" href="../Styles/images/umbc.png">
 
 <title>Student Registration</title>
 

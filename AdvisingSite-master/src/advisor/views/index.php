@@ -11,7 +11,7 @@ if (isset($_SESSION["HAS_LOGGED_IN"])) {
 
 <html>
 <head>
-    
+    <link rel="icon" type="image/png" href="../../Styles/images/umbc.png">
 <link rel="stylesheet" type="text/css" href="../../Styles/style.css">
 <title>Advisor Registration</title>
 

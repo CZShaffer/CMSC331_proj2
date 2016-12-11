@@ -1,7 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<title>Student Login</title>
 <link rel="stylesheet" type="text/css" href="../Styles/style.css">
+<link rel="icon" type="image/png" href="../Styles/images/umbc.png">
 </head>
 
 <body>

@@ -10,6 +10,7 @@ if($_SESSION["HAS_LOGGED_IN"] == false){
 <html>
   <head>
   <link rel="stylesheet" type="text/css" href="../Styles/style.css">
+<link rel="icon" type="image/png" href="../Styles/images/umbc.png">
   <title>Student Homepage</title>
   </head>
   
