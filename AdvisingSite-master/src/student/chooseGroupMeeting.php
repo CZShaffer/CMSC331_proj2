@@ -19,8 +19,8 @@ if($numRows>0){
 header('Location:meetingChosen.php');
 }
 // Searchs for all the meetings that passed 
-// 
-$search_meeting = "SELECT * FROM Meeting WHERE Meeting.start > NOW() AND Meeting.meetingType = true AND Meeting.numStudents < 40";
+//
+$search_meeting = "SELECT * FROM Meeting WHERE Meeting.start > NOW() AND Meeting.meetingType = true AND Meeting.numStudents < Meeting.studentLimit";
 $rs = $COMMON->executequery($search_meeting, $fileName);
 
 $allRows = mysql_num_rows($rs);
