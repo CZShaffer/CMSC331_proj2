@@ -8,8 +8,11 @@ if ($_SESSION["HAS_LOGGED_IN"] and $_POST) {
 
     // Parse through variables from form
     $start = $_POST["meetingStartTime"];
+    $_SESSION["meetingStartTime"] = $_POST["meetingStartTime"];  
     $bName = $_POST["buildingName"];
+    $_SESSION["buildingName"] = $_POST["buildingName"];  
     $rNumber = $_POST["roomNumber"];
+    $_SESSION["roomNumber"] = $_POST["roomNumber"];  
     $typeOfMeeting = $_POST["meetingType"];
     $isIndividual = false;
 
@@ -20,7 +23,7 @@ if ($_SESSION["HAS_LOGGED_IN"] and $_POST) {
     $numOfErrors = 0;
 
     if ($start == "") {
-        $_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"] = "Error: You should probably enter in a date.";
+        $_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"] = "Error: Please enter in a date.";
         $numOfErrors += 1;
     }
 

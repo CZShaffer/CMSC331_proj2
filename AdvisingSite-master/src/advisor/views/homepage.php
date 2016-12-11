@@ -211,7 +211,7 @@ function findStudentsInMeeting($meetingID)
         <ul>
             <li>
                 <label>Meeting Start Date </label>
-                <input type="datetime-local" name="meetingStartTime">
+                <input type="datetime-local" name="meetingStartTime"  value="<?php echo (isset($_SESSION['meetingStartTime']) ? $_SESSION['meetingStartTime'] : ''); ?>">
                 <br>
 
                 <?php
@@ -224,7 +224,7 @@ function findStudentsInMeeting($meetingID)
 
             <li>
                 <label>Building Name</label>
-                <input type="text" name="buildingName">
+                <input type="text" name="buildingName" value="<?php echo (isset($_SESSION['buildingName']) ? $_SESSION['buildingName'] : ''); ?>">
                    <br>                
 		<?php
                 if (isset($_SESSION["ERROR_ADVISOR_MEETING_BUILDING"])) {
@@ -236,7 +236,7 @@ function findStudentsInMeeting($meetingID)
 
             <li>
                 <label>Room Number</label>
-                <input type="text" name="roomNumber">
+                <input type="text" name="roomNumber" value="<?php echo (isset($_SESSION['roomNumber']) ? $_SESSION['roomNumber'] : ''); ?>">
                 <br>
 
                 <?php
