@@ -118,12 +118,12 @@
               <tr>
 	        <th>Current Courses and Grades</th>
 		<th>Proposed Courses for Next Semester</th>
-		<th>Reason for Taking the Course</th>
-		<th># of Credits</th>
+		<th>Reason for Taking the Proposed Course</th>
+		<th>Number of Credits for Proposed Course</th>
 	      </tr>
 	      <tr>
 		<td>
-		  <input type='text' placeholder="ex. BIOL302" name='course1' style="width: 99.5%" required></td>
+		  <input type='text' placeholder="ex. BIOL302 A" name='course1' style="width: 99.5%" required></td>
 		<td><input type='text' placeholder="ex. BIOL313" name='next1' style="width: 99.5%"></td>
 		<td><input type='text' name='reason1' placeholder="ex. 'Major Requirement'" style="width: 99.5%"></td>
 		<td><input type='text' name='credit1' style="width: 99.5%"></td>
@@ -160,6 +160,12 @@
 		<td><input type='text' name='reason6' style="width: 99.5%"></td>
 		<td><input type='text' name='credit6' style="width: 99.5%"></td>
 	      </tr>
+	      <tr>
+                <td><input type='text' name='course7' style="width: 99.5%"></td>
+                <td><input type='text' name='next7' style="width: 99.5%"></td>
+                <td><input type='text' name='reason7' style="width: 99.5%"></td>
+                <td><input type='text' name='credit7' style="width: 99.5%"></td>
+              </tr>
 	    </table>
 	  </div>
 	</fieldset>
@@ -170,7 +176,6 @@
 	  <h2>Degree Audit</h2>
 	  <p>Degree Audit is a helpful tool when choosing your classes and planning for graduation. Track your progress below. In order to access Degree Audit follow these steps:</p>
 	  <p><i>Login to myUMBC >> Topics >> Advising and Student Support >> Degree Audit >> Expand All Button</i></p>
-	  <p>For the fields below, please enter your total number of aquired credits for each requirement.</p>
 	  
 	  <h4><!-- style="float: left; width: 50%; font-size:120%;"-->Graduation Requirements</h4>
 	  <!--<p style="float: right; width: 50%; font-size:120%; text-align: left;">General Education Requirements</p> -->
@@ -188,11 +193,14 @@
 	    <input id="upp" name="upp" type="number" min="0" style="width: 40px" required>
 	    <span class="error">* </span>
 	    <br>
-	    <label for="WI">1 Writing Intensive Course:</label>
+
+	    <p>For the rest of the fields in the degree audit, please enter your total number of completed classes for each requirement.</p>
+
+	    <label for="WI">Writing Intensive Courses (1 required):</label>
 	    <input id="WI" name="WI" type="number" min="0" style="width: 40px" required>
 	    <span class="error">* </span>
 	    <br>
-	    <label for="PE">2 Physical Education Courses:</label>
+	    <label for="PE">Physical Education Courses (2 required):</label>
 	    <input id="PE" name="PE" type="number" min="0" style="width: 40px" required>
 	    <span class="error">* </span>
 	  <!--</fieldset> -->
@@ -200,22 +208,28 @@
 	  <br>
 
 	  <h4>General Education Requirements</h4>
+	  <p>
 	  <!--<fieldset> <!-- stlye="float: right; width: 54%; text-align: left;"> -->
-	    <label for="eng">English Composition:</label>
+	    <label for="eng">English Composition (1 required):</label>
 	    <input id="eng" name="eng" type="number" min="0" style="width: 40px">
 	    <span class="error">* </span>
 	    <br>
-	    <label for="AH">3 Arts and Humanities:</label>
+	    <label for="AH">Arts and Humanities (3 required):</label>
 	    <input id="AH" name="AH" type="number" min="0" style="width: 40px">
 	    <span class="error">* </span>
 	    <br>
-	    <label for="cult">Culture (BS-1, BA-2):</label>
+	    <label for="cult">Culture (1 required for BS, 2 for BA):</label>
 	    <input id="cult" name="cult" type="number" min="0" style="width: 40px">
 	    <span class="error">* </span>
 	    <br>
-	    <label for="lang">201 Language Proficiency:</label>
-	    <input id="lang" name="lang" type="number" min="0" style="width: 40px">
+	    <label for="lang">201 Language Proficiency completed:</label>
+	    <select id="lang" name="lang">
+	      <option></option>
+	      <option value="TRUE">Yes</option>
+	      <option value="FALSE">No</option>
+	    </select>
 	    <span class="error">* </span>
+	    
 	  <!--</fieldset> -->
 	</fieldset>
 	
