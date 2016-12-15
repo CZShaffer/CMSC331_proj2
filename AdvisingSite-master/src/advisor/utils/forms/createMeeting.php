@@ -14,13 +14,26 @@ if ($_SESSION["HAS_LOGGED_IN"] and $_POST) {
     $rNumber = $_POST["roomNumber"];
     $_SESSION["roomNumber"] = $_POST["roomNumber"];  
     $typeOfMeeting = $_POST["meetingType"];
+    $_SESSION["meetingType"] = $_POST["meetingType"];
     $isIndividual = false;
+    $studentLimit = 1;
+
+    $numOfErrors = 0;
 
     if ($typeOfMeeting == "group") {
         $isIndividual = true;
+	if ($_POST["studentLimit"] == "") {
+	  $_SESSION["ERROR_STUDENT_LIMIT"] = "Error: Please enter a number of students";
+	  $numOfErrors += 1;
+	}
+	else if (($_POST["studentLimit"] < 2) || ($_POST["studentLimit"] > 40)) {
+	  $_SESSION["ERROR_STUDENT_LIMIT"] = "Error: Please enter a number greater than 1 and less than 41";
+	  $numOfErrors += 1;
+	}
+	else{
+	$studentLimit = $_POST["studentLimit"];
+	}
     }
-
-    $numOfErrors = 0;
 
     if ($start == "") {
         $_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"] = "Error: Please enter in a date.";
@@ -56,9 +69,9 @@ if ($_SESSION["HAS_LOGGED_IN"] and $_POST) {
 
         // Create meeting SQL query and insert into DB
         $insertIntoMeetings = "
-          INSERT INTO Meeting(start,end,buildingName,roomNumber, meetingType, numStudents)
+          INSERT INTO Meeting(start,end,buildingName,roomNumber, meetingType, numStudents, studentLimit)
           VALUES (
-            '$formattedStartDate','$formattedEndDate','$bName', '$rNumber', '$isIndividual', 0
+            '$formattedStartDate','$formattedEndDate','$bName', '$rNumber', '$isIndividual', 0, '$studentLimit'
           )
         ";
 

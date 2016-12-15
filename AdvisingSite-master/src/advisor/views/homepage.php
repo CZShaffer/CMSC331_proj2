@@ -249,7 +249,7 @@ function findStudentsInMeeting($meetingID)
 
             <li>
                 <label>Type of Meeting:</label>
-                <select name="meetingType" onchange="showfield(this.options[this.selectedIndex].value)">
+                <select name="meetingType" onchange="showfield(this.options[this.selectedIndex].value)" >
                         <option value="individual">Individual</option>
                         <option value="group">Group</option>
                 </select><br><br><br>
@@ -257,7 +257,7 @@ function findStudentsInMeeting($meetingID)
 <div id="div1">
 					<label>
                 Max number of Students: </label> 
-		      <input type = "text" name = "maxStudents">  
+		      <input type = "text" name = "studentLimit">  
 					<br><br><br>
             </div>
                     </select>
