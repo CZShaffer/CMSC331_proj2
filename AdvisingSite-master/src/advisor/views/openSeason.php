@@ -1,5 +1,4 @@
 <?php
-  //include '../utils/CommonMethods.php';
 include '../utils/dbconfig.php';
 session_start();
 
@@ -11,24 +10,12 @@ if($_SESSION["HAS_LOGGED_IN"] == false){
 $open_connection = connectToDB();
 
 // remove current entry in AdvisingSeason table
-$sql = "REMOVE * FROM AdvisingSeason";
+$sql = "TRUNCATE TABLE AdvisingSeason";
 $results = $open_connection->query($sql);
 
 // add new entry setting isSeasonOver to false
-$sql = "INSERT INTO AdvisingSeason (`isSeasonOver`) VALUES ('false')";
+$sql = "INSERT INTO AdvisingSeason (`isSeasonOver`) VALUES (0)";
 $results = $open_connection->query($sql);
-
-//$debug = true;
-//$COMMON = new Common($debug);
-//$filename = "openSeason.php";
-
-// remove current entry in AdvisingSeason table
-//$sql = "REMOVE * FROM AdvisingSeason";
-//$select_results = $COMMON->executequery($sql, $filename);
-
-// add new entry setting isSeasonOver to false
-//$sql = "INSERT INTO AdvisingSeason (`isSeasonOver`) VALUES ('false')";
-//$result = $COMMON->executeQuery($sql, $filename);
 
 $_SESSION["isSeasonOver"] = false;
 
