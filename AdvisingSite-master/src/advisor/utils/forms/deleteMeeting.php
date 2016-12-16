@@ -5,7 +5,7 @@ session_start();
 if ($_SESSION["HAS_LOGGED_IN"] and $_POST) {
 
     include '../dbconfig.php';
-
+    //include("..../CommonMethods.php");
 
     // ID That needs to be deleted
     // Advisor ID
@@ -28,6 +28,17 @@ if ($_SESSION["HAS_LOGGED_IN"] and $_POST) {
       WHERE MeetingId = '$selectedMeetingID'
     ";
     $open_connection->query($deleteFromMeeting);
+
+    $getStudents = "SELECT * FROM StudentMeeting WHERE MeetingID=".$meetingID.";";
+    $result = $open_connection->query($getStudents);
+
+    while($row = mysqli_fetch_row($result)){
+        $studentID = $row[1];
+        $updateStudent = "UPDATE Student SET meetingStatus='meeting_deleted' WHERE StudentID=".$studentID.";";
+        $rs = $open_connection->query($updateStudent);
+        $deleteStudentMeeting = "DELETE FROM StudentMeeting WHERE StudentID=".$studentID.";";
+        $rs = $open_connection->query($updateStudent);
+    }
 
     $open_connection->close();
 }
