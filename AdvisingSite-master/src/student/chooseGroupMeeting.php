@@ -27,14 +27,17 @@ $allRows = mysql_num_rows($rs);
 //adds the selected meeting to studentMeeting
 if ($_POST) {
   //adds the selected meeting to studentMeeting
-  $theMeetingID = $_POST['meeting'];
+    $theMeetingID = $_POST['meeting'];
  
 
   //echo "The student ID is ".$_SESSION['STUDENT_ID'];
   //creates a new student meeting
-  $create_meeting = "INSERT INTO StudentMeeting(StudentID,MeetingID)
+    $create_meeting = "INSERT INTO StudentMeeting(StudentID,MeetingID)
 VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
-  $rs=$COMMON->executequery($create_meeting,$fileName);
+    $rs=$COMMON->executequery($create_meeting,$fileName);
+
+    $updateStudent = "UPDATE Student SET meetinStatus='meeting_scheduled' WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
+    $rs=$COMMON->executequery($create_meeting,$fileName);
   
   //changes the number of people registered for the meeting, increases them by 1
 

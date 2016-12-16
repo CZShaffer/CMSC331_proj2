@@ -119,7 +119,7 @@ $sqlCommand = "CREATE TABLE StudentForm(
 );";
 $rs = $COMMON->executeQuery($sqlCommand, $filename);
 
-$sqlCommand = "CREATE TABLE Season(isSeasonOver tinyint(1) NOT NULL DEFAULT=1);";
+$sqlCommand = "CREATE TABLE Season(isSeasonOver tinyint(1) NOT NULL DEFAULT 1);";
 $rs = $COMMON->executeQuery($sqlCommand, $filename);
 
 
