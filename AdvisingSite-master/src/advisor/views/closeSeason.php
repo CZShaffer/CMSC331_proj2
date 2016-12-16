@@ -1,33 +1,36 @@
 <?php
-include '../CommonMethods.php';
+  //include '../utils/CommonMethods.php';
+include '../utils/dbconfig.php';
 session_start();
 
 // redirect user to index.php if they haven't logged in
 if($_SESSION["HAS_LOGGED_IN"] == false){
-  header("Location: index.php");
+  header("Location: login.php");
 }
 
-// if user closes season
-if(isset($_POST['yes'])) {
+$open_connection = connectToDB();
 
-  $debug = true;
-  $COMMON = new Common($debug);
-  $filename = "closeSeason.php";
+// remove current entry in AdvisingSeason table
+$sql = "REMOVE * FROM AdvisingSeason";
+$results = $open_connection->query($sql);
 
-  // remove current entry in AdvisingSeason table
-  $sql  = "REMOVE * FROM AdvisingSeason";
-  $select_results = $COMMON->executequery($sql, $filename);
+// add new entry setting isSeasonOver to false
+$sql = "INSERT INTO AdvisingSeason (`isSeasonOver`) VALUES ('true')";
+$results = $open_connection->query($sql);
 
-  // add new entry setting isSeasonOver to true
-  $sql = "INSERT INTO AdvisingSeason (`isSeasonOver`) VALUES ('true'))";
-  $result = $COMMON->executeQuery($sql, $_SERVER["filename"]);
+//$debug = true;
+//$COMMON = new Common($debug);
+//$filename = "openSeason.php";
 
-  ////////////////////maybe check $result
+// remove current entry in AdvisingSeason table
+//$sql = "REMOVE * FROM AdvisingSeason";
+//$select_results = $COMMON->executequery($sql, $filename);
 
-}
+// add new entry setting isSeasonOver to false
+//$sql = "INSERT INTO AdvisingSeason (`isSeasonOver`) VALUES ('false')";
+//$result = $COMMON->executeQuery($sql, $filename);
 
-// else, redirect user to homePage.php
-else {
-  header("Location: homePage.php");
-}
+$_SESSION["isSeasonOver"] = true;
+
+header("Location: homepage.php");
 ?>
