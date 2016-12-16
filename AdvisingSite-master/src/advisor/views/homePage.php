@@ -41,36 +41,33 @@ if ($_SESSION["HAS_LOGGED_IN"]) {
 
   $searchResults = $open_connection->query($searchAdvisorMeetings);
 
-  
-  //    $allRows = $searchResults->fetch_all(MYSQLI_ASSOC);
-  
   $allRows = array();
   while ($row = $searchResults->fetch_assoc()) {
     array_push($allRows, $row);
   }
-  
+
   // check if advising season is over
-  if(!isset($_SESSION["isSeasonOver"])) {
-    $select_isSeasonOver  = "SELECT isSeasonOver FROM AdvisingSeason";
-    $results = $open_connection->query($select_isSeasonOver);
-    
-    $seasonRows = array();
-    while ($row = $results->fetch_assoc()) {
-      array_push($seasonRows, $row);
-    }
-    
-    if(empty($seasonRows)) {
-      $_SESSION["isSeasonOver"] = true;
-      echo "This error shouldn't happen. If it does, contact Lupoli.";
-    }
-    
-    //  $results_row = mysql_fetch_array($allRows);
-    $_SESSION["isSeasonOver"] = $seasonRows[0];
-    echo gettype($seasonRows["isSeasonOver"]);
-    echo $_SESSION["isSeasonOver"];
+  $conn = new mysqli("studentdb-maria.gl.umbc.edu", "pb10459", "pb10459", "pb10459");
+  $sql = "SELECT * FROM AdvisingSeason";
+  $rs = $conn->query($sql);
+
+  // set isSeasonOver session variable
+  if ($rs->num_rows > 0) {
+    $row = $rs->fetch_assoc();
+    $_SESSION["isSeasonOver"] = $row['isSeasonOver'];
   }
-  
+
+  // if no entries in AdvisingSeason table
+  else {
+    $sql = "INSERT INTO AdvisingSeason (`isSeasonOver`) VALUES ('1')";
+    $rs = $COMMON->executequery($sql, $filename);
+    $_SESSION["isSeasonOver"] = 1;
+    
+    echo "<br><p style='color:red'>Something went wrong with the database, so the advising season was set to closed.</p>";
+  }
+
   $open_connection->close();
+  $conn->close();
 }
 
 /*
