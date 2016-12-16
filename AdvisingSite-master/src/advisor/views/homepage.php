@@ -255,7 +255,7 @@ function hidefield() {
             Create a Meeting
         </h4>
         <ul>
-            <li>
+            
                 <label>Meeting Start Date </label>
                 <input type="datetime-local" name="meetingStartTime"  value="<?php echo (isset($_SESSION['meetingStartTime']) ? $_SESSION['meetingStartTime'] : ''); ?>">
                 <br>
@@ -266,9 +266,7 @@ function hidefield() {
                     unset($_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>Building Name</label>
                 <input type="text" name="buildingName" value="<?php echo (isset($_SESSION['buildingName']) ? $_SESSION['buildingName'] : ''); ?>">
                    <br>                
@@ -278,9 +276,7 @@ function hidefield() {
                     unset($_SESSION["ERROR_ADVISOR_MEETING_BUILDING"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>Room Number</label>
                 <input type="text" name="roomNumber" value="<?php echo (isset($_SESSION['roomNumber']) ? $_SESSION['roomNumber'] : ''); ?>">
                 <br>
@@ -291,26 +287,23 @@ function hidefield() {
                     unset($_SESSION["ERROR_ADVISOR_MEETING_ROOM"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>Type of Meeting:</label>
                 <select name="meetingType" onchange="showfield(this.options[this.selectedIndex].value)">
                         <option value="individual">Individual</option>
                         <option value="group">Group</option>
                 </select><br><br><br>
 					<body onload="hidefield()">
-<div id="div1">
-					<label>
-                Max number of Students: </label> 
+	<div id="div1">
+		<label>Max number of Students: </label> 
 		      <input type = "text" name = "maxStudents">  
 					<br><br><br>
-            </div>
+        </div>
                     </select>
 
                     </select>
                 </label>
-            </li>
+            
             
 
                 <input type="submit">

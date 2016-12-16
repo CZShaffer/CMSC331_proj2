@@ -7,32 +7,28 @@ if(!isset($_SESSION["HAS_LOGGED_IN"])){
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Advising Scheduling</title>
-
-    <link rel="icon" type="image/x-icon" href="favicon.png"/>
-    <link rel="stylesheet" type="text/css" href="_________________________.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Styles/style.css">
+    <link rel="icon" type="image/png" href="../../Styles/images/umbc.png">
   </head>
-
   <body>
-    
-    <h2>Close advising season</h2>
-    <p>Are you sure you want to open the scheduling site? This can be reversed.</p>
+    <div id="content-container">
+      <div id="content">
 
-  <a href="openSeason.php">
-    <button type="button">Open season</button>
-  </a>
+        <h1>Close advising season</h1>
+        <p>Are you sure you want to open the scheduling site? This can be reversed.</p>
 
-  <br><br>
-  <a href="homepage.php">
-    <button type="button">Take me back</button>
-  </a>
+  	<a href="openSeason.php" style="text-decoration:none;">
+    	  <button type="button">Open season</button>
+  	</a>
 
-    </form>
+  	<br><br>
+  	<a href="homepage.php" style="text-decoration:none;">
+    	  <button type="button">Take me back</button>
+  	</a>
+      </div>
+    </div>
   </body>
 </html>
