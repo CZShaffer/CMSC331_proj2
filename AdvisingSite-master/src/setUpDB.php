@@ -1,16 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Phillip
- * Date: 12/11/2016
- * Time: 3:04 PM
- */
 
-$GLOBALS['setup'] = true;
 //include('./dropDB.php');
-include('commonMethods.php');
-//define($GLOBALS['CMDefined'],true);
-//include('dropDB.php');
+include('./commonMethods.php');
+
 $filename = 'setUpDB.php';
 
 //echo("making tables");
@@ -132,42 +124,6 @@ $sqlCommand = "CREATE TABLE StudentForm(
 );";
 $rs = $COMMON->executeQuery($sqlCommand, $filename);
 echo("\nStudentForm made\n");
-
-// Second major (text) NULL
-// minor (text) NULL
-// future plans (text)
-// learning resources (text)
-// internship (text)
-// for each current course(7): name of course (text)
-// for each planned course (7): name of course (text), numCredits unsigned tinyint, reason for taking course (text)
-// credits earned unsigned tiny int
-// GPA float
-// Upper level credits unsigned tiny int
-// number of writing intensives tiny int
-// number of physical courses tiny int
-// English comp num tinyint
-// arts and humanities num tinyint
-// culture num tinyint
-// language proficiency (bool)
-// performance reflection (text)
-// studiedWithFriends bool
-// classQuestion bool
-// notes bool
-// BB discussion bool
-// tutorial center bool
-// RLC tutor bool
-// office hours bool
-// email professor bool
-// volunteer activities (text)
-// currently employed (text)
-// commuter (text)
-// commute hours unsigned tiny int
-// work hours unsigned tiny int
-// family hours unsigned tiny int
-// extracurricular hours unsigned tiny int
-// additional comments (text) NULL
-
-header("../live/test.php");
 
 ?>
 
