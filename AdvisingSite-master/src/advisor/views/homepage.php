@@ -4,23 +4,23 @@ session_start();
 $allRows = "";
 
 if (!isset($_SESSION["HAS_LOGGED_IN"])) {
-  header('Location: login.php');
+    header('Location: login.php');
 }
 
 
 // IF THERE ARE LOGGED IN
 if ($_SESSION["HAS_LOGGED_IN"]) {
-  include '../utils/dbconfig.php';
-  
-  // Create meeting first and then add advisor to meeting ; DISPLAY MEETINGS
-  // Create meeting form that lets the advisor create a meeting
-  
-  // Includes the form for creating meetings
-  $advisorID = $_SESSION["ADVISOR_ID"];
-  
-  $open_connection = connectToDB();
-  
-  $searchAdvisorMeetings = "
+    include '../utils/dbconfig.php';
+
+    // Create meeting first and then add advisor to meeting ; DISPLAY MEETINGS
+    // Create meeting form that lets the advisor create a meeting
+
+    // Includes the form for creating meetings
+    $advisorID = $_SESSION["ADVISOR_ID"];
+
+    $open_connection = connectToDB();
+
+    $searchAdvisorMeetings = "
       SELECT 
         Advisor.AdvisorID, 
         Meeting.meetingID,
@@ -39,38 +39,18 @@ if ($_SESSION["HAS_LOGGED_IN"]) {
         Advisor.advisorID = '$advisorID'
     ";
 
-  $searchResults = $open_connection->query($searchAdvisorMeetings);
+    $searchResults = $open_connection->query($searchAdvisorMeetings);
 
-  
-  //    $allRows = $searchResults->fetch_all(MYSQLI_ASSOC);
-  
-  $allRows = array();
-  while ($row = $searchResults->fetch_assoc()) {
-    array_push($allRows, $row);
-  }
-  
-  // check if advising season is over
-  if(!isset($_SESSION["isSeasonOver"])) {
-    $select_isSeasonOver  = "SELECT isSeasonOver FROM AdvisingSeason";
-    $results = $open_connection->query($select_isSeasonOver);
-    
-    $seasonRows = array();
-    while ($row = $results->fetch_assoc()) {
-      array_push($seasonRows, $row);
+
+//    $allRows = $searchResults->fetch_all(MYSQLI_ASSOC);
+
+    $allRows = array();
+    while ($row = $searchResults->fetch_assoc()) {
+        array_push($allRows, $row);
     }
-    
-    if(empty($seasonRows)) {
-      $_SESSION["isSeasonOver"] = true;
-      echo "This error shouldn't happen. If it does, contact Lupoli.";
-    }
-    
-    //  $results_row = mysql_fetch_array($allRows);
-    $_SESSION["isSeasonOver"] = $seasonRows[0];
-    echo gettype($seasonRows["isSeasonOver"]);
-    echo $_SESSION["isSeasonOver"];
-  }
-  
-  $open_connection->close();
+
+
+    $open_connection->close();
 }
 
 /*
@@ -78,9 +58,9 @@ if ($_SESSION["HAS_LOGGED_IN"]) {
  */
 function findStudentsInMeeting($meetingID)
 {
-  $open_connection = connectToDB();
+    $open_connection = connectToDB();
 
-  $queryForStudent = "
+    $queryForStudent = "
         SELECT
           Student.StudentID,
           Student.email,
@@ -96,29 +76,29 @@ function findStudentsInMeeting($meetingID)
         WHERE Meeting.meetingID = '$meetingID'
     ";
 
-  $studentResults = $open_connection->query($queryForStudent);
-  
-  
-  $studentInfos = array();
-  
-  while ($studentInfo = $studentResults->fetch_assoc()) {
-    array_push($studentInfos, $studentInfo);
-  }
-  
-  return $studentInfos;
+    $studentResults = $open_connection->query($queryForStudent);
+
+
+    $studentInfos = array();
+
+    while ($studentInfo = $studentResults->fetch_assoc()) {
+        array_push($studentInfos, $studentInfo);
+    }
+
+    return $studentInfos;
 }
 
 ?>
 
 <html>
 <script type="text/javascript">
-function showfield(name){
-  if(name=='group')document.getElementById('div1').style.display="block";
-  else document.getElementById('div1').style.display="none";
-}
-
-function hidefield() {
-   document.getElementById('div1').style.display='none';
+  function showfield(name){
+    if(name=='group')document.getElementById('div1').style.display="block";
+    else document.getElementById('div1').style.display="none";
+  }
+ 
+ function hidefield() {
+ document.getElementById('div1').style.display='none';
  }
   
   </script>
@@ -141,32 +121,6 @@ function hidefield() {
         Welcome <?php echo htmlspecialchars($_SESSION["ADVISOR_FNAME"]); ?>, here are your meetings.
     </h3>
 
-					
-    <?php					
-    if(!isset($_SESSION["isSeasonOver"])) {
-      echo('Oops! Something went wrong. Advisors don\'t have to worry about this, only Lupoli.');
-      $_SESSION["isSeasonOver"] = true;
-      //header('login.html');
-    }
-					
-    // if advising season is over, show message saying so and a link to re-open it
-    if($_SESSION["isSeasonOver"]) {
-      echo "<br><p style='color:red'>The advising season is currently closed.</p>";
-      echo "<a href='openSeasonConfirmation.php'>";
-      echo "<button type='button'>Open season</button>";
-      echo "</a>";
-      //include('appointmentOptions.html');
-    }
-    
-    // otherwise show option to sign up for an appointment
-    else {
-      echo "<br><a href='closeSeasonConfirmation.php'>";
-      echo "<button type='button'>Close season</button>";
-      echo "</a>";
-      //    include('signUpOption.html');
-    }
-?>
-    <br><br>
     <a href="logout.php">
         <button type="button">Log Out</button>
     </a>
@@ -295,7 +249,7 @@ function hidefield() {
 
             <li>
                 <label>Type of Meeting:</label>
-                <select name="meetingType" onchange="showfield(this.options[this.selectedIndex].value)">
+                <select name="meetingType" onchange="showfield(this.options[this.selectedIndex].value)" >
                         <option value="individual">Individual</option>
                         <option value="group">Group</option>
                 </select><br><br><br>
@@ -303,7 +257,7 @@ function hidefield() {
 <div id="div1">
 					<label>
                 Max number of Students: </label> 
-		      <input type = "text" name = "maxStudents">  
+		      <input type = "text" name = "studentLimit">  
 					<br><br><br>
             </div>
                     </select>
