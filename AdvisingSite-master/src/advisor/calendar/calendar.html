@@ -1,60 +1,87 @@
-File Edit Options Buffers Tools HTML SGML Help                                       
 <!DOCTYPE html>
-<html lang"en">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Advising Calendar</title>
     <link rel="stylesheet" type="text/css" href="calendarStyle.css" />
-    <script src="calendarJS.js"></script>
+<!--    <script src="calendarJS.js"></script> -->
   </head>
   <body>
     <div id="content-container">
       <div id="content">
-        <h1>Appointment Calendar</h1>
-        <div class="calendar">
-        <div class="month">
-          <ul>
-            <li class="prev">❮</li>
-            <li class="next">❯</li>
-            <li style="text-align:center; font-size:45px">
-              December<br>
-            </li>
-          </ul>
+	<h1>Appointment Calendar</h1>
+	<div class="calendar">
+	<div class="month">      
+	  <ul>
+	    <li class="prev">❮</li>
+	    <li class="next">❯</li>
+	    <li style="text-align:center; font-size:45px">
+	      December<br>  
+	    </li>
+	  </ul>
+	</div>
+
+	<ul class="weekdays" style="font-size:20px; font-family:firaReg">
+	  <li>Mon</li>
+	  <li>Tue</li>
+	  <li>Wed</li>
+	  <li>Thu</li>
+	  <li>Fri</li>
+	  <li>Sat</li>
+	  <li>Sun</li>
+	</ul>
+	
+	<ul class="days" style="font-size:20px; font-family:firaReg">  
+	  <li><button id="myBtn" class="button">1</button></li>
+	  <li><button id="myBtn" class="button">2</button></li>
+	  <li><button id="myBtn" class="button">3</button></li>
+	  <li><button id="myBtn" class="button">4</button></li>
+	  <li><button id="myBtn" class="button">5</button></li>
+	  <li><button id="myBtn" class="button">6</button></li>
+	  <li><button id="myBtn" class="button">7</button></li>
+	  <li><button id="myBtn" class="button">8</button></li>
+	  <li><button id="myBtn" class="button">9</button></li>
+	  <li><button id="myBtn" class="button">10</button></li>
+	  <li><button id="myBtn" class="button">11</button></li>
+	  <li><button id="myBtn" class="button">12</button></li>
+	  <li><button id="myBtn" class="button">13</button></li>
+	  <li><button id="myBtn" class="button">14</button></li>
+	  <li><button id="myBtn" class="button">15</button></li>
+	  <li><button id="myBtn" class="button">16</button></li>
+	  <li><button id="myBtn" class="button">17</button></li>
+	  <li><button id="myBtn" class="button">18</button></li>
+	  <li><button id="myBtn" class="button">19</button></li>
+	  <li><button id="myBtn" class="button">20</button></li>
+	  <li><button id="myBtn" class="button">21</button></li>
+	  <li><button id="myBtn" class="button">22</button></li>
+	  <li><button id="myBtn" class="button">23</button></li>
+	  <li><button id="myBtn" class="button">24</button></li>
+	  <li><button id="myBtn" class="button">25</button></li>
+	  <li><button id="myBtn" class="button">26</button></li>
+	  <li><button id="myBtn" class="button">27</button></li>
+	  <li><button id="myBtn" class="button">28</button></li>
+	  <li><button id="myBtn" class="button">29</button></li>
+	  <li><button id="myBtn" class="button">30</button></li>
+	  <li><button id="myBtn" class="button">31</button></li>
+	</ul>
+	</div>
+      </div>
+    </div>
+
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">×</span>
+          <h2>Appoinments [Date]</h2>
         </div>
-
-        <ul class="weekdays" style="font-size:20px; font-family:firaReg">
-          <li>Mon</li>
-          <li>Tue</li>
-          <li>Wed</li>
-          <li>Thu</li>
-          <li>Fri</li>
-          <li>Sat</li>
-          <li>Sun</li>
-        </ul>
-
-        <ul class="days" style="font-size:20px; font-family:firaReg">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li><button id="myBtn" class="button">6</button></li>
-          <!-- The Modal -->
-          <div id="myModal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content">
-              <div class="modal-header">
-                <span class="close">×</span>
-                <h2>Appoinments December 6th, 2016</h2>
-              </div>
-              <div class="modal-body">
-                <p>
-                </p>
-
-
-
-                <button class="accordion">10:00-10:30AM</button>
+        <div class="modal-body">
+          <p>
+          </p>
+          <button class="accordion">10:00-10:30AM</button>
                 <div class="panel">
                   <p>Group Appointment
                     <br>
@@ -69,7 +96,8 @@ File Edit Options Buffers Tools HTML SGML Help
                     Chemistry B.S.<br>
                   </p>
                 </div>
-                 <button class="accordion">1:00-1:30PM</button>
+		
+                <button class="accordion">1:00-1:30PM</button>
                 <div class="panel">
                   <p>Individual Appointment
                     <br>
@@ -78,7 +106,7 @@ File Edit Options Buffers Tools HTML SGML Help
                     Real Name<br>
                     AB12345<br>
                     Environmental Science B.A.<br>
-
+		    
                   </p>
                 </div>
 
@@ -87,87 +115,16 @@ File Edit Options Buffers Tools HTML SGML Help
                   <p>Available Group Appointment</p>
                 </div>
                 <br>
-                <script>
-                  var acc = document.getElementsByClassName("accordion");
-                  var i;
-
-                  for (i = 0; i < acc.length; i++) {
-                                  acc[i].onclick = function(){
-                                  this.classList.toggle("active");
-                                  this.nextElementSibling.classList.toggle("show");
-                                  }
-                                  }
-                                  </script>
-
-
-
-
 
               </div>
+
             </div>
 
           </div>
-          <script>
-            // Get the modal
-            var modal = document.getElementById('myModal');
 
-            // Get the button that opens the modal
-            var btn = document.getElementById("myBtn");
-
-            // Get the <span> element that closes the modal
-              var span = document.getElementsByClassName("close")[0];
-
-              // When the user clicks the button, open the modal
-              btn.onclick = function() {
-              modal.style.display = "block";
-              }
-
-              // When the user clicks on <span> (x), close the modal
-                span.onclick = function() {
-                modal.style.display = "none";
-                }
-
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function(event) {
-                if (event.target == modal) {
-                modal.style.display = "none";
-                }
-                }
-          </script>
-
-
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
-          <li>31</li>
-        </ul>
-        </div>
-      </div>
-    </div>
+    <script src="calendarJS.js"></script>
   </body>
 </html>
-
 
 
 
