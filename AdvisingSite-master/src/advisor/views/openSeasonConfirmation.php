@@ -17,7 +17,7 @@ if(!isset($_SESSION["HAS_LOGGED_IN"])){
     <div id="content-container">
       <div id="content">
 
-        <h1>Close advising season</h1>
+        <h1>Open advising season</h1>
         <p>Are you sure you want to open the scheduling site? This can be reversed.</p>
 
   	<a href="openSeason.php" style="text-decoration:none;">
