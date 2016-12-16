@@ -1,8 +1,8 @@
 html {
-/*background-image:url('images/dot-bg.png');                                                                   
+/*background-image:url('images/dot-bg.png');
     background-repeat:repeat;*/
     background-color:#F5CA5C;
-
+    
 }
 
 @font-face {
@@ -42,13 +42,14 @@ html {
     margin: 4px 2px;
     cursor: pointer;
 }
+
 body {
 
     max-width:1200px;
     margin: auto;
 /*    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     font-size: 13px;
-    padding: 20px;
+    padding: 20px; 
 }
 
 #content-container {
@@ -57,24 +58,25 @@ body {
     border-color:#FFFFFF;
     border-radius: 8px;
     margin: auto;
-
+   
 }
 
 #content{
 /*color:#FFFFFF;*/
-padding: 20px;
+padding: 20px; 
 background-color: #eee;
-/*background-color:#888b8d;*/
+/*background-color:#888b8d;*/ 
 min-height:400px;
     width:960px
-margin: auto;
-border-radius: 8px;
+margin: auto; 
+border-radius: 8px; 
 border-width:20px;
 border-color:#FFFFFF;
-background-size: 256px 256px;
-background-position: top right;
-background-repeat: no-repeat;
+background-size: 256px 256px; 
+background-position: top right; 
+background-repeat: no-repeat; 
 background-image: url('paw-bg.png');
+
 height:auto;
 overflow:visible;
 }
@@ -87,22 +89,23 @@ h1 {
 }
 
 label {
-    display: inline-block;
+    display: inline-block;  
     float: left;
     clear: left;
     width: 135px;
     text-align: left;
 }
-
+ 
 input {
     display: inline-block;
     float: left;
 }
+
 select{
     display: inline-block;
     float: left;
     width: 170px;
-}
+}  
 
 
 * {box-sizing:border-box;}
@@ -116,7 +119,7 @@ body {font-family: firaBold;}
     top: 20px;
     width: 700px;
     height: 600px;
-    margin-left: 90px;
+    margin-left: 90px;    
 }
 
 .month {
@@ -129,6 +132,7 @@ body {font-family: firaBold;}
     margin: 0;
     padding: 0;
 }
+
 .month ul li {
     color: white;
     font-size: 20px;
@@ -151,6 +155,7 @@ body {font-family: firaBold;}
     padding: 10px 0;
     background-color: #ddd;
 }
+
 .weekdays li {
     display: inline-block;
     width: 13.6%;
@@ -170,7 +175,7 @@ body {font-family: firaBold;}
     width: 13.6%;
 
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: #777;
 }
 
@@ -179,6 +184,7 @@ body {font-family: firaBold;}
     background: #4C7D98;
     color: white !important
 }
+
 @media screen and (max-width:720px) {
     .weekdays li, .days li {width: 13.1%;}
 }
@@ -200,12 +206,13 @@ body {font-family: firaBold;}
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
-    width:100%;
+    width:100%;   
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+
 /* Modal Content */
 .modal-content {
     position: relative;
@@ -223,7 +230,7 @@ body {font-family: firaBold;}
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0}
+    from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
 }
 
@@ -261,6 +268,7 @@ body {font-family: firaBold;}
     background-color: #4C7D98;
     color: white;
 }
+
 button.accordion {
     background-color: #eee;
     color: #444;
@@ -291,5 +299,3 @@ div.panel.show {
     opacity: 1;
     max-height: 500px;
 }
-
-

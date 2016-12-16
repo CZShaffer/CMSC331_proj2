@@ -20,13 +20,19 @@ if(!isset($_SESSION["HAS_LOGGED_IN"])){
   </head>
 
   <body>
-    
+
     <h2>Close advising season</h2>
     <p>Are you sure you want to close the scheduling site? This can be reversed.</p>
 
-    <form action="closeSeason.php" method="POST">
-      <input type="submit" value="Yes">
-      <input type="submit" value="No">
+  <a href="closeSeason.php">
+    <button type="button">Close season</button>
+  </a>
+
+  <br><br>
+  <a href="homepage.php">
+    <button type="button">Take me back</button>
+  </a>
+
     </form>
   </body>
 </html>
