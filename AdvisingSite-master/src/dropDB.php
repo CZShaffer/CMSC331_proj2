@@ -23,4 +23,8 @@ $rs = $COMMON->executeQuery($sqlCommand, $filename);
 $sqlCommand = "DROP TABLE Meeting;";
 $rs = $COMMON->executeQuery($sqlCommand, $filename);
 
+$sqlCommand = "DROP TABLE Season";
+$rs = $COMMON->executeQuery($sqlCommand, $filename);
+
+
 ?>

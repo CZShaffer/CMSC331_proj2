@@ -29,6 +29,9 @@ $meetingID = $_SESSION['MEETING_ID'];
 $subtractOne = "UPDATE Meeting SET numStudents = numStudents-1 WHERE meetingID =$meetingID";
 $rs = $COMMON->executequery($subtractOne, $fileName);
 
+$updateStudent = "UPDATE Student SET meetinStatus='meeting_not_scheduled' WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
+$rs=$COMMON->executequery($create_meeting,$fileName);
+
 unset($_SESSION['MEETING_ID']);
 header('Location:homePage.php');
 ?>

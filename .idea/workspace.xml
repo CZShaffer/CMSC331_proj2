@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74d918c8-967d-498e-85e4-230a3f027ec5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/dropDB.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/dropDB.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/setUpDB.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/setUpDB.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/student/deleteMeeting.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/student/deleteMeeting.php" />
     </list>
     <ignored path="Proj2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,35 +35,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chooseMeeting.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chooseGroupMeeting.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <marker date="1481658525927" expanded="true" signature="315:376" ph="Select * FRO... StudentMeeting" />
-                <marker date="1481658525927" expanded="true" signature="620:727" ph="SELECT * FRO... Meeting" />
-                <marker date="1481658525927" expanded="true" signature="620:747" ph="SELECT * FRO... Meeting" />
-                <marker date="1481658525927" expanded="true" signature="1098:1199" ph="INSERT INTO StudentMeeting... " />
-                <marker date="1481658525927" expanded="true" signature="1369:1434" ph="UPDATE Meeti... " />
-                <marker date="1481658525927" expanded="true" signature="1571:1584" ph="SELECT * FRO... " />
-                <marker date="1481658525927" expanded="true" signature="1571:1609" ph="SELECT * FRO... Meeting" />
-                <marker date="1481658525927" expanded="true" signature="1702:1740" ph="SELECT * FRO... Student" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CommonMethods.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/CommonMethods.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,31 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="regSheet.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/regSheet.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readME.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/calendar/updating calendar/readME.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="fullCalender.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/calendar/updating calendar/fullCalender.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            <state relative-caret-position="85">
+              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -113,36 +65,95 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setUpDB.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/setUpDB.php">
+      <file leaf-file-name="chooseGroupMeeting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+            <state relative-caret-position="314">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="39" selection-end-column="57" />
               <folding>
-                <marker date="1481922607952" expanded="true" signature="164:436" ph="CREATE TABLE... Student" />
-                <marker date="1481922607952" expanded="true" signature="535:694" ph="CREATE TABLE... StudentMeeting" />
-                <marker date="1481922607952" expanded="true" signature="800:1051" ph="CREATE TABLE... Advisor" />
-                <marker date="1481922607952" expanded="true" signature="1150:1308" ph="CREATE TABLE... AdvisorMeeting" />
-                <marker date="1481922607952" expanded="true" signature="1414:1717" ph="CREATE TABLE... Meeting" />
-                <marker date="1481922607952" expanded="true" signature="1816:3849" ph="CREATE TABLE... StudentForm" />
+                <marker date="1481931405188" expanded="true" signature="315:376" ph="Select * FRO... StudentMeeting" />
+                <marker date="1481931405188" expanded="true" signature="620:747" ph="SELECT * FRO... Meeting" />
+                <marker date="1481931405188" expanded="true" signature="1102:1203" ph="INSERT INTO StudentMeeting... " />
+                <marker date="1481931405188" expanded="true" signature="1287:1319" ph="UPDATE Stude... " />
+                <marker date="1481931405188" expanded="true" signature="1287:1355" ph="UPDATE Stude... " />
+                <marker date="1481931405188" expanded="true" signature="1287:1384" ph="UPDATE Stude... " />
+                <marker date="1481931405188" expanded="true" signature="1287:1553" ph="UPDATE Stude... " />
+                <marker date="1481931405188" expanded="true" signature="1555:1620" ph="UPDATE Meeti... " />
+                <marker date="1481931405188" expanded="true" signature="1757:1795" ph="SELECT * FRO... Meeting" />
+                <marker date="1481931405188" expanded="true" signature="1888:1926" ph="SELECT * FRO... Student" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropDB.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/dropDB.php">
+      <file leaf-file-name="cancelMeeting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/cancelMeeting.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+            <state relative-caret-position="297">
+              <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
               <folding>
-                <marker date="1481922608020" expanded="true" signature="108:126" ph="DROP TABLE S... " />
-                <marker date="1481922608020" expanded="true" signature="199:221" ph="DROP TABLE S... " />
-                <marker date="1481922608020" expanded="true" signature="294:319" ph="DROP TABLE S... " />
-                <marker date="1481922608020" expanded="true" signature="392:410" ph="DROP TABLE A... " />
-                <marker date="1481922608020" expanded="true" signature="483:508" ph="DROP TABLE A... " />
-                <marker date="1481922608020" expanded="true" signature="582:600" ph="DROP TABLE M... " />
+                <marker date="1481928727678" expanded="true" signature="533:590" ph="SELECT * FRO... StudentMeeting" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteMeeting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/deleteMeeting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="72" selection-start-line="31" selection-start-column="72" selection-end-line="31" selection-end-column="72" />
+              <folding>
+                <marker date="1481931480859" expanded="true" signature="309:354" ph="DELETE FROM " />
+                <marker date="1481931480859" expanded="true" signature="505:640" ph="SELECT * FRO... Meeting" />
+                <marker date="1481931480859" expanded="true" signature="834:898" ph="UPDATE Meeti... " />
+                <marker date="1481931480859" expanded="true" signature="984:1056" ph="UPDATE Stude... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setUpDB.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/setUpDB.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="121" column="76" selection-start-line="121" selection-start-column="76" selection-end-line="121" selection-end-column="76" />
+              <folding>
+                <marker date="1481931632213" expanded="true" signature="164:436" ph="CREATE TABLE... Student" />
+                <marker date="1481931632213" expanded="true" signature="509:668" ph="CREATE TABLE... StudentMeeting" />
+                <marker date="1481931632213" expanded="true" signature="741:992" ph="CREATE TABLE... Advisor" />
+                <marker date="1481931632213" expanded="true" signature="1065:1223" ph="CREATE TABLE... AdvisorMeeting" />
+                <marker date="1481931632213" expanded="true" signature="1296:1599" ph="CREATE TABLE... Meeting" />
+                <marker date="1481931632213" expanded="true" signature="1672:3705" ph="CREATE TABLE... StudentForm" />
+                <marker date="1481931632213" expanded="true" signature="3778:3841" ph="CREATE TABLE... Season" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chooseIndividualMeeting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseIndividualMeeting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-417">
+              <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+              <folding>
+                <marker date="1481928727774" expanded="true" signature="320:381" ph="Select * FRO... StudentMeeting" />
+                <marker date="1481928727774" expanded="true" signature="623:732" ph="SELECT * FRO... Meeting" />
+                <marker date="1481928727774" expanded="true" signature="1088:1189" ph="INSERT INTO StudentMeeting... " />
+                <marker date="1481928727774" expanded="true" signature="1341:1394" ph="UPDATE Meeti... " />
+                <marker date="1481928727774" expanded="true" signature="1536:1574" ph="SELECT * FRO... Meeting" />
+                <marker date="1481928727774" expanded="true" signature="1667:1705" ph="SELECT * FRO... Student" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbconfig.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/dbconfig.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,8 +169,10 @@
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/dbsetup.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/dbconfig.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseIndividualMeeting.php" />
-        <option value="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/dropDB.php" />
+        <option value="$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/forms/deleteMeeting.php" />
+        <option value="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php" />
+        <option value="$PROJECT_DIR$/AdvisingSite-master/src/student/deleteMeeting.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/setUpDB.php" />
       </list>
     </option>
@@ -202,7 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -319,43 +332,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="calendar" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proj2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proj2" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdvisingSite-master" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="advisor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calendar" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="updating calendar" />
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -423,24 +406,26 @@
       <workItem from="1480879164685" duration="6409000" />
       <workItem from="1481487004969" duration="1135000" />
       <workItem from="1481920070224" duration="1431000" />
+      <workItem from="1481929066790" duration="9000" />
+      <workItem from="1481929150281" duration="2722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8975000" />
+    <option name="totallyTimeSpent" value="11706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25052083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1421875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -478,6 +463,220 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1481931405188" expanded="true" signature="315:376" ph="Select * FRO... StudentMeeting" />
+            <marker date="1481931405188" expanded="true" signature="620:747" ph="SELECT * FRO... Meeting" />
+            <marker date="1481931405188" expanded="true" signature="1102:1203" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1319" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1355" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1384" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1553" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1555:1620" ph="UPDATE Meeti... " />
+            <marker date="1481931405188" expanded="true" signature="1757:1795" ph="SELECT * FRO... Meeting" />
+            <marker date="1481931405188" expanded="true" signature="1888:1926" ph="SELECT * FRO... Student" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/CommonMethods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/regSheet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/calendar/updating calendar/readME.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/calendar/updating calendar/fullCalender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/calendar/updating calendar/testCal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/setUpDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1481931632213" expanded="true" signature="164:436" ph="CREATE TABLE... Student" />
+            <marker date="1481931632213" expanded="true" signature="509:668" ph="CREATE TABLE... StudentMeeting" />
+            <marker date="1481931632213" expanded="true" signature="741:992" ph="CREATE TABLE... Advisor" />
+            <marker date="1481931632213" expanded="true" signature="1065:1223" ph="CREATE TABLE... AdvisorMeeting" />
+            <marker date="1481931632213" expanded="true" signature="1296:1599" ph="CREATE TABLE... Meeting" />
+            <marker date="1481931632213" expanded="true" signature="1672:3705" ph="CREATE TABLE... StudentForm" />
+            <marker date="1481931632213" expanded="true" signature="3778:3841" ph="CREATE TABLE... Season" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/dropDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <marker date="1481929237658" expanded="true" signature="108:126" ph="DROP TABLE S... " />
+            <marker date="1481929237658" expanded="true" signature="199:221" ph="DROP TABLE S... " />
+            <marker date="1481929237658" expanded="true" signature="294:319" ph="DROP TABLE S... " />
+            <marker date="1481929237658" expanded="true" signature="392:410" ph="DROP TABLE A... " />
+            <marker date="1481929237658" expanded="true" signature="483:508" ph="DROP TABLE A... " />
+            <marker date="1481929237658" expanded="true" signature="582:600" ph="DROP TABLE M... " />
+            <marker date="1481929237658" expanded="true" signature="673:690" ph="DROP TABLE S... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/CommonMethods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1481931405188" expanded="true" signature="315:376" ph="Select * FRO... StudentMeeting" />
+            <marker date="1481931405188" expanded="true" signature="620:747" ph="SELECT * FRO... Meeting" />
+            <marker date="1481931405188" expanded="true" signature="1102:1203" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1319" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1355" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1384" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1553" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1555:1620" ph="UPDATE Meeti... " />
+            <marker date="1481931405188" expanded="true" signature="1757:1795" ph="SELECT * FRO... Meeting" />
+            <marker date="1481931405188" expanded="true" signature="1888:1926" ph="SELECT * FRO... Student" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/CommonMethods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/regSheet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/calendar/updating calendar/readME.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/calendar/updating calendar/fullCalender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/calendar/updating calendar/testCal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/setUpDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1481931632213" expanded="true" signature="164:436" ph="CREATE TABLE... Student" />
+            <marker date="1481931632213" expanded="true" signature="509:668" ph="CREATE TABLE... StudentMeeting" />
+            <marker date="1481931632213" expanded="true" signature="741:992" ph="CREATE TABLE... Advisor" />
+            <marker date="1481931632213" expanded="true" signature="1065:1223" ph="CREATE TABLE... AdvisorMeeting" />
+            <marker date="1481931632213" expanded="true" signature="1296:1599" ph="CREATE TABLE... Meeting" />
+            <marker date="1481931632213" expanded="true" signature="1672:3705" ph="CREATE TABLE... StudentForm" />
+            <marker date="1481931632213" expanded="true" signature="3778:3841" ph="CREATE TABLE... Season" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/dropDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <marker date="1481929237658" expanded="true" signature="108:126" ph="DROP TABLE S... " />
+            <marker date="1481929237658" expanded="true" signature="199:221" ph="DROP TABLE S... " />
+            <marker date="1481929237658" expanded="true" signature="294:319" ph="DROP TABLE S... " />
+            <marker date="1481929237658" expanded="true" signature="392:410" ph="DROP TABLE A... " />
+            <marker date="1481929237658" expanded="true" signature="483:508" ph="DROP TABLE A... " />
+            <marker date="1481929237658" expanded="true" signature="582:600" ph="DROP TABLE M... " />
+            <marker date="1481929237658" expanded="true" signature="673:690" ph="DROP TABLE S... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/CommonMethods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
@@ -489,14 +688,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1481658525927" expanded="true" signature="315:376" ph="Select * FRO... StudentMeeting" />
-            <marker date="1481658525927" expanded="true" signature="620:727" ph="SELECT * FRO... Meeting" />
-            <marker date="1481658525927" expanded="true" signature="620:747" ph="SELECT * FRO... Meeting" />
-            <marker date="1481658525927" expanded="true" signature="1098:1199" ph="INSERT INTO StudentMeeting... " />
-            <marker date="1481658525927" expanded="true" signature="1369:1434" ph="UPDATE Meeti... " />
-            <marker date="1481658525927" expanded="true" signature="1571:1584" ph="SELECT * FRO... " />
-            <marker date="1481658525927" expanded="true" signature="1571:1609" ph="SELECT * FRO... Meeting" />
-            <marker date="1481658525927" expanded="true" signature="1702:1740" ph="SELECT * FRO... Student" />
+            <marker date="1481931405188" expanded="true" signature="315:376" ph="Select * FRO... StudentMeeting" />
+            <marker date="1481931405188" expanded="true" signature="620:747" ph="SELECT * FRO... Meeting" />
+            <marker date="1481931405188" expanded="true" signature="1102:1203" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1319" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1355" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1384" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1553" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1555:1620" ph="UPDATE Meeti... " />
+            <marker date="1481931405188" expanded="true" signature="1757:1795" ph="SELECT * FRO... Meeting" />
+            <marker date="1481931405188" expanded="true" signature="1888:1926" ph="SELECT * FRO... Student" />
           </folding>
         </state>
       </provider>
@@ -529,7 +730,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
-          <folding />
+          <folding>
+            <marker date="1481928727774" expanded="true" signature="320:381" ph="Select * FRO... StudentMeeting" />
+            <marker date="1481928727774" expanded="true" signature="623:732" ph="SELECT * FRO... Meeting" />
+            <marker date="1481928727774" expanded="true" signature="1088:1189" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1481928727774" expanded="true" signature="1341:1394" ph="UPDATE Meeti... " />
+            <marker date="1481928727774" expanded="true" signature="1536:1574" ph="SELECT * FRO... Meeting" />
+            <marker date="1481928727774" expanded="true" signature="1667:1705" ph="SELECT * FRO... Student" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -538,14 +746,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1481658525927" expanded="true" signature="315:376" ph="Select * FRO... StudentMeeting" />
-            <marker date="1481658525927" expanded="true" signature="620:727" ph="SELECT * FRO... Meeting" />
-            <marker date="1481658525927" expanded="true" signature="620:747" ph="SELECT * FRO... Meeting" />
-            <marker date="1481658525927" expanded="true" signature="1098:1199" ph="INSERT INTO StudentMeeting... " />
-            <marker date="1481658525927" expanded="true" signature="1369:1434" ph="UPDATE Meeti... " />
-            <marker date="1481658525927" expanded="true" signature="1571:1584" ph="SELECT * FRO... " />
-            <marker date="1481658525927" expanded="true" signature="1571:1609" ph="SELECT * FRO... Meeting" />
-            <marker date="1481658525927" expanded="true" signature="1702:1740" ph="SELECT * FRO... Student" />
+            <marker date="1481931405188" expanded="true" signature="315:376" ph="Select * FRO... StudentMeeting" />
+            <marker date="1481931405188" expanded="true" signature="620:747" ph="SELECT * FRO... Meeting" />
+            <marker date="1481931405188" expanded="true" signature="1102:1203" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1319" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1355" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1384" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1553" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1555:1620" ph="UPDATE Meeti... " />
+            <marker date="1481931405188" expanded="true" signature="1757:1795" ph="SELECT * FRO... Meeting" />
+            <marker date="1481931405188" expanded="true" signature="1888:1926" ph="SELECT * FRO... Student" />
           </folding>
         </state>
       </provider>
@@ -555,13 +765,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/dbconfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="65" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -576,63 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/CommonMethods.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/meetingChosen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseIndividualMeeting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <marker date="1481658525927" expanded="true" signature="315:376" ph="Select * FRO... StudentMeeting" />
-            <marker date="1481658525927" expanded="true" signature="620:727" ph="SELECT * FRO... Meeting" />
-            <marker date="1481658525927" expanded="true" signature="620:747" ph="SELECT * FRO... Meeting" />
-            <marker date="1481658525927" expanded="true" signature="1098:1199" ph="INSERT INTO StudentMeeting... " />
-            <marker date="1481658525927" expanded="true" signature="1369:1434" ph="UPDATE Meeti... " />
-            <marker date="1481658525927" expanded="true" signature="1571:1584" ph="SELECT * FRO... " />
-            <marker date="1481658525927" expanded="true" signature="1571:1609" ph="SELECT * FRO... Meeting" />
-            <marker date="1481658525927" expanded="true" signature="1702:1740" ph="SELECT * FRO... Student" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/CommonMethods.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,23 +800,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/dropDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        <state relative-caret-position="425">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding>
-            <marker date="1481922608020" expanded="true" signature="108:126" ph="DROP TABLE S... " />
-            <marker date="1481922608020" expanded="true" signature="199:221" ph="DROP TABLE S... " />
-            <marker date="1481922608020" expanded="true" signature="294:319" ph="DROP TABLE S... " />
-            <marker date="1481922608020" expanded="true" signature="392:410" ph="DROP TABLE A... " />
-            <marker date="1481922608020" expanded="true" signature="483:508" ph="DROP TABLE A... " />
-            <marker date="1481922608020" expanded="true" signature="582:600" ph="DROP TABLE M... " />
+            <marker date="1481929237658" expanded="true" signature="108:126" ph="DROP TABLE S... " />
+            <marker date="1481929237658" expanded="true" signature="199:221" ph="DROP TABLE S... " />
+            <marker date="1481929237658" expanded="true" signature="294:319" ph="DROP TABLE S... " />
+            <marker date="1481929237658" expanded="true" signature="392:410" ph="DROP TABLE A... " />
+            <marker date="1481929237658" expanded="true" signature="483:508" ph="DROP TABLE A... " />
+            <marker date="1481929237658" expanded="true" signature="582:600" ph="DROP TABLE M... " />
+            <marker date="1481929237658" expanded="true" signature="673:690" ph="DROP TABLE S... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/calendar/updating calendar/fullCalender.php">
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/CommonMethods.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -683,17 +830,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/setUpDB.php">
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/forms/registerAdvisor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-527">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1481658524859" expanded="true" signature="1854:1910" ph="SELECT 1 fro... Advisor" />
+            <marker date="1481658524859" expanded="true" signature="2068:2330" ph="INSERT INTO Advisor... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/forms/deleteMeeting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="69" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
+          <folding>
+            <marker date="1481930394551" expanded="true" signature="446:517" ph="DELETE FROM " />
+            <marker date="1481930394551" expanded="true" signature="642:706" ph="DELETE FROM " />
+            <marker date="1481930394551" expanded="true" signature="784:829" ph="SELECT * FRO... StudentMeeting" />
+            <marker date="1481930394551" expanded="true" signature="1002:1069" ph="UPDATE Stude... " />
+            <marker date="1481930394551" expanded="true" signature="1002:1083" ph="UPDATE Stude... " />
+            <marker date="1481930394551" expanded="true" signature="1175:1218" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/meetingChosen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/CommonMethods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/cancelMeeting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <marker date="1481928727678" expanded="true" signature="533:590" ph="SELECT * FRO... StudentMeeting" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/deleteMeeting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="72" selection-start-line="31" selection-start-column="72" selection-end-line="31" selection-end-column="72" />
+          <folding>
+            <marker date="1481931480859" expanded="true" signature="309:354" ph="DELETE FROM " />
+            <marker date="1481931480859" expanded="true" signature="505:640" ph="SELECT * FRO... Meeting" />
+            <marker date="1481931480859" expanded="true" signature="834:898" ph="UPDATE Meeti... " />
+            <marker date="1481931480859" expanded="true" signature="984:1056" ph="UPDATE Stude... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseIndividualMeeting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-417">
+          <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+          <folding>
+            <marker date="1481928727774" expanded="true" signature="320:381" ph="Select * FRO... StudentMeeting" />
+            <marker date="1481928727774" expanded="true" signature="623:732" ph="SELECT * FRO... Meeting" />
+            <marker date="1481928727774" expanded="true" signature="1088:1189" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1481928727774" expanded="true" signature="1341:1394" ph="UPDATE Meeti... " />
+            <marker date="1481928727774" expanded="true" signature="1536:1574" ph="SELECT * FRO... Meeting" />
+            <marker date="1481928727774" expanded="true" signature="1667:1705" ph="SELECT * FRO... Student" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/dbconfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="39" selection-end-column="57" />
+          <folding>
+            <marker date="1481931405188" expanded="true" signature="315:376" ph="Select * FRO... StudentMeeting" />
+            <marker date="1481931405188" expanded="true" signature="620:747" ph="SELECT * FRO... Meeting" />
+            <marker date="1481931405188" expanded="true" signature="1102:1203" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1319" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1355" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1384" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1287:1553" ph="UPDATE Stude... " />
+            <marker date="1481931405188" expanded="true" signature="1555:1620" ph="UPDATE Meeti... " />
+            <marker date="1481931405188" expanded="true" signature="1757:1795" ph="SELECT * FRO... Meeting" />
+            <marker date="1481931405188" expanded="true" signature="1888:1926" ph="SELECT * FRO... Student" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/calendar/updating calendar/fullCalender.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/setUpDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="121" column="76" selection-start-line="121" selection-start-column="76" selection-end-line="121" selection-end-column="76" />
           <folding>
-            <marker date="1481922607952" expanded="true" signature="164:436" ph="CREATE TABLE... Student" />
-            <marker date="1481922607952" expanded="true" signature="535:694" ph="CREATE TABLE... StudentMeeting" />
-            <marker date="1481922607952" expanded="true" signature="800:1051" ph="CREATE TABLE... Advisor" />
-            <marker date="1481922607952" expanded="true" signature="1150:1308" ph="CREATE TABLE... AdvisorMeeting" />
-            <marker date="1481922607952" expanded="true" signature="1414:1717" ph="CREATE TABLE... Meeting" />
-            <marker date="1481922607952" expanded="true" signature="1816:3849" ph="CREATE TABLE... StudentForm" />
+            <marker date="1481931632213" expanded="true" signature="164:436" ph="CREATE TABLE... Student" />
+            <marker date="1481931632213" expanded="true" signature="509:668" ph="CREATE TABLE... StudentMeeting" />
+            <marker date="1481931632213" expanded="true" signature="741:992" ph="CREATE TABLE... Advisor" />
+            <marker date="1481931632213" expanded="true" signature="1065:1223" ph="CREATE TABLE... AdvisorMeeting" />
+            <marker date="1481931632213" expanded="true" signature="1296:1599" ph="CREATE TABLE... Meeting" />
+            <marker date="1481931632213" expanded="true" signature="1672:3705" ph="CREATE TABLE... StudentForm" />
+            <marker date="1481931632213" expanded="true" signature="3778:3841" ph="CREATE TABLE... Season" />
           </folding>
         </state>
       </provider>

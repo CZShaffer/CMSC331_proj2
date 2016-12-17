@@ -18,7 +18,6 @@ $sqlCommand = "CREATE TABLE Student(
   meetingStatus text NOT NULL
 );";
 $rs = $COMMON->executeQuery($sqlCommand, $filename);
-echo("\nStudent made\n");
 
 $sqlCommand = "CREATE TABLE StudentMeeting(
   StudentMeetingID int(11) PRIMARY KEY UNIQUE AUTO_INCREMENT NOT NULL,
@@ -26,7 +25,6 @@ $sqlCommand = "CREATE TABLE StudentMeeting(
   MeetingID int(11) NOT NULL
 );";
 $rs = $COMMON->executeQuery($sqlCommand, $filename);
-echo("\nStudentMeeting made\n");
 
 $sqlCommand = "CREATE TABLE Advisor(
   advisorID int(11) PRIMARY KEY UNIQUE AUTO_INCREMENT NOT NULL,
@@ -38,7 +36,6 @@ $sqlCommand = "CREATE TABLE Advisor(
   roomNumber text NOT NULL
 );";
 $rs = $COMMON->executeQuery($sqlCommand, $filename);
-echo("\nAdvisor made\n");
 
 $sqlCommand = "CREATE TABLE AdvisorMeeting(
   AdvisorMeetingID int(11) PRIMARY KEY UNIQUE AUTO_INCREMENT NOT NULL,
@@ -46,7 +43,6 @@ $sqlCommand = "CREATE TABLE AdvisorMeeting(
   MeetingID int(7) NOT NULL
 );";
 $rs = $COMMON->executeQuery($sqlCommand, $filename);
-echo("\nAdvisorMeeting made\n");
 
 $sqlCommand = "CREATE TABLE Meeting(
   meetingID int(11) PRIMARY KEY UNIQUE AUTO_INCREMENT NOT NULL,
@@ -59,7 +55,6 @@ $sqlCommand = "CREATE TABLE Meeting(
   studentLimit tinyint(2) NOT NULL
 );";
 $rs = $COMMON->executeQuery($sqlCommand, $filename);
-echo("\nMeeting made\n");
 
 $sqlCommand = "CREATE TABLE StudentForm(
   studentFormID int(11) PRIMARY KEY UNIQUE AUTO_INCREMENT NOT NULL,
@@ -123,7 +118,10 @@ $sqlCommand = "CREATE TABLE StudentForm(
   additionalComments text NULL  
 );";
 $rs = $COMMON->executeQuery($sqlCommand, $filename);
-echo("\nStudentForm made\n");
+
+$sqlCommand = "CREATE TABLE Season(isSeasonOver tinyint(1) NOT NULL DEFAULT 1);";
+$rs = $COMMON->executeQuery($sqlCommand, $filename);
+
 
 ?>
 
