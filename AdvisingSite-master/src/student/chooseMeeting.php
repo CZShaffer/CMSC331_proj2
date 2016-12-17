@@ -5,7 +5,8 @@ session_start();
 if($_SESSION["HAS_LOGGED_IN"] == false){
   header("Location: index.php");
 }
-?>
+
+echo('
 
 <html>
 <head>
@@ -14,13 +15,13 @@ if($_SESSION["HAS_LOGGED_IN"] == false){
     <title>Choose Your Meeting</title>
 </head>
 <style>
-    div.meetingAlert {
+    .meetingAlert {
         padding: 20px;
         background-color: #e53900;
         color: white;
     }
 
-    span.close {
+    .close {
         margin-left: 15px;
         color: white;
         font-weight: bold;
@@ -29,12 +30,13 @@ if($_SESSION["HAS_LOGGED_IN"] == false){
         transition: 0.35s;
     }
 
-    .closebtn:hover {
+    .close:hover {
         color: black;
     }
 </style>
 <body>
-<?php
+');
+
 $filename = "chooseMeeting.php";
 $sqlCommand = "SELECT * FROM Student WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
 $rs = $COMMON->executequery($sqlCommand,$filename);
@@ -44,7 +46,7 @@ if($row[7]=="meeting_deleted"){
     echo('
         <div class="meetingAlert">
             <span class="close" onclick="this.parentElement.style.display=\'none\'">
-                &times;
+                &times&times;
             </span>
             <b>Warning!</b>  Your previous meeting has been deleted. Please schedule a new one.
         </div>
@@ -53,7 +55,7 @@ if($row[7]=="meeting_deleted"){
     $rs = $COMMON->executequery($sqlCommand,$filename);
 }
 
-?>
+echo('
 <div id="content-container">
 <div id="content">
 <h1>Would you like a group meeting or an Individual Meeting</h1>
@@ -68,3 +70,5 @@ if($row[7]=="meeting_deleted"){
 </div>
 </div>
 </body>
+    ');
+?>
