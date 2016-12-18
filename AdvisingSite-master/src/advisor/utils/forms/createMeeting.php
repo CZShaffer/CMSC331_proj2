@@ -31,7 +31,7 @@ if ($_SESSION["HAS_LOGGED_IN"] and $_POST) {
             $numOfErrors += 1;
         }
         else{
-            $studentLimit = $_POST["studentLimit"];
+            $studentLimit = ((int)($_POST["studentLimit"]));
         }
     }
 
@@ -96,5 +96,6 @@ if ($_SESSION["HAS_LOGGED_IN"] and $_POST) {
 
         error_log($open_connection->error);
     }
+    //echo("attempted insert: ".$insertIntoMeetings."; with result: ".$resultOfMeetingInsert  );
     header('Location: ../../views/homepage.php');
 }

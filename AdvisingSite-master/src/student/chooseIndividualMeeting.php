@@ -36,7 +36,10 @@ if ($_POST) {
   $create_meeting = "INSERT INTO StudentMeeting(StudentID,MeetingID)
 VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
   $rs=$COMMON->executequery($create_meeting,$fileName);
-  
+
+
+    $updateStudent = "UPDATE Student SET meetinStatus='meeting_scheduled' WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
+    $rs=$COMMON->executequery($updateStudent,$fileName);
   
   // changes the number of people registered for the meeting
   $changeNumRegistered = "UPDATE Meeting SET numStudents = 1 WHERE meetingID = $theMeetingID";

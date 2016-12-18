@@ -30,7 +30,7 @@ $subtractOne = "UPDATE Meeting SET numStudents = numStudents-1 WHERE meetingID =
 $rs = $COMMON->executequery($subtractOne, $fileName);
 
 $updateStudent = "UPDATE Student SET meetinStatus='meeting_not_scheduled' WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
-$rs=$COMMON->executequery($create_meeting,$fileName);
+$rs=$COMMON->executequery($updateStudent,$fileName);
 
 unset($_SESSION['MEETING_ID']);
 header('Location:homePage.php');

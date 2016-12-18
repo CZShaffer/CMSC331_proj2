@@ -18,7 +18,7 @@ if($_SESSION["HAS_LOGGED_IN"] == false){
 
 <?php
 include('../CommonMethods.php');
-session_start();
+//session_start();
 
 $COMMON = new Common(false);
 $fileName = "cancelMeeting.php";
