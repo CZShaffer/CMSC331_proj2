@@ -31,7 +31,7 @@ $select_Meeting_ID  = "SELECT MeetingID FROM StudentMeeting WHERE StudentID = $s
 $select_results = $COMMON->executequery($select_Meeting_ID, $filename);
 
 if(mysql_num_rows($select_results) == 0){
-  echo "<br>You have not scheduled any appointments.<br>";
+  echo "<p style='font-size:18px;'><br>You have not scheduled any appointments.</p><br>";
 }
 
 else{
