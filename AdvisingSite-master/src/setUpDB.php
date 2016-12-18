@@ -33,7 +33,8 @@ $sqlCommand = "CREATE TABLE Advisor(
   middleName text NULL,
   lastName text NOT NULL,
   buildingName text NOT NULL,
-  roomNumber text NOT NULL
+  roomNumber text NOT NULL,
+  password text NOT NULL
 );";
 $rs = $COMMON->executeQuery($sqlCommand, $filename);
 
@@ -96,6 +97,7 @@ $sqlCommand = "CREATE TABLE StudentForm(
   GPA FLOAT NOT NULL,
   upperLevelCredits SMALLINT NOT NULL,
   numWritingIntensives TINYINT NOT NULL,
+  numPhysicalEds TINYINT NOT NULL,
   numEnglishComp TINYINT NOT NULL,
   numArtsAndHumanities TINYINT NOT NULL,
   numCulture TINYINT NOT NULL,

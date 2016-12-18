@@ -71,7 +71,7 @@ if ($_POST) {
                 '$email', '$fName', '$mName', '$lName', '$bldgName', '$officeRm' , '$password'
               )
             ";
-            $open_connection->query($insert_adviser);
+            $results = $open_connection->query($insert_adviser);
             header('Location: ../../views/login.php');
         } else {
             $_SESSION["ERROR_ADVISOR_REGISTRATION_EMAIL"] = "Error: This email already exists!";
