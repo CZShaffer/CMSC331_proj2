@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74d918c8-967d-498e-85e4-230a3f027ec5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/calendarHomepage.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/calendarHomepage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/login.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/login.php" />
     </list>
     <ignored path="Proj2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,16 +44,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calendarHomepage.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="calendarHomepage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/calendarHomepage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+            <state relative-caret-position="523">
+              <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
               <folding>
-                <marker date="1482099013640" expanded="true" signature="523:971" ph="SELECT Advis... Advisor" />
-                <marker date="1482099013640" expanded="true" signature="1334:1373" ph="SELECT isSea... AdvisingSeason" />
-                <marker date="1482099013640" expanded="true" signature="2064:2482" ph="SELECT Stude... Student" />
-                <marker date="1482099013640" expanded="true" signature="7039:7048" ph="..." />
+                <marker date="1482099118823" expanded="true" signature="523:971" ph="SELECT Advis... Advisor" />
+                <marker date="1482099118823" expanded="true" signature="1334:1373" ph="SELECT isSea... AdvisingSeason" />
+                <marker date="1482099118823" expanded="true" signature="2068:2486" ph="SELECT Stude... Student" />
+                <marker date="1482099118823" expanded="true" signature="7043:7052" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="568">
+              <caret line="118" column="43" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
+              <folding>
+                <marker date="1482099166396" expanded="true" signature="440:482" ph="SELECT * FRO... Advisor" />
               </folding>
             </state>
           </provider>
@@ -102,6 +116,7 @@
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/homepage.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/closeSeasonConfirmation.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/calendarHomepage.php" />
+        <option value="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/login.php" />
       </list>
     </option>
   </component>
@@ -394,12 +409,12 @@
       <workItem from="1482006601631" duration="6000" />
       <workItem from="1482009238086" duration="6059000" />
       <workItem from="1482030798149" duration="12961000" />
-      <workItem from="1482097976019" duration="1037000" />
+      <workItem from="1482097976019" duration="1198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32024000" />
+    <option name="totallyTimeSpent" value="32185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
@@ -757,14 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/forms/registerAdvisor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
@@ -974,13 +981,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/calendarHomepage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+        <state relative-caret-position="523">
+          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
           <folding>
-            <marker date="1482099013640" expanded="true" signature="523:971" ph="SELECT Advis... Advisor" />
-            <marker date="1482099013640" expanded="true" signature="1334:1373" ph="SELECT isSea... AdvisingSeason" />
-            <marker date="1482099013640" expanded="true" signature="2064:2482" ph="SELECT Stude... Student" />
-            <marker date="1482099013640" expanded="true" signature="7039:7048" ph="..." />
+            <marker date="1482099118823" expanded="true" signature="523:971" ph="SELECT Advis... Advisor" />
+            <marker date="1482099118823" expanded="true" signature="1334:1373" ph="SELECT isSea... AdvisingSeason" />
+            <marker date="1482099118823" expanded="true" signature="2068:2486" ph="SELECT Stude... Student" />
+            <marker date="1482099118823" expanded="true" signature="7043:7052" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="118" column="43" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
+          <folding>
+            <marker date="1482099166396" expanded="true" signature="440:482" ph="SELECT * FRO... Advisor" />
           </folding>
         </state>
       </provider>

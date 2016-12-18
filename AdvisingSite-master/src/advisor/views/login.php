@@ -116,7 +116,7 @@ if ($_POST) {
             ?>
         <br>
     <br>
-        <input type="submit" value="submit name ="Log in">
+        <input type="submit" value="submit" name ="Log in">
     
 </form>
 </div>
