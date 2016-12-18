@@ -8,7 +8,6 @@ session_start();
 include '../utils/dbconfig.php';
 $conn = connectToDB();
 
-$_SESSION['advisorMeetingID'] = 9;
 $advisorMeetingID = $_SESSION['advisorMeetingID'];
 intval($_SESSION['advisorMeetingID']);
 
