@@ -31,7 +31,7 @@ if ($_SESSION["HAS_LOGGED_IN"] and $_POST) {
 	  $numOfErrors += 1;
 	}
 	else{
-	$studentLimit = $_POST["studentLimit"];
+	$studentLimit = ((int)($_POST["studentLimit"]));
 	}
     }
 

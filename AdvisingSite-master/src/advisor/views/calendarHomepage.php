@@ -224,7 +224,7 @@ function hidefield() {
 	
 					<label>
                 Max number of Students: </label> 
-		      <input type = "text" name = "maxStudents">  
+		      <input type = "text" name = "studentLimit">
 					<br><br><br>
             </div>
                     </select>
