@@ -71,6 +71,19 @@ else{
   echo "<p style='font-size:18px;'>",$weekday, " ", $month, " ", $day, ", ", $year, " from ";
   echo $hourS, ":", $minS, " to ", $hourE, ":", $minE, " ";
   echo "in ", $_SESSION["CURRENT_APPT_BUILDING"], " ", $_SESSION["CURRENT_APPT_ROOM"], "</p>";
+    
+ echo"<br><p style='font-size:15px;'><b>There are a few things that you can do (or bring) that will go a long way toward ma\
+    king your advising appointment efficient and productive:</b><br><br>                                                         
+                                                                                                                             
+    - Be on time for your appointment! If you need to cancel/reschedule, do so as far in advance as possible (24 hours ahead, or\
+     more, is preferred), to allow other students to use the time that you leave empty. <br><br>                                 
+                                                                                                                             
+    - Be prepared to clarify/elaborate on any of the responses that you have submitted electronically.<br><br>                   
+                                                                                                                             
+    - Bring along a method of taking notes, in case your advisor has some recommendations or additional information to share wit\
+    h you.<br><br>                                                                                                               
+                                                                                                                             
+    - Bring along any paperwork/forms that require your advisor's signature.<br><p>";
 
 
 }
