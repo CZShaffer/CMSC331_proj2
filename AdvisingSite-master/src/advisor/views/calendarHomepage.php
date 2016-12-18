@@ -41,33 +41,36 @@ if ($_SESSION["HAS_LOGGED_IN"]) {
 
   $searchResults = $open_connection->query($searchAdvisorMeetings);
 
+  
+  //    $allRows = $searchResults->fetch_all(MYSQLI_ASSOC);
+  
   $allRows = array();
   while ($row = $searchResults->fetch_assoc()) {
     array_push($allRows, $row);
   }
-
+  
   // check if advising season is over
-  $conn = new mysqli("studentdb-maria.gl.umbc.edu", "pb10459", "pb10459", "pb10459");
-  $sql = "SELECT * FROM AdvisingSeason";
-  $rs = $conn->query($sql);
-
-  // set isSeasonOver session variable
-  if ($rs->num_rows > 0) {
-    $row = $rs->fetch_assoc();
-    $_SESSION["isSeasonOver"] = $row['isSeasonOver'];
-  }
-
-  // if no entries in AdvisingSeason table
-  else {
-    $sql = "INSERT INTO AdvisingSeason (`isSeasonOver`) VALUES ('1')";
-    $rs = $COMMON->executequery($sql, $filename);
-    $_SESSION["isSeasonOver"] = 1;
+  if(!isset($_SESSION["isSeasonOver"])) {
+    $select_isSeasonOver  = "SELECT isSeasonOver FROM AdvisingSeason";
+    $results = $open_connection->query($select_isSeasonOver);
     
-    echo "<br><p style='color:red'>Something went wrong with the database, so the advising season was set to closed.</p>";
+    $seasonRows = array();
+    while ($row = $results->fetch_assoc()) {
+      array_push($seasonRows, $row);
+    }
+    
+    if(empty($seasonRows)) {
+      $_SESSION["isSeasonOver"] = true;
+      echo "This error shouldn't happen. If it does, contact Lupoli.";
+    }
+    
+    //  $results_row = mysql_fetch_array($allRows);
+    $_SESSION["isSeasonOver"] = $seasonRows[0];
+    echo gettype($seasonRows["isSeasonOver"]);
+    echo $_SESSION["isSeasonOver"];
   }
-
+  
   $open_connection->close();
-  $conn->close();
 }
 
 /*
@@ -104,10 +107,15 @@ function findStudentsInMeeting($meetingID)
   
   return $studentInfos;
 }
-
 ?>
 
-<html>
+
+
+
+
+
+
+<!DOCTYPE html>
 <script type="text/javascript">
 function showfield(name){
   if(name=='group')document.getElementById('div1').style.display="block";
@@ -119,135 +127,56 @@ function hidefield() {
  }
   
   </script>
-<head>
-    <title>Advisor Homepage</title>
-<link rel="stylesheet" type="text/css" href="../../Styles/style.css">
-<link rel="icon" type="image/png" href="../../Styles/images/umbc.png">
-</head>
-<body>
-<div id="content-container">
-<div id="content">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Advising Calendar</title>
+ <link rel="stylesheet" type="text/css" href="calendarStyle.css">
+    <link rel="icon" type="image/png" href="../../Styles/images/umbc.png">
+  </head>
+  <body>
+    <div id="content-container">
+      <div id="content">
+	<h1>Appointment Calendar</h1>
 
-<h1>
-    Advisor Home
-</h1>
-
-<?php if ($_SESSION["HAS_LOGGED_IN"]) { ?>
+	
 
     <h3>
         Welcome <?php echo htmlspecialchars($_SESSION["ADVISOR_FNAME"]); ?>, here are your meetings.
     </h3>
+	
 
-					
-    <?php					
-    if(!isset($_SESSION["isSeasonOver"])) {
-      echo('Oops! Something went wrong. Advisors don\'t have to worry about this, only Lupoli.');
-      $_SESSION["isSeasonOver"] = true;
-      //header('login.html');
-    }
-					
-    // if advising season is over, show message saying so and a link to re-open it
-    if($_SESSION["isSeasonOver"]) {
-      echo "<br><p style='color:red'>The advising season is currently closed.</p>";
-      echo "<a href='openSeasonConfirmation.php'>";
-      echo "<button type='button'>Open season</button>";
-      echo "</a>";
-      //include('appointmentOptions.html');
-    }
-    
-    // otherwise show option to sign up for an appointment
-    else {
-      echo "<br><a href='closeSeasonConfirmation.php'>";
-      echo "<button type='button'>Close season</button>";
-      echo "</a>";
-      //    include('signUpOption.html');
-    }
-?>
-    <br><br>
-    <a href="logout.php">
-        <button type="button">Log Out</button>
-    </a>
 
     <hr>
 
-    <?php foreach ($allRows as $aRow) { ?>
-        <h4>Meeting</h4>
+	<?php 	
+		$_SESSION["year"]   = null;
+    		$_SESSION["month"] = null;
+    		if($_SESSION["year"]  == null && isset($_GET['year'])){
+    			$_SESSION["year"]  = $_GET['year'];
+ 	   	}
+		else if($_SESSION["year"] == null){
+      			$_SESSION["year"] = date("Y",time());  
+    		}          
+         
+    		if($_SESSION["month"] == null &&isset($_GET['month'])){
+      			$_SESSION["month"]= $_GET['month'];
+    		}
+		else if($_SESSION["month"] == null){
+      			$_SESSION["month"] = date("m",time());
+    		} 
 
-        <div class="meetingInfo">
-            <ul>
-                <form action="../utils/forms/deleteMeeting.php" method="POST">
-                    <input name="meetingID" value="<?php echo htmlspecialchars($aRow["meetingID"]) ?>" hidden>
+		include 'CalendarGen.php';
+		$calendar = new CalendarGen();
+		$calendar->Generate($_SESSION["month"],$_SESSION["year"], $allRows);
 
-                    <input type="submit" value="Delete Meeting">
-                </form>
-		<br><br>
-                <!-- Will need to use this value for selecting future values -->
-                <li hidden>
-                    Meeting Id: <?php echo htmlspecialchars($aRow["meetingID"]) ?>
-                </li>
-                <li>
-                    Start: <?php echo htmlspecialchars($aRow["start"]) ?>
-                </li>
-                <li>
-                    End: <?php echo htmlspecialchars($aRow["end"]) ?>
-                </li>
-                <li>
-                    Building Name: <?php echo htmlspecialchars($aRow["buildingName"]) ?>
-                </li>
-                <li>
-                    Room Number: <?php echo htmlspecialchars($aRow["roomNumber"]) ?>
-                </li>
-                <li>
-                    Meeting Type:
-                    <?php
-                    if ($aRow["meetingType"] == 0) {
-                        echo htmlspecialchars("Individual");
-                    } else {
-                        echo htmlspecialchars("Group");
-                    }
-                    ?>
-                </li>
-            </ul>
-        </div>
+	?>
+   	<script src="calendarJS.js"></script>
 
-        <div class="studentInfo">
-            <h4>Students in Meeting</h4>
-            <?php
-            $studentsInfo = findStudentsInMeeting($aRow["meetingID"]);
-            ?>
+<div>
+   <hr>
 
-            <?php foreach ($studentsInfo as $studentInfo) { ?>
-                <ul>
-                    <li hidden>
-                        Student ID: <?php echo htmlspecialchars($studentInfo["StudentID"]) ?>
-                    </li>
-
-                    <li>
-                        Email: <?php echo htmlspecialchars($studentInfo["email"]) ?>
-                    </li>
-                    <li>
-                        First Name: <?php echo htmlspecialchars($studentInfo["firstName"]) ?>
-                    </li>
-                    <li>
-                        Last Name: <?php echo htmlspecialchars($studentInfo["lastName"]) ?>
-                    </li>
-
-                    <li>
-                        Student ID: <?php echo htmlspecialchars($studentInfo["schoolID"]) ?>
-                    </li>
-
-                    <li>
-                        Major: <?php echo htmlspecialchars($studentInfo["major"]) ?>
-                    </li>
-                </ul>
-            <?php } ?>
-
-        </div>
-
-        <hr>
-    <?php } ?>
-
-    <form action="../utils/forms/createMeeting.php" method="POST">
+   <form action="../utils/forms/createMeetingCalendar.php" method="POST">
         <h4>
             Create a Meeting
         </h4>
@@ -292,6 +221,7 @@ function hidefield() {
                 </select><br><br><br>
 					<body onload="hidefield()">
 <div id="div1">
+	
 					<label>
                 Max number of Students: </label> 
 		      <input type = "text" name = "maxStudents">  
@@ -309,10 +239,37 @@ function hidefield() {
         </ul>
 
     </form>
-
-<?php } ?>
 </div>
-</div>
-</body>
-
+<br><br><hr>
+		 <?php					
+    if(!isset($_SESSION["isSeasonOver"])) {
+      echo('Oops! Something went wrong. Advisors don\'t have to worry about this, only Lupoli.');
+      $_SESSION["isSeasonOver"] = true;
+      //header('login.html');
+    }
+					
+    // if advising season is over, show message saying so and a link to re-open it
+    if($_SESSION["isSeasonOver"]) {
+      echo "<br><p style='color:red'>The advising season is currently closed.</p>";
+      echo "<a href='openSeasonConfirmation.php'>";
+      echo "<button type='button'>Open season</button>";
+      echo "</a>";
+      //include('appointmentOptions.html');
+    }
+    
+    // otherwise show option to sign up for an appointment
+    else {
+      echo "<br><a href='closeSeasonConfirmation.php'>";
+      echo "<button type='button'>Close season</button>";
+      echo "</a>";
+      //    include('signUpOption.html');
+    }
+?>
+    <br><br>
+    <a href="logout.php">
+        <button type="button">Log Out</button>
+    </a>
+	</div>
+	</div>
+  </body>
 </html>

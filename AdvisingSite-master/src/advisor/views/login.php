@@ -6,7 +6,7 @@ include '../utils/dbconfig.php';
 // Checks to see if the user is logged in, if so it redirects them to homepage
 if (isset($_SESSION["HAS_LOGGED_IN"])) {
     if ($_SESSION["HAS_LOGGED_IN"]) {
-        header('Location: homepage.php');
+        header('Location: calendarHomepage.php');
     }
 }
 
@@ -68,7 +68,7 @@ if ($_POST) {
         $_SESSION["ADVISOR_RM_NUM"] = $searched_advisor["roomNumber"];
 
         // Redirecting to homepage.php
-        header('Location: homepage.php');
+        header('Location: calendarHomepage.php');
     } 
 
     $open_connection->close();
