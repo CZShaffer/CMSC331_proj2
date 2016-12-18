@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74d918c8-967d-498e-85e4-230a3f027ec5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/closeSeason.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/closeSeason.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/homepage.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/homepage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/openSeason.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/openSeason.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/setUpDB.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/setUpDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseIndividualMeeting.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseIndividualMeeting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/student/homePage.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/student/homePage.php" />
     </list>
     <ignored path="Proj2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -163,13 +156,17 @@
       <file leaf-file-name="homepage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/homepage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+            <state relative-caret-position="459">
+              <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
               <folding>
-                <marker date="1482093466959" expanded="true" signature="524:972" ph="SELECT Advis... Advisor" />
-                <marker date="1482093466959" expanded="true" signature="1335:1374" ph="SELECT isSea... AdvisingSeason" />
-                <marker date="1482093466959" expanded="true" signature="2102:2520" ph="SELECT Stude... Student" />
-                <marker date="1482093466959" expanded="true" signature="3902:3911" ph="..." />
+                <marker date="1482094231321" expanded="true" signature="524:972" ph="SELECT Advis... Advisor" />
+                <marker date="1482094231321" expanded="true" signature="1335:1374" ph="SELECT isSea... AdvisingSeason" />
+                <marker date="1482094231321" expanded="true" signature="2196:2614" ph="SELECT Stude... Student" />
+                <marker date="1482094231321" expanded="true" signature="2868:2882" ph="..." />
+                <marker date="1482094231321" expanded="true" signature="3361:3370" ph="..." />
+                <marker date="1482094231321" expanded="true" signature="3415:3438" ph="..." />
+                <marker date="1482094231321" expanded="true" signature="3996:4005" ph="..." />
+                <marker date="1482094231321" expanded="true" signature="4716:4746" ph="..." />
               </folding>
             </state>
           </provider>
@@ -493,12 +490,12 @@
       <workItem from="1481929150281" duration="2977000" />
       <workItem from="1482006601631" duration="6000" />
       <workItem from="1482009238086" duration="6059000" />
-      <workItem from="1482030798149" duration="11929000" />
+      <workItem from="1482030798149" duration="12690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29955000" />
+    <option name="totallyTimeSpent" value="30716000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1139,13 +1136,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/homepage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+        <state relative-caret-position="459">
+          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
           <folding>
-            <marker date="1482093466959" expanded="true" signature="524:972" ph="SELECT Advis... Advisor" />
-            <marker date="1482093466959" expanded="true" signature="1335:1374" ph="SELECT isSea... AdvisingSeason" />
-            <marker date="1482093466959" expanded="true" signature="2102:2520" ph="SELECT Stude... Student" />
-            <marker date="1482093466959" expanded="true" signature="3902:3911" ph="..." />
+            <marker date="1482094231321" expanded="true" signature="524:972" ph="SELECT Advis... Advisor" />
+            <marker date="1482094231321" expanded="true" signature="1335:1374" ph="SELECT isSea... AdvisingSeason" />
+            <marker date="1482094231321" expanded="true" signature="2196:2614" ph="SELECT Stude... Student" />
+            <marker date="1482094231321" expanded="true" signature="2868:2882" ph="..." />
+            <marker date="1482094231321" expanded="true" signature="3361:3370" ph="..." />
+            <marker date="1482094231321" expanded="true" signature="3415:3438" ph="..." />
+            <marker date="1482094231321" expanded="true" signature="3996:4005" ph="..." />
+            <marker date="1482094231321" expanded="true" signature="4716:4746" ph="..." />
           </folding>
         </state>
       </provider>

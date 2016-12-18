@@ -54,20 +54,21 @@ if ($_SESSION["HAS_LOGGED_IN"]) {
   if(!isset($_SESSION["isSeasonOver"])) {
     $select_isSeasonOver  = "SELECT isSeasonOver FROM AdvisingSeason";
     $results = $open_connection->query($select_isSeasonOver);
-    
-    $seasonRows = array();
-    while ($row = $results->fetch_assoc()) {
-      array_push($seasonRows, $row);
+    $seasonOver=true;
+    //$seasonRows = array();
+      if(empty($results)){
+          echo "This error shouldn't happen. If it does, contact Lupoli.";
+      }
+    while ($row = mysqli_fetch_row($results)) {
+      $seasonOver = $row[0];
+
     }
-    
-    if(empty($seasonRows)) {
-      $_SESSION["isSeasonOver"] = true;
-      echo "This error shouldn't happen. If it does, contact Lupoli.";
-    }
-    
+
     //  $results_row = mysql_fetch_array($allRows);
-    $_SESSION["isSeasonOver"] = ((bool)($seasonRows[0]));
-    //echo gettype($seasonRows["isSeasonOver"]);
+      echo("seasonOver is set to: ".$seasonOver);
+    $_SESSION["isSeasonOver"] = ((bool)($seasonOver));
+      echo("isSessionOver is set to: ".$_SESSION['isSeasonOver']."\n<p></p>");
+    //echo gettype($_SESSION["isSeasonOver"]);
     //echo $_SESSION["isSeasonOver"];
   }
   
