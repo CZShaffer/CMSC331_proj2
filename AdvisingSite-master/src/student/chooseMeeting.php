@@ -1,4 +1,5 @@
 <?php
+include("../CommonMethods.php");
 session_start();
 
 // redirect user to index.php if they haven't logged in
@@ -36,7 +37,7 @@ echo('
 </style>
 <body>
 ');
-
+$COMMON = new Common(false);
 $filename = "chooseMeeting.php";
 $sqlCommand = "SELECT * FROM Student WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
 $rs = $COMMON->executequery($sqlCommand,$filename);
