@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74d918c8-967d-498e-85e4-230a3f027ec5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/homepage.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/homepage.php" />
-    </list>
+    <list default="true" id="74d918c8-967d-498e-85e4-230a3f027ec5" name="Default" comment="" />
     <ignored path="Proj2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -154,11 +151,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homepage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/homepage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+            <state relative-caret-position="799">
+              <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
               <folding>
                 <marker date="1482094305412" expanded="true" signature="524:972" ph="SELECT Advis... Advisor" />
                 <marker date="1482094305412" expanded="true" signature="1335:1374" ph="SELECT isSea... AdvisingSeason" />
@@ -169,6 +166,16 @@
                 <marker date="1482094305412" expanded="true" signature="4000:4009" ph="..." />
                 <marker date="1482094305412" expanded="true" signature="4720:4750" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbsetup.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/dbsetup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -491,12 +498,12 @@
       <workItem from="1481929150281" duration="2977000" />
       <workItem from="1482006601631" duration="6000" />
       <workItem from="1482009238086" duration="6059000" />
-      <workItem from="1482030798149" duration="12764000" />
+      <workItem from="1482030798149" duration="12961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30790000" />
+    <option name="totallyTimeSpent" value="30987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -899,14 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/dbsetup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/dbconfig.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1137,8 +1136,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/homepage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+        <state relative-caret-position="799">
+          <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
           <folding>
             <marker date="1482094305412" expanded="true" signature="524:972" ph="SELECT Advis... Advisor" />
             <marker date="1482094305412" expanded="true" signature="1335:1374" ph="SELECT isSea... AdvisingSeason" />
@@ -1149,6 +1148,14 @@
             <marker date="1482094305412" expanded="true" signature="4000:4009" ph="..." />
             <marker date="1482094305412" expanded="true" signature="4720:4750" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/dbsetup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
