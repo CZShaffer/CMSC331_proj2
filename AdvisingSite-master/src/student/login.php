@@ -88,7 +88,7 @@ if ($_POST) {
   <span class="error"> <?php echo $login_error;?></span>
   <br>
   <br>
-  <label><input type="submit"></label>
+  <label><input type="submit" value="submit" name="Log in"></label>
 
 </form>
 </div>
