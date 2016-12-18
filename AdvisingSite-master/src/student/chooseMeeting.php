@@ -47,13 +47,17 @@ if($row[7]=="meeting_deleted"){
     echo('
         <div class="meetingAlert">
             <span class="close" onclick="this.parentElement.style.display=\'none\'">
-                &times&times;
+                &times;
             </span>
             <b>Warning!</b>  Your previous meeting has been deleted. Please schedule a new one.
         </div>
     ');
-    $sqlCommand = "UPDATE Student SET meetingStatus='meeting_not_made' WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
-    $rs = $COMMON->executequery($sqlCommand,$filename);
+
+    // These two commands are to stop the message from annoying the student. When active, they will allow the user to see the message only once.
+    // example use: A student decides not to schedule that meeting at that time. These commands determine if the message will remind them when they come back.
+    // They have been commented out to make testing easier, but the option is there to put them back in.
+    //$sqlCommand = "UPDATE Student SET meetingStatus='meeting_not_made' WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
+    //$rs = $COMMON->executequery($sqlCommand,$filename);
 }
 
 echo('

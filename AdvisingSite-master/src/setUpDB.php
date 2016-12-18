@@ -60,8 +60,8 @@ $rs = $COMMON->executeQuery($sqlCommand, $filename);
 $sqlCommand = "CREATE TABLE StudentForm(
   studentFormID int(11) PRIMARY KEY UNIQUE AUTO_INCREMENT NOT NULL,
   StudentID int(7) NOT NULL UNIQUE,
-  minor text NULL,
   secondMajor text NULL,
+  minor text NULL,
   futurePlans text NULL ,
   learningResources text NULL,
   internship text NULL,
