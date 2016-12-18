@@ -237,7 +237,7 @@ area <br><br> Good luck with your new major!
 <br>
 
 <br>
-<input type="submit" value = submit>
+<input type="submit" value="submit" name="register">
 <br><br>
 
   <p><?php echo $other_major_error_message;?></p>

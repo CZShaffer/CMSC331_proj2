@@ -95,7 +95,7 @@ if (isset($_SESSION["HAS_LOGGED_IN"])) {
             }
             ?>
        <p><br></p>
-        <input type="submit" name="Register!">
+        <input type="submit" value="submit name="Register!">
     
 </form>
 </div>
