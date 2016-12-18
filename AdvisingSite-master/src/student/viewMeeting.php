@@ -52,8 +52,27 @@ else{
   $_SESSION["CURRENT_END_TIME"] = $meetingDict["end"];
   $_SESSION["CURRENT_APPT_BUILDING"] = $meetingDict["buildingName"];
   $_SESSION["CURRENT_APPT_ROOM"] = $meetingDict["roomNumber"];
+      
+  $weekday = date("l", strtotime($_SESSION["CURRENT_START_TIME"]));
+  $year = date("Y", strtotime($_SESSION["CURRENT_START_TIME"]));
+  $month = date("F", strtotime($_SESSION["CURRENT_START_TIME"]));
+  $day = date("j", strtotime($_SESSION["CURRENT_START_TIME"]));
   
-  echo "Your meeting is from ", date("r", strtotime($_SESSION["CURRENT_START_TIME"])),  " to ",  date("r", strtotime($_SESSION["CURRENT_END_TIME"])),  " in ",  $_SESSION["CURRENT_APPT_BUILDING"], " ",  $_SESSION["CURRENT_APPT_ROOM"], "<br>";
+  //start "S" hour and minute                                                                                                
+  $hourS = date("h", strtotime($_SESSION["CURRENT_START_TIME"]));
+  $minS = date("i", strtotime($_SESSION["CURRENT_START_TIME"]));
+ 
+  //end "E" hour and minute                                                                                                  
+  $hourE = date("h", strtotime($_SESSION["CURRENT_END_TIME"]));
+  $minE = date("i", strtotime($_SESSION["CURRENT_END_TIME"]));
+
+
+  echo "<p style='font-size:18px;'><br>Your current meeting is:</p>";
+  echo "<p style='font-size:18px;'>",$weekday, " ", $month, " ", $day, ", ", $year, " from ";
+  echo $hourS, ":", $minS, " to ", $hourE, ":", $minE, " ";
+  echo "in ", $_SESSION["CURRENT_APPT_BUILDING"], " ", $_SESSION["CURRENT_APPT_ROOM"], "</p>";
+
+
 }
 ?>
 
