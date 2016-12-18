@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74d918c8-967d-498e-85e4-230a3f027ec5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php" />
-    </list>
+    <list default="true" id="74d918c8-967d-498e-85e4-230a3f027ec5" name="Default" comment="" />
     <ignored path="Proj2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -78,8 +76,8 @@
       <file leaf-file-name="chooseMeeting.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="578">
+              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
               <folding>
                 <marker date="1482012530106" expanded="true" signature="170:815" ph="..." />
                 <marker date="1482012530106" expanded="true" signature="177:363" ph="..." />
@@ -405,12 +403,12 @@
       <workItem from="1481929066790" duration="9000" />
       <workItem from="1481929150281" duration="2977000" />
       <workItem from="1482006601631" duration="6000" />
-      <workItem from="1482009238086" duration="2705000" />
+      <workItem from="1482009238086" duration="4729000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14672000" />
+    <option name="totallyTimeSpent" value="16696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -1139,8 +1137,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseMeeting.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="578">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
             <marker date="1482012530106" expanded="true" signature="170:815" ph="..." />
             <marker date="1482012530106" expanded="true" signature="177:363" ph="..." />
