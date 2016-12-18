@@ -22,17 +22,17 @@ if ($_SESSION["HAS_LOGGED_IN"] and $_POST) {
 
     if ($typeOfMeeting == "group") {
         $isIndividual = true;
-	if ($_POST["studentLimit"] == "") {
-	  $_SESSION["ERROR_STUDENT_LIMIT"] = "Error: Please enter a number of students";
-	  $numOfErrors += 1;
-	}
-	else if (($_POST["studentLimit"] < 2) || ($_POST["studentLimit"] > 40)) {
-	  $_SESSION["ERROR_STUDENT_LIMIT"] = "Error: Please enter a number greater than 1 and less than 41";
-	  $numOfErrors += 1;
-	}
-	else{
-	$studentLimit = $_POST["studentLimit"];
-	}
+        if ($_POST["studentLimit"] == "") {
+            $_SESSION["ERROR_STUDENT_LIMIT"] = "Error: Please enter a number of students";
+            $numOfErrors += 1;
+        }
+        else if (($_POST["studentLimit"] < 2) || ($_POST["studentLimit"] > 40)) {
+            $_SESSION["ERROR_STUDENT_LIMIT"] = "Error: Please enter a number greater than 1 and less than 41";
+            $numOfErrors += 1;
+        }
+        else{
+            $studentLimit = $_POST["studentLimit"];
+        }
     }
 
     if ($start == "") {

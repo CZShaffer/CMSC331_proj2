@@ -100,6 +100,8 @@ $sqlCommand = "CREATE TABLE StudentForm(
   numPhysicalEds TINYINT NOT NULL,
   numEnglishComp TINYINT NOT NULL,
   numArtsAndHumanities TINYINT NOT NULL,
+  numSocialSciences TINYINT NOT NULL,
+  numMathSciences TINYINT NOT NULL,
   numCulture TINYINT NOT NULL,
   languageProficiency BOOLEAN NOT NULL,
   performanceReflection text NULL,
