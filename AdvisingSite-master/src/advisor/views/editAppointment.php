@@ -4,31 +4,25 @@ session_start();
 //if(!isset($_SESSION["HAS_LOGGED_IN"])) {
 //  header('Location: login.php');
 //}/////////////////////////////////////////////////////////////////////////////////////////
-
 include '../utils/dbconfig.php';
 $conn = connectToDB();
-
+$_SESSION['advisorMeetingID'] = 9;
 $advisorMeetingID = $_SESSION['advisorMeetingID'];
 intval($_SESSION['advisorMeetingID']);
-
 // get meetingID
 $sql = "SELECT * FROM AdvisorMeeting WHERE AdvisorMeetingID = '$advisorMeetingID'";
 $rs = $conn->query($sql);
-
 $meetingID = -1;
 if ($rs->num_rows > 0) {
   $row = $rs->fetch_assoc();
   $meetingID = $row['meetingID'];
 }
-
 else {
   echo "Meeting Not found";
 }
-
 // get original meeting info
 $sql = "SELECT * FROM Meeting WHERE meetingID = $meetingID";
 $rs = $conn->query($sql);
-
 if ($rs->num_rows > 0) {
   $row = $rs->fetch_assoc();
   $start = strftime('%Y-%m-%dT%H:%M:%S', strtotime($row['start']));
@@ -41,18 +35,15 @@ if ($rs->num_rows > 0) {
   $numStudents = $row['numStudents'];
   $limit = $row['studentLimit'];
 }
-
 // if user edits appointment
 if ($_POST) {
   $start = $_POST["start"];
   $end = $_POST["end"];
   $building = $_POST["building"];
   $room = $_POST["room"];
-
   $sql = "UPDATE Meeting
           SET `start`='$start', `end`='$end', `buildingName`='$building', `roomNumber`='$room'
           WHERE `meetingID`='$meetingID'";
-
   // add student limit to query if it is a group appointment
   if(isset($_POST["limit"])) {
     $limit = $_POST["limit"];
@@ -60,12 +51,9 @@ if ($_POST) {
             SET `start`='$start', `end`='$end', `buildingName`='$building', `roomNumber`='$room', `studentLimit`='$limit'
             WHERE `meetingID`='$meetingID'";
   }
-
   $rs = $conn->query($sql);
-
   echo "<p style='color:red'>Appointment updated</p>";
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +73,6 @@ if ($_POST) {
     <h3>Original appointment:</h3>
 
     <?php
-
     echo "Start time: ";
     echo date("r", strtotime($start));
     echo "<br><br>";
@@ -97,7 +84,6 @@ echo date("r", strtotime($end));
     echo "Room: $room";
     echo "<br><br>";
     echo "Meeting type: ";
-
     // if individual
     if(!$type) {
       echo "Individual<br>";
@@ -107,7 +93,6 @@ echo date("r", strtotime($end));
       echo "Group<br>";
       echo "Student limit: $limit<br>";
     }
-
     ?>
 
     <h3>Updated appointment:</h3>
@@ -130,7 +115,6 @@ echo date("r", strtotime($end));
       <input id="room" type="text" name="room" value="<?php echo (isset($room) ? $room : ''); ?>" required>
 
    <?php
-
    // if group appointment
    if($type) {
      echo '<br><br>';
