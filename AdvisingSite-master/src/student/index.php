@@ -23,7 +23,7 @@ if($isSeasonOver) {
 }
 
 $email_error_message = $fName_error_message = $lName_error_message = "";
-$schoolID_error_message = $major_error_message = "";
+$schoolID_error_message = $major_error_message = $other_major_error_message = "";
 $email = $fName = $lName = $schoolID = $major = "";
 
 if($_POST){
@@ -94,6 +94,12 @@ if($_POST){
       $misc_error = true;
       $major_error_message = "*Please enter your major.*";
     }
+
+    if($_POST["major"] === "other") {
+      $misc_error = true;
+      $other_major_error_message = 'Your major is not being handled by our department. <br>
+Please contact the <a href="http://advising.umbc.edu/departmental-advising/">advising</a> office for more information. <br>';
+	}
   }
   
   //additional field validation
@@ -127,6 +133,14 @@ if($_POST){
       $misc_error = true;
       $major_error_message = "*Please enter your major.*";
     }
+
+    if($_POST["major"] === "other") {
+      $misc_error = true;
+      $other_major_error_message = 'Your major is not being handled by our department. <br>
+Please contact the <a href="http://advising.umbc.edu/departmental-advising/">advising</a> office for more information. <br>';
+    }
+      
+  
   }
   
 
@@ -186,7 +200,7 @@ if($_POST){
 <br>
 
 <br>
-  <label>Major</label><!--<input type="text" name="major" >-->
+  <label>Primary Major</label><!--<input type="text" name="major" >-->
 	  <select name="major">
 	  <option value="">Please choose a major</option>
           <option value="BioSciBA">Biological Sciences BA</option>
@@ -197,13 +211,16 @@ if($_POST){
 	  <option value="ChemBA">Chemistry BA</option>
 	  <option value="ChemBS">Chemistry BS</option>
 	  <option value="ChemEd">Chemistry Education BA</option>
+          <option value = "other">Other</option>
 </select>
   <span class="error"> <?php echo $major_error_message;?></span>
 <br>
 
 <br>
-<input type="submit">
-<br>
+<input type="submit" value = submit>
+<br><br>
+
+  <p><?php echo $other_major_error_message;?></p>
 
 </form>
 </div>
