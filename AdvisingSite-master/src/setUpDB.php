@@ -50,7 +50,7 @@ $sqlCommand = "CREATE TABLE Meeting(
   end datetime NOT NULL,
   buildingName text NOT NULL,
   roomNumber text NOT NULL,
-  RmeetingType tinyint(1) NOT NULL,
+  meetingType tinyint(1) NOT NULL,
   numStudents tinyint(2) NOT NULL,
   studentLimit tinyint(2) NOT NULL
 );";
