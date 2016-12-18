@@ -53,7 +53,7 @@ else{
   $_SESSION["CURRENT_APPT_BUILDING"] = $meetingDict["buildingName"];
   $_SESSION["CURRENT_APPT_ROOM"] = $meetingDict["roomNumber"];
   
-  echo "Your meeting is from ", $_SESSION["CURRENT_START_TIME"],  " to ",  $_SESSION["CURRENT_END_TIME"],  " in ",  $_SESSION["CURRENT_APPT_BUILDING"], " ",  $_SESSION["CURRENT_APPT_ROOM"], "<br>";
+  echo "Your meeting is from ", date("r", strtotime($_SESSION["CURRENT_START_TIME"])),  " to ",  date("r", strtotime($_SESSION["CURRENT_END_TIME"])),  " in ",  $_SESSION["CURRENT_APPT_BUILDING"], " ",  $_SESSION["CURRENT_APPT_ROOM"], "<br>";
 }
 ?>
 
