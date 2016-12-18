@@ -65,9 +65,9 @@ if ($_SESSION["HAS_LOGGED_IN"]) {
     }
 
     //  $results_row = mysql_fetch_array($allRows);
-      echo("seasonOver is set to: ".$seasonOver);
+      //echo("seasonOver is set to: ".$seasonOver);
     $_SESSION["isSeasonOver"] = ((bool)($seasonOver));
-      echo("isSessionOver is set to: ".$_SESSION['isSeasonOver']."\n<p></p>");
+      //echo("isSessionOver is set to: ".$_SESSION['isSeasonOver']."\n<p></p>");
     //echo gettype($_SESSION["isSeasonOver"]);
     //echo $_SESSION["isSeasonOver"];
   }
