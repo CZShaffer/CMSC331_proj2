@@ -47,7 +47,7 @@ if ($_SESSION["HAS_LOGGED_IN"]) {
   }
 
   // check if advising season is over
-  $conn = new mysqli("studentdb-maria.gl.umbc.edu", "pb10459", "pb10459", "pb10459");
+  $conn = new mysqli("studentdb-maria.gl.umbc.edu", "phi3", "phi3", "phi3");
   $sql = "SELECT * FROM AdvisingSeason";
   $rs = $conn->query($sql);
 
