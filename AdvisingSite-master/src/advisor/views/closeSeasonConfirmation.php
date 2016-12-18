@@ -23,7 +23,7 @@ if(!isset($_SESSION["HAS_LOGGED_IN"])){
     	  <button type="button">Close season</button>
   	</a>
  	<br><br>
-  	<a href="homepage.php" style="text-decoration:none;">
+  	<a href="calendarHomepage.php" style="text-decoration:none;">
     	  <button type="button">Take me back</button>
  	 </a>
       </div>

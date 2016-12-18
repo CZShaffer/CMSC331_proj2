@@ -14,10 +14,10 @@ $sql = "TRUNCATE TABLE AdvisingSeason";
 $results = $open_connection->query($sql);
 
 // add new entry setting isSeasonOver to false
-$sql = "INSERT INTO AdvisingSeason(isSeasonOver) VALUES (0)";
+$sql = "INSERT INTO AdvisingSeason (`isSeasonOver`) VALUES (0)";
 $results = $open_connection->query($sql);
 
 $_SESSION["isSeasonOver"] = false;
 
-header("Location: homepage.php");
+header("Location: calendarHomepage.php");
 ?>
