@@ -97,8 +97,18 @@ if($_POST){
 
     if($_POST["major"] === "other") {
       $misc_error = true;
-      $other_major_error_message = 'Your major is not being handled by our department. <br>
-Please contact the <a href="http://advising.umbc.edu/departmental-advising/">advising</a> office for more information. <br>';
+      $other_major_error_message = 'You have indicated your major is not in the defined list. <br> <br> In order to obtain the BEST advice about course
+selection, degree progress, and academic policy, please meet with a representative of the
+department that administers your NEW major. <br><br>
+You can find advising contact information for your
+new major on the Office for Academic and
+Pre-Professional Advising Office’s <a href="http://advising.umbc.edu/departmental-advising/">Departmental
+Advising page.</a>
+That contact person/office will be
+able to give you instructions on how to schedule
+an advising appointment with someone in that
+area <br><br> Good luck with your new major!
+';
 	}
   }
   
@@ -136,8 +146,18 @@ Please contact the <a href="http://advising.umbc.edu/departmental-advising/">adv
 
     if($_POST["major"] === "other") {
       $misc_error = true;
-      $other_major_error_message = 'Your major is not being handled by our department. <br>
-Please contact the <a href="http://advising.umbc.edu/departmental-advising/">advising</a> office for more information. <br>';
+      $other_major_error_message = 'You have indicated your major is not in the defined list. <br> <br> In order to obtain the BEST advice about course
+selection, degree progress, and academic policy, please meet with a representative of the
+department that administers your NEW major. <br><br>
+You can find advising contact information for your
+new major on the Office for Academic and
+Pre-Professional Advising Office’s <a href="http://advising.umbc.edu/departmental-advising/">Departmental
+Advising page.</a> 
+That contact person/office will be
+able to give you instructions on how to schedule
+an advising appointment with someone in that
+area <br><br> Good luck with your new major!
+';
     }
       
   
