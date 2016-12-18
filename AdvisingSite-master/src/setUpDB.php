@@ -1,7 +1,7 @@
 <?php
 
 //include('./dropDB.php');
-include('./commonMethods.php');
+include('./CommonMethods.php');
 
 $filename = 'setUpDB.php';
 

@@ -1,6 +1,6 @@
 <?php
 
-include('commonMethods.php');
+include('./CommonMethods.php');
 
 $filename = 'dropDB.php';
 $COMMON = new Common(false);
