@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -42,37 +41,33 @@ if ($_SESSION["HAS_LOGGED_IN"]) {
 
   $searchResults = $open_connection->query($searchAdvisorMeetings);
 
-  
-  //    $allRows = $searchResults->fetch_all(MYSQLI_ASSOC);
-  
   $allRows = array();
   while ($row = $searchResults->fetch_assoc()) {
     array_push($allRows, $row);
   }
-  
+
   // check if advising season is over
-  if(!isset($_SESSION["isSeasonOver"])) {
-    $select_isSeasonOver  = "SELECT isSeasonOver FROM AdvisingSeason";
-    $results = $open_connection->query($select_isSeasonOver);
-    $seasonOver=true;
-    //$seasonRows = array();
-      if(empty($results)){
-          echo "This error shouldn't happen. If it does, contact Lupoli.";
-      }
-    while ($row = mysqli_fetch_row($results)) {
-      $seasonOver = $row[0];
+  $conn = new mysqli("studentdb-maria.gl.umbc.edu", "pb10459", "pb10459", "pb10459");
+  $sql = "SELECT * FROM AdvisingSeason";
+  $rs = $conn->query($sql);
 
-    }
-
-    //  $results_row = mysql_fetch_array($allRows);
-      //echo("seasonOver is set to: ".$seasonOver);
-    $_SESSION["isSeasonOver"] = ((bool)($seasonOver));
-      //echo("isSessionOver is set to: ".$_SESSION['isSeasonOver']."\n<p></p>");
-    //echo gettype($_SESSION["isSeasonOver"]);
-    //echo $_SESSION["isSeasonOver"];
+  // set isSeasonOver session variable
+  if ($rs->num_rows > 0) {
+    $row = $rs->fetch_assoc();
+    $_SESSION["isSeasonOver"] = $row['isSeasonOver'];
   }
-  
+
+  // if no entries in AdvisingSeason table
+  else {
+    $sql = "INSERT INTO AdvisingSeason (`isSeasonOver`) VALUES ('1')";
+    $rs = $COMMON->executequery($sql, $filename);
+    $_SESSION["isSeasonOver"] = 1;
+    
+    echo "<br><p style='color:red'>Something went wrong with the database, so the advising season was set to closed.</p>";
+  }
+
   $open_connection->close();
+  $conn->close();
 }
 
 /*
@@ -257,7 +252,7 @@ function hidefield() {
             Create a Meeting
         </h4>
         <ul>
-            <li>
+            
                 <label>Meeting Start Date </label>
                 <input type="datetime-local" name="meetingStartTime"  value="<?php echo (isset($_SESSION['meetingStartTime']) ? $_SESSION['meetingStartTime'] : ''); ?>">
                 <br>
@@ -268,9 +263,7 @@ function hidefield() {
                     unset($_SESSION["ERROR_ADVISOR_MEETING_DATE_OR_TIME"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>Building Name</label>
                 <input type="text" name="buildingName" value="<?php echo (isset($_SESSION['buildingName']) ? $_SESSION['buildingName'] : ''); ?>">
                    <br>                
@@ -280,9 +273,7 @@ function hidefield() {
                     unset($_SESSION["ERROR_ADVISOR_MEETING_BUILDING"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>Room Number</label>
                 <input type="text" name="roomNumber" value="<?php echo (isset($_SESSION['roomNumber']) ? $_SESSION['roomNumber'] : ''); ?>">
                 <br>
@@ -293,9 +284,7 @@ function hidefield() {
                     unset($_SESSION["ERROR_ADVISOR_MEETING_ROOM"]);
                 }
                 ?>
-            </li>
-
-            <li>
+            
                 <label>Type of Meeting:</label>
                 <select name="meetingType" onchange="showfield(this.options[this.selectedIndex].value)">
                         <option value="individual">Individual</option>
@@ -305,14 +294,14 @@ function hidefield() {
 <div id="div1">
 					<label>
                 Max number of Students: </label> 
-		      <input type = "text" name = "studentLimit">
+		      <input type = "text" name = "maxStudents">  
 					<br><br><br>
             </div>
                     </select>
 
                     </select>
                 </label>
-            </li>
+            
             
 
                 <input type="submit">
@@ -327,4 +316,3 @@ function hidefield() {
 </body>
 
 </html>
-
