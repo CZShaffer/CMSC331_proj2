@@ -77,53 +77,57 @@ VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
 }
 ?>
 
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="../Styles/style.css">
-<link rel="icon" type="image/png" href="../Styles/images/umbc.png">
-  <title>Choose Your Appointment</title>
-</head>
-<body>
-<div id="content-container">
-<div id="content">
-<h1>Choose an Individual Appointment:</h1>
-<br>
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-    <?php
-  //makes all the availible meetings into radio buttons
-  if (!$allRows){
-    echo "<h4>Sorry, there are no appointments available at this time.</h4>";
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Meeting</title>
+    <link rel="icon" type="image/x-icon" href="../Styles/images/umbc.png"/>
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
+  </head>
+
+  <body>
+    <div id="content-container">
+      <div id="content">
+        <h1>Choose an Individual Appointment:</h1>
+        <br>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+<?php
+//makes all the availible meetings into radio buttons
+if (!$allRows){
+  echo "<h4>Sorry, there are no appointments available at this time.</h4>";
+}
+else{
+  while ($aRow = mysql_fetch_assoc($rs)) {
+    echo "<input type = 'radio' name='meeting' value='" . $aRow["meetingID"] . "'>";
+?>
+          <h4>Meeting</h4>
+          <ul>
+            <li>
+              Start: <?php echo htmlspecialchars($aRow["start"]) ?>
+            </li>
+            <li>
+              End: <?php echo htmlspecialchars($aRow["end"]) ?>
+            </li>
+            <li>
+              Building Name: <?php echo htmlspecialchars($aRow["buildingName"]) ?>
+            </li>
+            <li>
+              Room Number: <?php echo htmlspecialchars($aRow["roomNumber"]) ?>
+            </li>
+          </ul>
+<?php
   }
-  else{
-    while ($aRow = mysql_fetch_assoc($rs)) {
-      echo "<input type = 'radio' name='meeting' value='" . $aRow["meetingID"] . "'>";
-        ?>
-        <h4>Meeting</h4>
-
-        <ul>
-            <li>
-	   Start: <?php echo htmlspecialchars($aRow["start"]) ?>
-            </li>
-            <li>
-	   End: <?php echo htmlspecialchars($aRow["end"]) ?>
-            </li>
-            <li>
-	   Building Name: <?php echo htmlspecialchars($aRow["buildingName"]) ?>
-            </li>
-            <li>
-	   Room Number: <?php echo htmlspecialchars($aRow["roomNumber"]) ?>
-            </li>
-        </ul>
-        <?php
-	   }
-    ?>
-      <input type="submit">
-
-</form>
-       <?php } ?>
-<br><br>
-<a href="homePage.php">Return Home</a>
-</div>
-</div>
-</body>
+?>
+          <input type="submit">
+        </form>
+<?php
+}
+?>
+        <br><br>
+        <a href="homePage.php">Return Home</a>
+      </div>
+    </div>
+  </body>
 </html>
