@@ -74,7 +74,7 @@ VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
      */
 
     header('Location:homePage.php');
-    
+
 }
 
 ?>

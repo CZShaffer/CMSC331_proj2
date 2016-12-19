@@ -37,12 +37,16 @@ echo('
 </style>
 <body>
 ');
+
+// retrieve student information
 $COMMON = new Common(false);
 $filename = "chooseMeeting.php";
 $sqlCommand = "SELECT * FROM Student WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
 $rs = $COMMON->executequery($sqlCommand,$filename);
 $row = mysql_fetch_row($rs);
-//echo("".$row[7]);
+
+// if the student's previous meeting has been deleted or canceled from the advisor side,
+// let the student know with an error display
 if($row[7]=="meeting_deleted"){
     echo('
         <div class="meetingAlert">
@@ -53,9 +57,10 @@ if($row[7]=="meeting_deleted"){
         </div>
     ');
 
-    // These two commands are to stop the message from annoying the student. When active, they will allow the user to see the message only once.
-    // example use: A student decides not to schedule that meeting at that time. These commands determine if the message will remind them when they come back.
-    // They have been commented out to make testing easier, but the option is there to put them back in.
+    /** These two commands are to stop the message from annoying the student. When active, they will allow the user to see the message only once.
+     * example use: A student decides not to schedule that meeting at that time. These commands determine if the message will remind them when they come back.
+     * They have been commented out to make testing easier, but the option is there to put them back in.
+     **/
     //$sqlCommand = "UPDATE Student SET meetingStatus='meeting_not_made' WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
     //$rs = $COMMON->executequery($sqlCommand,$filename);
 }
