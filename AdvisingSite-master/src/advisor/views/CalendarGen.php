@@ -177,7 +177,8 @@ public function findStudentsInMeeting($meetingID) {
 					if($apptDay == $x && $apptMonth ==$currMonth){
 					$hasAppt = TRUE;
                 			echo '<button class="accordion">';
-					echo date("H:i", strtotime($appt["start"])).' - '.date("H:i", strtotime($appt["end"]));					echo '</button>
+					echo ltrim(date("h:i A", strtotime($appt["start"])),0).' - '.ltrim(date("h:i A", strtotime($appt["end"])),0);					
+					echo '</button>
                 			<div class="panel">
                   				<br>';
 						if($appt["meetingType"] == 0){
