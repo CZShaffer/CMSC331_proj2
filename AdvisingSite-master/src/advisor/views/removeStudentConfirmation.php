@@ -11,6 +11,7 @@ if(isset($_GET['removeStudentID'])){
     		$removeStudentID = $_GET['removeStudentID'];
 		$name = $_GET['name'];
 		$date = $_GET['date'];
+		$meetingID = $_GET['meetingID'];
 		echo '
 
 <html>
@@ -27,7 +28,7 @@ if(isset($_GET['removeStudentID'])){
         <p>Are you sure you want to remove ' .$name
 	 .' from the appointment on ' .$date  .'? This cannot be reversed.</p>
 
-  	<a href="removeStudent.php?studentID="' .$removeStudentID .'style="text-decoration:none;">
+  	<a href="removeStudent.php?studentID=' .$removeStudentID .'&meetingID=' .$meetingID .'" style="text-decoration:none;">
     	  <button type="button">Remove Student</button>
   	</a>
 

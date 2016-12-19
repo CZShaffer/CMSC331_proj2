@@ -6,7 +6,7 @@ session_start();
 //}/////////////////////////////////////////////////////////////////////////////////////////
 include '../utils/dbconfig.php';
 $conn = connectToDB();
-$_SESSION['advisorMeetingID'] = 9;
+//$_SESSION['advisorMeetingID'] = 9;
 $advisorMeetingID = $_SESSION['advisorMeetingID'];
 intval($_SESSION['advisorMeetingID']);
 // get meetingID
@@ -52,6 +52,7 @@ if ($_POST) {
             WHERE `meetingID`='$meetingID'";
   }
   $rs = $conn->query($sql);
+  header('Location: calendarHomepage.php?month='.$_SESSION["month"] .'&year=' .$_SESSION["year"]);
   echo "<p style='color:red'>Appointment updated</p>";
 }
 ?>
@@ -64,20 +65,23 @@ if ($_POST) {
 
     <title>Advising Scheduling</title>
 
-    <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
     <link rel="stylesheet" type="text/css" href="../../Styles/style.css">
+<link rel="icon" type="image/png" href="../Styles/images/umbc.png">
   </head>
 
   <body>
+  <div id="content-container">
+  <div id="content">
     <h1>Edit appointment</h1>
     <h3>Original appointment:</h3>
 
     <?php
-    echo "Start time: ";
-    echo date("r", strtotime($start));
+    echo "Date: ";
+    echo ltrim(date("m/d/Y", strtotime($start)),0);
     echo "<br><br>";
-echo "End time: ";
-echo date("r", strtotime($end));
+    echo "Time: ";
+    echo ltrim(date("h:i A", strtotime($start)),0) .' - ';
+    echo ltrim(date("h:i A", strtotime($end)),0);
     echo "<br><br>";
     echo "Building: $building";
     echo "<br><br>";
@@ -124,8 +128,10 @@ echo date("r", strtotime($end));
    ?>
    
       <br><br><br> 
-      <input type="submit" value="Update appointment">
+      <input type="submit" value="Update appointment"><br><br> 
 
     </form>
+</div>
+</div>
   </body>
 </html>
