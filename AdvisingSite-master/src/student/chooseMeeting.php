@@ -13,7 +13,7 @@ echo('
 <head>
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
 <link rel="icon" type="image/png" href="../Styles/images/umbc.png">
-    <title>Choose Your Meeting</title>
+    <title>Choose Meeting</title>
 </head>
 <style>
     .meetingAlert {
