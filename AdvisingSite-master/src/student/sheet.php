@@ -70,10 +70,12 @@ $question = isset($_POST['question']) ? $_POST['question']: "";
 //inserting the variabes into the table                                           
 $id = $_SESSION['STUDENT_ID'];
 
+//deleting the information from the student table to insert the new information, could have also used UPDATE
 $sql = "DELETE FROM StudentForm WHERE StudentID = $id";
 
 $result = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
+//inserting new data into the database
 $sql = "INSERT INTO StudentForm (`StudentID`, `secondMajor`, `minor`, `futurePlans`, `learningResources`, `internship`, `currentCourse1Name`, `currentCourse2Name`, `currentCourse3Name`, `currentCourse4Name`, `currentCourse5Name`, `currentCourse6Name`, `currentCourse7Name`, `plannedCourse1Name`, `plannedCourse2Name`, `plannedCourse3Name`, `plannedCourse4Name`, `plannedCourse5Name`, `plannedCourse6Name`, `plannedCourse7Name`, `plannedCourse1Reason`, `plannedCourse2Reason`, `plannedCourse3Reason`, `plannedCourse4Reason`, `plannedCourse5Reason`, `plannedCourse6Reason`, `plannedCourse7Reason`, `plannedCourse1Credits`, `plannedCourse2Credits`, `plannedCourse3Credits`, `plannedCourse4Credits`, `plannedCourse5Credits`, `plannedCourse6Credits`,`plannedCourse7Credits`, `creditsEarned`, `GPA`, `upperLevelCredits`, `numWritingIntensives`, `numPhysicalEds`, `numEnglishComp`, `numArtsAndHumanities`, `numSocialSciences`, `numMathSciences`, `numCulture`, `languageProficiency`, `performanceReflection`, `studiedWithFriends`, `classQuestion`, `notes`, `BBDiscussion`, `tutorialCenter`, `RLCTutor`, `officeHours`, `emailProfessor`, `volunteerActivities`, `currentlyEmployed`, `commuter`, `commuteHours`, `workHours`, `familyHours`, `extracurricularHours`, `additionalComments`) 
 
         VALUES ('$id', '$major2', '$minor', '$goal1', '$goal2', '$goal3', '$currClass1', '$currClass2', '$currClass3', '$currClass4', '$currClass5', '$currClass6', '$currClass7', '$nextClass1', '$nextClass2', '$nextClass3', '$nextClass4', '$nextClass5', '$nextClass6', '$nextClass7', '$reason1', '$reason2', '$reason3', '$reason4', '$reason5', '$reason6', '$reason7', '$numCred1', '$numCred2', '$numCred3', '$numCred4', '$numCred5', '$numCred6', '$numCred7', '$totCred', '$gpa', '$uppLevel', '$WI', '$PE', '$engCred', '$AHCred', '$SSCred', '$mathSciCredit', '$cultCred', '$langCred', '$accProg', '$resource1', '$resource2', '$resource3', '$resource4', '$resource5', '$resource6', '$resource7', '$resource8', '$timeComm1', '$timeComm2', '$timeComm3', '$commute', '$work', '$family', '$extraAc', '$question')";
