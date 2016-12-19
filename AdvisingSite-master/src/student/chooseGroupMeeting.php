@@ -4,7 +4,7 @@ session_start();
 
 // redirect user to index.php if they haven't logged in
 if($_SESSION["HAS_LOGGED_IN"] == false){
-  header("Location: index.php");
+    header("Location: index.php");
 }
 
 $COMMON = new Common(false);
@@ -16,37 +16,43 @@ $rs = $COMMON->executequery($checkForMeeting,$fileName);
 $numRows = mysql_fetch_array($rs);
 
 if($numRows>0){
-header('Location:meetingChosen.php');
+    header('Location:meetingChosen.php');
 }
-// Searchs for all the meetings that passed 
-//
+
+// Searches for all the meetings that passed
 $search_meeting = "SELECT * FROM Meeting WHERE Meeting.start > NOW() AND Meeting.meetingType = true AND Meeting.numStudents < Meeting.studentLimit";
 $rs = $COMMON->executequery($search_meeting, $fileName);
 
 $allRows = mysql_num_rows($rs);
+
 //adds the selected meeting to studentMeeting
 if ($_POST) {
-  //adds the selected meeting to studentMeeting
+    //adds the selected meeting to studentMeeting
     $theMeetingID = $_POST['meeting'];
- 
 
-  //echo "The student ID is ".$_SESSION['STUDENT_ID'];
-  //creates a new student meeting
+    //echo "The student ID is ".$_SESSION['STUDENT_ID'];
+    ////creates a new student meeting
     $create_meeting = "INSERT INTO StudentMeeting(StudentID,MeetingID)
 VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
     $rs=$COMMON->executequery($create_meeting,$fileName);
 
+    // updatess the student table to reflect the student's current status
     $updateStudent = "UPDATE Student SET meetingStatus='meeting_scheduled' WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
     $rs=$COMMON->executequery($updateStudent,$fileName);
-  
-  //changes the number of people registered for the meeting, increases them by 1
 
-  $changeNumRegistered = "UPDATE Meeting SET numStudents = numStudents+1 WHERE meetingID = $theMeetingID";
-  $rs=$COMMON->executequery($changeNumRegistered,$fileName);
+    //changes the number of people registered for the meeting, increases them by 1
+    $changeNumRegistered = "UPDATE Meeting SET numStudents = numStudents+1 WHERE meetingID = $theMeetingID";
+    $rs=$COMMON->executequery($changeNumRegistered,$fileName);
 
- $_SESSION['MEETING_ID']= $theMeetingID;
+    $_SESSION['MEETING_ID']= $theMeetingID;
 
 
+    /**
+     * This is a segment which emails the student regarding the meeting they have just scheduled.
+     * It should be noted that some servers (like the current GL server) have disabled email sending.
+     * As a result, this code should assign "true" to sent,
+     * but will not actually send mail without the server's permission.
+     */
     $command = "SELECT * FROM Meeting WHERE meetingID=".$theMeetingID;
     $meetingInfo=$COMMON->executequery($command,$fileName);
     $command = "SELECT * FROM Student WHERE StudentID=".$_SESSION['STUDENT_ID'];
@@ -63,7 +69,12 @@ VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
     }else{
         echo("<p>email failed<p>");
     }
-  header('Location:homePage.php');
+    /**
+     * End of mail code
+     */
+
+    header('Location:homePage.php');
+    
 }
 
 ?>
