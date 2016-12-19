@@ -12,8 +12,8 @@
 session_start();
 
 // redirect user to index.php if they haven't logged in
-if($_SESSION["HAS_LOGGED_IN"] == false){
-  header("Location: index.php");
+if(!isset($_SESSION["HAS_LOGGED_IN"])){
+  header("Location: login.php");
 }
 
 include '../CommonMethods.php';
