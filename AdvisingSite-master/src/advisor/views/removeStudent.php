@@ -11,7 +11,7 @@ $COMMON = new Common(false);
 $fileName = "removeStudent.php";
 
 $studentID = $_GET["studentID"];
-$cancelMeeting = "DELETE FROM StudentMeeting Where studentID = $studentID";
+$cancelMeeting = "DELETE FROM StudentMeeting Where StudentID = $studentID";
 $rs = $COMMON->executeQuery($cancelMeeting, $fileName);
 
 //finds the number of people in the meeting and drops it by one
@@ -29,7 +29,7 @@ $meetingID = $_SESSION['MEETING_ID'];
 $subtractOne = "UPDATE Meeting SET numStudents = numStudents-1 WHERE meetingID =$meetingID";
 $rs = $COMMON->executequery($subtractOne, $fileName);
 
-$updateStudent = "UPDATE Student SET meetinStatus='meeting_not_scheduled' WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
+$updateStudent = "UPDATE Student SET meetingStatus='meeting_not_scheduled' WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
 $rs=$COMMON->executequery($create_meeting,$fileName);
 
 unset($_SESSION['MEETING_ID']);
