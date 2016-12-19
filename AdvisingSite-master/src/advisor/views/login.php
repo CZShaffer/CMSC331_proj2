@@ -23,7 +23,6 @@ if ($_POST) {
 
     $searched_advisor = mysqli_fetch_assoc($queryOfSearchAdvisor);
 
-    //$num_rows = mysqli_num_rows($queryOfSearchAdvisor);
     // Check whether or not there has been a successful adviser creation
 
     $advisor_exist = false;
@@ -55,8 +54,6 @@ if ($_POST) {
 
     if ($advisor_exist == true) {
         session_start();
-        // Translate the SQL Query into a dictioanry
-        //$advisorDict = mysqli_fetch_assoc($queryOfSearchAdvisor);
 
         // Assigning to session values based on what data is found
         $_SESSION["HAS_LOGGED_IN"] = true;
