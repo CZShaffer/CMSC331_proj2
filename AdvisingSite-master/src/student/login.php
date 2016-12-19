@@ -22,7 +22,6 @@ $filename = "login.php";
 $select_isSeasonOver  = "SELECT isSeasonOver FROM AdvisingSeason";
 $select_results = $COMMON->executequery($select_isSeasonOver, $filename);
 
- //checks that the database isn't messed up 
 if(mysql_num_rows($select_results) == 0){
   echo "This error shouldn't happen";
 }
@@ -36,25 +35,42 @@ if($isSeasonOver) {
 }
 
 //declare and define empty login_error
-$login_error = "";
+$login_email_error = $login_ID_error = "";
   
-//if something has been entered  
 if ($_POST) {
   $email = strtolower($_POST["email"]);
+  $ID = $_POST["ID"];
   $debug = true;
   $COMMON = new Common($debug);
   $fileName = "login.php";
   
-  //uses the student email to pull from the table
-  $login_val_query = "SELECT * FROM Student WHERE email = '$email'";
-  $results = $COMMON->executequery($login_val_query, $fileName);
-  
+  $login_val_query_email = "SELECT * FROM Student WHERE email = '$email'";
+  $results = $COMMON->executequery($login_val_query_email, $fileName);
+  $login_val_query_ID = "SELECT * FROM Student WHERE schoolID = '$ID'";
+  $results_ID = $COMMON->executequery($login_val_query_ID, $fileName);
+  $num_errors = $num_fields = 0;
+
+  $EMAIL_INFO = mysql_fetch_row($results);
+  $ID_INFO = mysql_fetch_row($results_ID);
   
   //if email field is left empty or does not exist in table
-  if(empty($email) || mysql_num_rows($results) == 0){
-    $login_error = "Please enter a valid email.";
+  if(empty($email) || (mysql_num_rows($results) == 0)){
+    $login_email_error = "Please enter a valid email.";
+    $num_fields++;
+    $num_errors++;
   }
-  else{
+  if(empty($ID) || (mysql_num_rows($results_ID) == 0)){
+    $login_ID_error = "Please enter a valid student ID.";
+    $num_fields++;
+    $num_errors++;
+  }
+  if(($EMAIL_INFO[5] != $ID_INFO[5]) && ($num_fields === 0)){
+    $login_email_error = "Email does not match entered ID";
+    $login_ID_error = "ID does not match entered Email";
+    $num_errors++;
+  }
+
+  if ($num_errors === 0){
     // Search is advisor email exists in student
     // Run raw sql query in attempt to create a new advisor
     $search_student = "SELECT * FROM Student WHERE email='$email'";
@@ -80,7 +96,7 @@ if ($_POST) {
   }
 }
 ?>
-<!-- html for student login page to enter information -->
+
 <h1>
     Student Login Page
 </h1>
@@ -88,7 +104,12 @@ if ($_POST) {
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
 
   <label>E-mail</label><input type="text" name="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : ''); ?>">
-  <span class="error"> <?php echo $login_error;?></span>
+  <span class="error"> <?php echo $login_email_error;?></span>
+  <br>
+  <br>
+
+  <label>Student ID</label><input type="text" name="ID" value="<?php echo (isset($_POST['ID']) ? $_POST['ID'] : ''); ?>">
+  <span class="error"> <?php echo $login_ID_error;?></span>
   <br>
   <br>
   <label><input type="submit" value="submit" name="Log in"></label>
