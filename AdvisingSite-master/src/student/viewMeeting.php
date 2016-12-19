@@ -47,6 +47,7 @@ else{
   
   $meetingDict = mysql_fetch_assoc($rs);
   
+    //setting session variables for the meeting times and location
   $_SESSION["CURRENT_MEETING_ID"] = $meetingDict["meetingID"];
   $_SESSION["CURRENT_START_TIME"] = $meetingDict["start"];
   $_SESSION["CURRENT_END_TIME"] = $meetingDict["end"];
@@ -67,13 +68,17 @@ else{
   $minE = date("i", strtotime($_SESSION["CURRENT_END_TIME"]));
 
 
+    //printing out to the page the meeting information and advice 
   echo "<p style='font-size:18px;'><br>Your current meeting is:</p>";
   echo "<p style='font-size:18px;'>",$weekday, " ", $month, " ", $day, ", ", $year, " from ";
   echo $hourS, ":", $minS, " to ", $hourE, ":", $minE, " ";
-  echo "in ", $_SESSION["CURRENT_APPT_BUILDING"], " ", $_SESSION["CURRENT_APPT_ROOM"], "</p>";
+  echo "in ", $_SESSION["CURRENT_APPT_BUILDING"], " ", $_SESSION["CURRENT_APPT_ROOM"], "</p><br>";
     
- echo"<br><p style='font-size:15px;'><b>There are a few things that you can do (or bring) that will go a long way toward ma\
-    king your advising appointment efficient and productive:</b><br><br>                                                         
+  echo "<p style='font-size:15px;'>Now that you have selected and scheduled your advising session, please fill out our Pre-Registration Sheet. 
+    Bring a completed copy of the sheet with you to your session.<br></p>";
+    
+   echo"<br><p style='font-size:15px;'><b>There are a few things that you can do (or bring) that will go a long way toward ma\
+     king your advising appointment efficient and productive:</b><br><br>                                                         
                                                                                                                              
     - Be on time for your appointment! If you need to cancel/reschedule, do so as far in advance as possible (24 hours ahead, or\
      more, is preferred), to allow other students to use the time that you leave empty. <br><br>                                 
