@@ -22,7 +22,6 @@ $getNumPeople = "SELECT * FROM Meeting
 $rs = $COMMON->executequery($getNumPeople, $fileName);
 $theMeeting = mysql_fetch_assoc($rs);
 
-
 $meetingID = $_SESSION['MEETING_ID'];
 
 // actually updates the table 
