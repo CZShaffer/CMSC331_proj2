@@ -46,7 +46,7 @@ $rs = $COMMON->executequery($sqlCommand,$filename);
 $row = mysql_fetch_row($rs);
 
 // if the student's previous meeting has been deleted or canceled from the advisor side,
-// let the student know with an error display
+// let the student know with a warning display
 if($row[7]=="meeting_deleted"){
     echo('
         <div class="meetingAlert">
