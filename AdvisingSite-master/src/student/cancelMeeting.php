@@ -7,14 +7,21 @@ if($_SESSION["HAS_LOGGED_IN"] == false){
 }
 ?>
 
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="../Styles/style.css">
-    <title>Choose Your Appointment</title>
-</head>
-<body>
-<div id="content-container">
-<div id="content">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cancel Meeting</title>
+
+    <link rel="icon" type="image/x-icon" href="../Styles/images/umbc.png"/>
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
+  </head>
+
+  <body>
+    <div id="content-container">
+      <div id="content">
 
 <?php
 include('../CommonMethods.php');
@@ -54,7 +61,7 @@ else {
 
 ?>
 
-</div>
-</div>
-</body>
+      </div>
+    </div>
+  </body>
 </html>
