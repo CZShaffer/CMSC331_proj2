@@ -81,22 +81,22 @@ VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Choose Meeting</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Meeting</title>
  
-		<link rel="icon" type="image/x-icon" href="../Styles/images/umbc.png"/>
-		<link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
+    <link rel="icon" type="image/x-icon" href="../Styles/images/umbc.png"/>
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
   
-	</head>
+  </head>
 	
-	<body>
-		<h1>Choose an Appointment:</h1>
-		<br>
-		<div id="content-container">
-			<div id="content">
-				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+  <body>
+    <h1>Choose an Appointment:</h1>
+    <br>
+    <div id="content-container">
+      <div id="content">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
     
 <?php
 //makes all the availible meetings into radio buttons
@@ -107,33 +107,32 @@ else{
 	while ($aRow = mysql_fetch_assoc($rs)) {
     echo "<input type = 'radio' name='meeting' value='" . $aRow["meetingID"] . "'>";
 ?>
-	        <h4>Meeting</h4>
-
-  	      <ul>
-    	      <li>
-	   					Start: <?php echo htmlspecialchars($aRow["start"]) ?>
+        <h4>Meeting</h4>
+          <ul>
+            <li>
+              Start: <?php echo htmlspecialchars($aRow["start"]) ?>
             </li>
             <li>
-	   					End: <?php echo htmlspecialchars($aRow["end"]) ?>
+              End: <?php echo htmlspecialchars($aRow["end"]) ?>
             </li>
             <li>
-	   					Building Name: <?php echo htmlspecialchars($aRow["buildingName"]) ?>
+              Building Name: <?php echo htmlspecialchars($aRow["buildingName"]) ?>
             </li>
             <li>
-	   					Room Number: <?php echo htmlspecialchars($aRow["roomNumber"]) ?>
+              Room Number: <?php echo htmlspecialchars($aRow["roomNumber"]) ?>
             </li>
-        	</ul>
+          </ul>
 <?php
-	}
+  }
 ?>
-	      	<input type="submit">
-				</form>
+          <input type="submit">
+        </form>
 <?php
 }
 ?>
-				<br>
-				<a href="homePage.php">Return Home</a>
-			</div>
-		</div>
-	</body>
+      <br>
+      <a href="homePage.php">Return Home</a>
+      </div>
+    </div>
+  </body>
 </html>

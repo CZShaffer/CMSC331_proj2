@@ -6,7 +6,7 @@
     private $naviHref= null;
 
 
-function findStudentsInMeeting($meetingID) {
+public function findStudentsInMeeting($meetingID) {
   $open_connection = connectToDB();
 
   $queryForStudent = "
@@ -36,29 +36,9 @@ function findStudentsInMeeting($meetingID) {
   
   return $studentInfos;
 }
-    public function majorNameExpanded($major){
-	$returnMajor = 'Unknown';
-		if($major == 'BioSciBA')
-			$returnMajor = 'Biological Sciences B.A.';
-		if($major == 'BioSciBS')	
-			$returnMajor = 'Biological Sciences B.S.';
-		if($major == 'BioChem')	
-			$returnMajor = 'Biochemistry and Molecular Biology B.S.';
-		if($major == 'BioInfo')	
-			$returnMajor = 'Bioinformatics and Computational Biology B.S.';
-		if($major == 'BioEd')	
-			$returnMajor = 'Biology Education B.A.';
-		if($major == 'ChemBA')	
-			$returnMajor = 'Chemistry B.A.';
-		if($major == 'ChemBS')	
-			$returnMajor = 'Chemistry B.S.';
-		if($major == 'ChemEd')
-			$returnMajor = 'Chemistry Education B.A.';
-			
-	
 
-	return $returnMajor;
-    }
+
+
 
     public function generate($currMonth, $currYear, $meetingsInfo) {
 	  $numDays = 0;
@@ -209,6 +189,7 @@ function findStudentsInMeeting($meetingID) {
 						
 						
 						echo 'Room ' .htmlspecialchars($appt["buildingName"]) .' ' . htmlspecialchars($appt["roomNumber"]);
+						
 							$_SESSION["advisorMeetingID"] = $appt["meetingID"];
 							echo '<br><br><a href="editAppointment.php"><button>Edit Appointment</button></a>
 							<br><br>
@@ -217,7 +198,7 @@ function findStudentsInMeeting($meetingID) {
                     					<input name="meetingID" value="';
 							echo htmlspecialchars($appt["meetingID"]); 
 							echo '" style="display:none;">
-                    					<input type="submit" value="Delete Meeting">
+                    					<input type="submit" value="Delete Appointment">
                 					</form><br><br>';
 
 
@@ -232,23 +213,28 @@ function findStudentsInMeeting($meetingID) {
                         					echo 'Student ID: ' .htmlspecialchars($studentInfo["schoolID"]).'<br>'; 
 								$major = $studentInfo["major"];
 								if($major == 'BioSciBA')
-			$major = 'Biological Sciences B.A.';
-		if($major == 'BioSciBS')	
-			$major = 'Biological Sciences B.S.';
-		if($major == 'BioChem')	
-			$major = 'Biochemistry and Molecular Biology B.S.';
-		if($major == 'BioInfo')	
-			$major = 'Bioinformatics and Computational Biology B.S.';
-		if($major == 'BioEd')	
-			$major = 'Biology Education B.A.';
-		if($major == 'ChemBA')	
-			$major = 'Chemistry B.A.';
-		if($major == 'ChemBS')	
-			$major = 'Chemistry B.S.';
-		if($major == 'ChemEd')
-			$major = 'Chemistry Education B.A.';
+									$major = 'Biological Sciences B.A.';
+								if($major == 'BioSciBS')	
+									$major = 'Biological Sciences B.S.';
+								if($major == 'BioChem')	
+									$major = 'Biochemistry and Molecular Biology B.S.';
+								if($major == 'BioInfo')	
+									$major = 'Bioinformatics and Computational Biology B.S.';
+								if($major == 'BioEd')	
+									$major = 'Biology Education B.A.';
+								if($major == 'ChemBA')	
+									$major = 'Chemistry B.A.';
+								if($major == 'ChemBS')	
+									$major = 'Chemistry B.S.';
+								if($major == 'ChemEd')
+									$major = 'Chemistry Education B.A.';
                         					echo 'Major: ' .htmlspecialchars($major) .'<br>'; 
 								echo 'Email: ' .htmlspecialchars($studentInfo["email"]) .'<br>'; 
+								
+								$_SESSION['MEETING_ID'] = $appt["meetingID"];
+								echo '<a href="removeStudentConfirmation.php?removeStudentID=' .htmlspecialchars($studentInfo["schoolID"]) 
+								.'&name=' .htmlspecialchars($studentInfo["firstName"]).' ' .htmlspecialchars($studentInfo["lastName"]) 
+								.'&date=' .$apptMonth ."/" .$apptDay .'"><button>Remove Student</button></a>';
 							}
 						}
                     				echo '<!--Student Name<br>
