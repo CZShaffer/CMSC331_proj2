@@ -7,6 +7,7 @@ if($_SESSION["HAS_LOGGED_IN"] == false){
 }
 ?>
 
+<!-- Student Page for if they have already chosen a meeting and attempt to choose a new one -->
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
