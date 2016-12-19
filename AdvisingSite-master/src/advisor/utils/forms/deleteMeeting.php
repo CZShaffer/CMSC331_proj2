@@ -34,9 +34,9 @@ if ($_SESSION["HAS_LOGGED_IN"] and $_POST) {
 
     while($row = mysqli_fetch_row($result)){
         $studentID = $row[1];
-        $updateStudent = "UPDATE Student SET meetingStatus='meeting_deleted' WHERE StudentID=".$studentID.";";
+        $updateStudent = "UPDATE Student SET meetingStatus='meeting_deleted' WHERE StudentID='".$studentID."';";
         $rs = $open_connection->query($updateStudent);
-        $deleteStudentMeeting = "DELETE FROM StudentMeeting WHERE StudentID=".$studentID.";";
+        $deleteStudentMeeting = "DELETE FROM StudentMeeting WHERE StudentID='".$studentID."';";
         $rs = $open_connection->query($deleteStudentMeeting);
     }
     //$deleteStudentMeeting = "DELETE FROM StudentMeeting WHERE MeetingID=".$selectedMeetingID.";";
