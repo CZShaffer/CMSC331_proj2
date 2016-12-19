@@ -11,7 +11,7 @@ if($_SESSION["HAS_LOGGED_IN"] == false){
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
-    <title>Choose Your Appointment</title>
+    <title>Meeting Chosen</title>
 </head>
 <br>
 <body>
