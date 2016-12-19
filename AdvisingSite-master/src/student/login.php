@@ -22,6 +22,7 @@ $filename = "login.php";
 $select_isSeasonOver  = "SELECT isSeasonOver FROM AdvisingSeason";
 $select_results = $COMMON->executequery($select_isSeasonOver, $filename);
 
+ //checks that the database isn't messed up 
 if(mysql_num_rows($select_results) == 0){
   echo "This error shouldn't happen";
 }
@@ -37,12 +38,14 @@ if($isSeasonOver) {
 //declare and define empty login_error
 $login_error = "";
   
+//if something has been entered  
 if ($_POST) {
   $email = strtolower($_POST["email"]);
   $debug = true;
   $COMMON = new Common($debug);
   $fileName = "login.php";
   
+  //uses the student email to pull from the table
   $login_val_query = "SELECT * FROM Student WHERE email = '$email'";
   $results = $COMMON->executequery($login_val_query, $fileName);
   
@@ -77,7 +80,7 @@ if ($_POST) {
   }
 }
 ?>
-
+<!-- html for student login page to enter information -->
 <h1>
     Student Login Page
 </h1>
