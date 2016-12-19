@@ -232,10 +232,10 @@ public function findStudentsInMeeting($meetingID) {
                         					echo 'Major: ' .htmlspecialchars($major) .'<br>'; 
 								echo 'Email: ' .htmlspecialchars($studentInfo["email"]) .'<br>'; 
 								
-								$_SESSION['MEETING_ID'] = $appt["meetingID"];
+								//$_SESSION['MEETING_ID'] = $appt["meetingID"];
 								echo '<a href="removeStudentConfirmation.php?removeStudentID=' .htmlspecialchars($studentInfo["schoolID"]) 
 								.'&name=' .htmlspecialchars($studentInfo["firstName"]).' ' .htmlspecialchars($studentInfo["lastName"]) 
-								.'&date=' .$apptMonth ."/" .$apptDay .'"><button>Remove Student</button></a>';
+								.'&date=' .$apptMonth ."/" .$apptDay .'&meetingID=' .htmlspecialchars($appt["meetingID"]) .'"><button>Remove Student</button></a>';
 							}
 						}
                     				echo '<!--Student Name<br>
