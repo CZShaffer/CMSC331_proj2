@@ -79,15 +79,20 @@ VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
 
 ?>
 
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="../Styles/style.css">
-<link rel="icon" type="image/png" href="../Styles/images/umbc.png">
-    <title>Choose Your Appointment</title>
-</head>
-<h1>Choose an Appointment:</h1>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Choose Meeting</title>
+ 
+		<link rel="icon" type="image/x-icon" href="../Styles/images/umbc.png"/>
+		<link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
+  
+	</head>
+	<body>
+	<h1>Choose an Appointment:</h1>
 <br>
-<body>
 <div id="content-container">
 <div id="content">
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

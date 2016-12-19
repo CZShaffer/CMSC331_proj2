@@ -17,7 +17,7 @@ $rs = $conn->query($sql);
 error_reporting(0);
 if ($rs->num_rows > 0) {
   $row = $rs->fetch_assoc();
-
+//all of the variables needed for the page
   $secondMajor = $row['secondMajor'];
   $minor = $row['minor'];
   $futurePlans = $row['futurePlans'];
@@ -80,13 +80,13 @@ if ($rs->num_rows > 0) {
   $extracurricularHours = $row['extracurricularHours'];
   $additionalComments = $row['additionalComments'];
 }
-
+//if the page hasnt been filled out and there's no data
 else {
   echo "Pre advising worksheet data not found";
 }
 
 ?>
-
+<!-- html for the page -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -109,6 +109,7 @@ else {
 	<div class="fieldset">
 	<fieldset>
 	  <br>
+          <!-- drop down list of all UMBC majors to choose second major -->
 	  <label for="2ndMajor">2nd Major (if applicable):</label>
 	  <select id="2ndMajor" name="2ndMajor">
             <option></option>            
@@ -170,13 +171,13 @@ else {
 	  </select>
 	  
 	  <br><br>
-	  
+	  <!-- ability to list if they have a minor -->
 	  <label for="tfMinor">Minor(s) (if applicable):</label>
 	  <input id="tfMinor" type="text" name="tfMinor" value="<?php echo (isset($minor) ? $minor : ''); ?>">
 	  <br><br>	  
 	</fieldset>
 	</div>
-	<!------------------------------------->      
+	<!-----------------GOALS-------------------->      
 	
 	<fieldset>
 	  <h2>Goals</h2>
@@ -186,25 +187,26 @@ else {
 	  
 	  <label for="goal1">What are your plans for the future once your UMBC degree is complete?</label>
 	  <span class="error">* </span><br>
-				      <textarea id="goal1" name="goal1" cols="40" rows="5" value="<?php echo (isset($futurePlans) ? $futurePlans : ''); ?>" required><?php echo (isset($futurePlans) ? $futurePlans : ''); ?></textarea>
+	  <textarea id="goal1" name="goal1" cols="40" rows="5" value="<?php echo (isset($futurePlans) ? $futurePlans : ''); ?>" required><?php echo (isset($futurePlans) ? $futurePlans : ''); ?></textarea>
 	  <br><br>
 	  <label for="goal2">What resources have you used in order to learn more about your career/educational goals?</label>
 	  <span class="error">* </span><br>
-				      <textarea id="goal2" name="goal2" cols="40" rows="5" value="<?php echo (isset($learningResources) ? $learningResources : ''); ?>" required><?php echo (isset($learningResources) ? $learningResources : ''); ?></textarea>
+	  <textarea id="goal2" name="goal2" cols="40" rows="5" value="<?php echo (isset($learningResources) ? $learningResources : ''); ?>" required><?php echo (isset($learningResources) ? $learningResources : ''); ?></textarea>
 	  <br><br>
 	  <label for="goal3">What research/internship/clinical experience do you have, if any?</label><br>
-				      <textarea id="goal3" name="goal3" cols="40" rows="5" value="<?php echo (isset($internship) ? $internship : ''); ?>" required><?php echo (isset($internship) ? $internship : ''); ?></textarea>
+          <textarea id="goal3" name="goal3" cols="40" rows="5" value="<?php echo (isset($internship) ? $internship : ''); ?>" required><?php echo (isset($internship) ? $internship : ''); ?></textarea>
 	</fieldset>
 	
-	<!------------------------------------->
+	<!-------------------PLANNING------------------>
 	
 	<fieldset>
 	  <h2>Evaluating and Planning Ahead</h2>
 	  <p>Planning for the future requires evaluating today.</p>
-	  
+	  <!-- Below is a table where each <tr> has 4 <td>s and they correspond in order of the <th>s, in 
+	  other words, it's arranged by column not by row. Taking a look at the names of the fields will 
+	  clarify this if it's still unclear-->
 	  <div align="center">
 	    <table style="width:100%">
-	      <!--<caption style="font-size:120%;">Courses</caption> -->
               <tr>
 	        <th>Current Courses and Grades</th>
 		<th>Proposed Courses for Next Semester</th>
@@ -212,8 +214,7 @@ else {
 		<th>Number of Credits for Proposed Course</th>
 	      </tr>
 	      <tr>
-		<td>
-		  <input type='text' placeholder="ex. BIOL302 A" name='course1' style="width: 99.5%" value="<?php echo (isset($currentCourse1Name) ? $currentCourse1Name : ''); ?>" required></td>
+		<td><input type='text' placeholder="ex. BIOL302 A" name='course1' style="width: 99.5%" value="<?php echo (isset($currentCourse1Name) ? $currentCourse1Name : ''); ?>" required></td>
 		<td><input type='text' placeholder="ex. BIOL313" name='next1' style="width: 99.5%" value="<?php echo (isset($plannedCourse1Name) ? $plannedCourse1Name : ''); ?>" required></td>
 		<td><input type='text' name='reason1' placeholder="ex. 'Major Requirement'" style="width: 99.5%" value="<?php echo (isset($plannedCourse1Reason) ? $plannedCourse1Reason : ''); ?>" required></td>
 		<td><input type='text' name='credit1' style="width: 99.5%" value="<?php echo (isset($plannedCourse1Credits) ? $plannedCourse1Credits : ''); ?>" required></td>
@@ -258,17 +259,15 @@ else {
 	  </div>
 	</fieldset>
 	
-	<!------------------------------------->
+	<!---------------DEGREE AUDIT---------------------->
 	
 	<fieldset>
 	  <h2>Degree Audit</h2>
 	  <p>Degree Audit is a helpful tool when choosing your classes and planning for graduation. Track your progress below. In order to access Degree Audit follow these steps:</p>
 	  <p><i>Login to myUMBC >> Topics >> Advising and Student Support >> Degree Audit >> Expand All Button</i></p>
 	  
-	  <h4><!-- style="float: left; width: 50%; font-size:120%;"-->Graduation Requirements</h4>
-	  <!--<p style="float: right; width: 50%; font-size:120%; text-align: left;">General Education Requirements</p> -->
-	  
-	 <!-- <fieldset> <!--style="float: left; width: 46%;"> -->
+	  <h4>Graduation Requirements</h4>
+	 
 	    <label for="totCred">Number of Credits Earned (120 required):</label>
 	    <input id="totCred" name="totCred" type="number" min="0" style="width: 50px" value="<?php echo (isset($creditsEarned) ? $creditsEarned : ''); ?>" required>
 	    <span class="error">* </span>
@@ -288,13 +287,13 @@ else {
 	    <label for="PE">Physical Education Courses (2 required):</label>
 	    <input id="PE" name="PE" type="number" min="0" style="width: 40px" value="<?php echo (isset($numPhysEd) ? $numPhysEd : ''); ?>" required>
 	    <span class="error">* </span>
-	  <!--</fieldset> -->
+	 
 
 	  <br>
 
 	  <h4>General Education Requirements</h4>
 	  <p>
-	  <!--<fieldset> <!-- stlye="float: right; width: 54%; text-align: left;"> -->
+	 
 	    <label for="eng">English Composition (1 required):</label>
 	    <input id="eng" name="eng" type="number" min="0" style="width: 40px" value="<?php echo (isset($numEnglishComp) ? $numEnglishComp : ''); ?>" required>
 	    <span class="error">* </span>
@@ -323,10 +322,10 @@ else {
 	    </select>
 	    <span class="error">* </span>
 	    
-	  <!--</fieldset> -->
-	</fieldset>
+	 </fieldset>
 	
-	<!------------------------------------->
+	
+	<!-----ACADEMIC PROGRESS------>
 
 	<fieldset>
 	  <h2>Assess Your Academic Progress</h2>
@@ -365,7 +364,7 @@ else {
 	  <label for="resource8">Emailed my professors/TAs with questions</label>
 	</fieldset>
 	
-	<!------------------------------------->
+	<!----------------TIME COMMITMENTS-------------------->
 	
 	<fieldset>
 	  <h2>Assess Your Time Commitments</h2>
@@ -403,7 +402,7 @@ else {
 	  <label for="extra">hours per week)</label>
 	</fieldset>
 	
-	<!------------------------------------->      
+	<!----------------QUESTIONS--------------------->      
 	
 	<fieldset>
 	  <label for="question"><h2>Additional Questions, Comments, and Concerns:</h2></label>

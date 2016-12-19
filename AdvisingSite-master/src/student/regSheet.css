@@ -4,13 +4,6 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 { 
-
-}
-  
-h2 { 
-
-}
 
 fieldset {
     margin-bottom: 8px;
@@ -39,25 +32,4 @@ th, td {
     color: #FF0000;
 }
 
-/*.nextbutton {
-    background-color: #768089;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 11px;
-    font-weight: bold;
-    height: 25px;
-    overflow: visible;
-    padding: 0 12px;
-    margin: 5px auto 0;
-    text-decoration: none;
-    vertical-align: top;
-    white-space: nowrap;
-    width: auto;
-    -moz-appearance: none;
-    -moz-border-radius: 4px;
-    -webkit-appearance: none;
-    -webkit-border-radius: 4px;
-    line-height: 25px;
-}*/
+
