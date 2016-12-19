@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>View Your Meeting</title>
+    <title>View Meeting</title>
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
 </head>
 <body>
