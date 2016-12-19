@@ -233,9 +233,9 @@ public function findStudentsInMeeting($meetingID) {
 								echo 'Email: ' .htmlspecialchars($studentInfo["email"]) .'<br>'; 
 								
 								//$_SESSION['MEETING_ID'] = $appt["meetingID"];
-								echo '<a href="removeStudentConfirmation.php?removeStudentID=' .htmlspecialchars($studentInfo["schoolID"]) 
-								.'&name=' .htmlspecialchars($studentInfo["firstName"]).' ' .htmlspecialchars($studentInfo["lastName"]) 
-								.'&date=' .$apptMonth ."/" .$apptDay .'&meetingID=' .htmlspecialchars($appt["meetingID"]) .'"><button>Remove Student</button></a>';
+								//echo '<a href="removeStudentConfirmation.php?removeStudentID=' .htmlspecialchars($studentInfo["schoolID"]) 
+								//.'&name=' .htmlspecialchars($studentInfo["firstName"]).' ' .htmlspecialchars($studentInfo["lastName"]) 
+								//.'&date=' .$apptMonth ."/" .$apptDay .'&meetingID=' .htmlspecialchars($appt["meetingID"]) .'"><button>Remove Student</button></a>';
 							}
 						}
                     				echo '<!--Student Name<br>
@@ -247,6 +247,12 @@ public function findStudentsInMeeting($meetingID) {
 					}
 					
                  		}
+					if($hasAppt){
+						echo '<script>
+							//document.getElementById("myBtn' .$x .'").className.replace( /(?:^|\s) (?!\S)/g , \'\' );
+							document.getElementById("myBtn' .$x .'").className = "buttonActive";
+						</script>';
+					}
 					if(!$hasAppt)
 						echo 'No appointments Scheduled<br><br>';
                 			
