@@ -90,47 +90,50 @@ VALUES(" . $_SESSION["STUDENT_ID"] . ",$theMeetingID)";
 		<link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
   
 	</head>
+	
 	<body>
-	<h1>Choose an Appointment:</h1>
-<br>
-<div id="content-container">
-<div id="content">
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-    <?php
-  //makes all the availible meetings into radio buttons
-  if (sizeof($allRows) == 0){
-    echo "<h4>Sorry, there are no appointments available at this time.</h4>";
-  }
-  else{
-    while ($aRow = mysql_fetch_assoc($rs)) {
-      echo "<input type = 'radio' name='meeting' value='" . $aRow["meetingID"] . "'>";
-        ?>
-        <h4>Meeting</h4>
+		<h1>Choose an Appointment:</h1>
+		<br>
+		<div id="content-container">
+			<div id="content">
+				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    
+<?php
+//makes all the availible meetings into radio buttons
+if (sizeof($allRows) == 0){
+	echo "<h4>Sorry, there are no appointments available at this time.</h4>";
+}
+else{
+	while ($aRow = mysql_fetch_assoc($rs)) {
+    echo "<input type = 'radio' name='meeting' value='" . $aRow["meetingID"] . "'>";
+?>
+	        <h4>Meeting</h4>
 
-        <ul>
-            <li>
-	   Start: <?php echo htmlspecialchars($aRow["start"]) ?>
+  	      <ul>
+    	      <li>
+	   					Start: <?php echo htmlspecialchars($aRow["start"]) ?>
             </li>
             <li>
-	   End: <?php echo htmlspecialchars($aRow["end"]) ?>
+	   					End: <?php echo htmlspecialchars($aRow["end"]) ?>
             </li>
             <li>
-	   Building Name: <?php echo htmlspecialchars($aRow["buildingName"]) ?>
+	   					Building Name: <?php echo htmlspecialchars($aRow["buildingName"]) ?>
             </li>
             <li>
-	   Room Number: <?php echo htmlspecialchars($aRow["roomNumber"]) ?>
+	   					Room Number: <?php echo htmlspecialchars($aRow["roomNumber"]) ?>
             </li>
-        </ul>
-        <?php
-	   }
-    ?>
-      <input type="submit">
-
-</form>
-       <?php } ?>
-<br>
-<a href="homePage.php">Return Home</a>
-</div>
-</div>
-</body>
+        	</ul>
+<?php
+	}
+?>
+	      	<input type="submit">
+				</form>
+<?php
+}
+?>
+				<br>
+				<a href="homePage.php">Return Home</a>
+			</div>
+		</div>
+	</body>
 </html>
