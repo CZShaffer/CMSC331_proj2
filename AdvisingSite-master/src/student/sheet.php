@@ -1,8 +1,14 @@
 <?php
+session_start();
+
+// redirect user to login page if they are not logged in
+if(!isset($_SESSION["HAS_LOGGED_IN"])){
+  header("Location: login.php");
+}
+
 include('../CommonMethods.php');
 $debug = true;
 $COMMON = new Common($debug);
-session_start();
 
 //setting the variables to the inputed values in the form
 $major2 = isset($_POST['2ndMajor']) ? $_POST['2ndMajor'] : "";
