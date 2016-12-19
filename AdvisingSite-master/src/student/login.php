@@ -44,6 +44,7 @@ if ($_POST) {
   $COMMON = new Common($debug);
   $fileName = "login.php";
   
+  //uses the student email and ID to pull from the table to validate
   $login_val_query_email = "SELECT * FROM Student WHERE email = '$email'";
   $results = $COMMON->executequery($login_val_query_email, $fileName);
   $login_val_query_ID = "SELECT * FROM Student WHERE schoolID = '$ID'";
@@ -59,11 +60,13 @@ if ($_POST) {
     $num_fields++;
     $num_errors++;
   }
+  //if ID field is left empty or does not exist in table
   if(empty($ID) || (mysql_num_rows($results_ID) == 0)){
     $login_ID_error = "Please enter a valid student ID.";
     $num_fields++;
     $num_errors++;
   }
+  //if the email and id do not match in table
   if(($EMAIL_INFO[5] != $ID_INFO[5]) && ($num_fields === 0)){
     $login_email_error = "Email does not match entered ID";
     $login_ID_error = "ID does not match entered Email";
@@ -100,7 +103,7 @@ if ($_POST) {
 <h1>
     Student Login Page
 </h1>
-
+<!-- to log in students will use their email and their ID -->
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
 
   <label>E-mail</label><input type="text" name="email" value="<?php echo (isset($_POST['email']) ? $_POST['email'] : ''); ?>">
