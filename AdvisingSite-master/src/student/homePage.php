@@ -34,15 +34,20 @@ color: black;
 
   <body>
   <?php
+
+  // establish connection
   include("../CommonMethods.php");
-$COMMON = new Common(false);
-$filename = "homePage.php";
-$sqlCommand = "SELECT * FROM Student WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
-$rs = $COMMON->executequery($sqlCommand,$filename);
-$row = mysql_fetch_row($rs);
-//echo("".$row[7]);
-if($row[7]=="meeting_deleted"){
-  echo('
+  $COMMON = new Common(false);
+  $filename = "homePage.php";
+
+  // get student info
+  $sqlCommand = "SELECT * FROM Student WHERE StudentID=".$_SESSION['STUDENT_ID'].";";
+  $rs = $COMMON->executequery($sqlCommand,$filename);
+  $row = mysql_fetch_row($rs);
+
+  // notify student if student's appointment has been deleted or canceled from the advisor side
+  if($row[7]=="meeting_deleted"){
+    echo('
         <div class="meetingAlert">
             <span class="close" onclick="this.parentElement.style.display=\'none\'">
                 &times;
@@ -50,7 +55,7 @@ if($row[7]=="meeting_deleted"){
             <b>Warning!</b>  Your previous meeting has been deleted. Please schedule a new one.
         </div>
     ');
-}
+  }
   ?>
     <div id="content-container">
       <div id="content">
