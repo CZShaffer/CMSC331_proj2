@@ -191,8 +191,8 @@ public function findStudentsInMeeting($meetingID) {
 						
 						echo 'Room ' .htmlspecialchars($appt["buildingName"]) .' ' . htmlspecialchars($appt["roomNumber"]);
 						
-							$_SESSION["advisorMeetingID"] = $appt["meetingID"];
-							echo '<br><br><a href="editAppointment.php"><button>Edit Appointment</button></a>
+							//$_SESSION["advisorMeetingID"] = $appt["meetingID"];
+							echo '<br><br><a href="editAppointment.php?advisorMeetingID=' .$appt["meetingID"] .'"><button>Edit Appointment</button></a>
 							<br><br>
 
 							<form action="../utils/forms/deleteMeetingCalendar.php" method="POST">
