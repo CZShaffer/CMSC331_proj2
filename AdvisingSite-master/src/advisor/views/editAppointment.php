@@ -62,7 +62,7 @@ if ($_POST) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Advising Scheduling</title>
         <link rel="stylesheet" type="text/css" href="../../Styles/style.css">
-        <link rel="icon" type="image/png" href="../Styles/images/umbc.png">
+        <link rel="icon" type="image/png" href="../../Styles/images/umbc.png">
     </head>
 
     <body>
