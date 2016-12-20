@@ -55,7 +55,7 @@ if ($_POST) {
             WHERE `meetingID`='$meetingID'";
   }
   $rs = $conn->query($sql);
-  header('Location: calendarHomepage.php?month='.$_SESSION["month"] .'&year=' .$_SESSION["year"]);
+//  header('Location: calendarHomepage.php?month='.$_SESSION["month"] .'&year=' .$_SESSION["year"]);
   echo "<p style='color:red'>Appointment updated</p>";
 }
 ?>
@@ -116,7 +116,7 @@ if ($_POST) {
 
                     <br><br>
                     <label for="room">Meeting room</label>
-                    <input id="room" type="text" name="room"  required>
+                    <input id="room" type="text" name="room" value="<?php echo (isset($room) ? $room : ''); ?>" required>
 
                     <?php
                     // if group appointment
