@@ -119,7 +119,7 @@ if ($_POST) {
 </div>
 </div>
 
-<h3><a href="index.php">Don't have an account? Register here.</a></h3>
+<h3><a href="index.php" style='font-family:sourceLitI;'>Don't have an account? Register here.</a></h3>
 </body>
 
 </html>

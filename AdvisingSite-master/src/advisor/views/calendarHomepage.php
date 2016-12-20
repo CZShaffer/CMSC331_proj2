@@ -121,8 +121,8 @@ function findStudentsInMeeting($meetingID) {
      <body>
          <div id="content-container">
               <div id="content">
-	          <h1>Appointment Calendar</h1>
-                  <h3>Welcome <?php echo htmlspecialchars($_SESSION["ADVISOR_FNAME"]); ?>, here are your meetings.</h3>
+      <h1 style='font-family: sourceBold;'>Appointment Calendar</h1>
+                  <h4 style='font-size:17px;'>Welcome <?php echo htmlspecialchars($_SESSION["ADVISOR_FNAME"]); ?>, here are your meetings.</h4>
     		  <hr>
 	          <?php 	
 		      $_SESSION["year"]   = null;

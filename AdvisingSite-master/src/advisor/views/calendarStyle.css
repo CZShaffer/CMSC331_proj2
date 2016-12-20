@@ -4,29 +4,49 @@ html {
 
 @font-face {
     font-family: firaBold;
-    src: url(fira-sans/FiraSans-SemiBold.otf);
+    src: url(../../Styles/fira-sans/FiraSans-SemiBold.otf);
 }
 
 @font-face {
     font-family: firaLight;
-    src: url(fira-sans/FiraSans-Light.otf);
+    src: url(../../Stlyes/fira-sans/FiraSans-Light.otf);
 }
 
 @font-face {
     font-family: firaReg;
-    src: url(fira-sans/FiraSans-Regular.otf);
+    src: url(../../Styles/fira-sans/FiraSans-Regular.otf);
 }
 
 @font-face {
     font-family: firaHev;
-    src: url(fira-sans/FiraSans-Heavy.otf);
+    src: url(../../Styles/fira-sans/FiraSans-Heavy.otf);
 }
 
 @font-face {
     font-family: firaUL;
-    src: url(fira-sans/FiraSans-UltraLight.otf);
+    src: url(../../Styles/fira-sans/FiraSans-UltraLight.otf);
+}
+@font-face {
+font-family: sourceReg;
+src: url(../../Styles/source-sans-pro/SourceSansPro-Regular.otf);
+}
+@font-face {
+font-family: sourceBold;
+src: url(../../Styles/source-sans-pro/SourceSansPro-Semibold.otf);
+}
+@font-face {
+font-family: sourceLitI;
+src: url(../../Styles/source-sans-pro/SourceSansPro-LightIt.otf);
 }
 
+
+h1{
+    font-family: sourceBold;
+}
+h4{
+    font-family: firaReg;
+    font-size: 20px;
+}
 .button {
     background-color: #4C7D98;
     border: none;
