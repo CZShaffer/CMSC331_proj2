@@ -202,7 +202,7 @@ function findStudentsInMeeting($meetingID) {
             
             
 
-                <input type="submit">
+                <input type="submit" value="submit" name="Create Appointment">
             
         </ul>
 
