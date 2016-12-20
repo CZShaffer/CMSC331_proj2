@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74d918c8-967d-498e-85e4-230a3f027ec5" name="Default" comment="" />
+    <list default="true" id="74d918c8-967d-498e-85e4-230a3f027ec5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php" afterPath="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php" />
+    </list>
     <ignored path="Proj2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -40,7 +43,7 @@
       <file leaf-file-name="deleteMeetingCalendar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/forms/deleteMeetingCalendar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
+            <state relative-caret-position="731">
               <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <marker date="1482179007532" expanded="true" signature="446:517" ph="DELETE FROM " />
@@ -53,36 +56,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chooseIndividualMeeting.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseIndividualMeeting.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="727">
-              <caret line="124" column="121" selection-start-line="124" selection-start-column="121" selection-end-line="124" selection-end-column="121" />
-              <folding>
-                <marker date="1482187541370" expanded="true" signature="321:382" ph="Select * FRO... StudentMeeting" />
-                <marker date="1482187541370" expanded="true" signature="628:737" ph="SELECT * FRO... Meeting" />
-                <marker date="1482187541370" expanded="true" signature="1043:1144" ph="INSERT INTO StudentMeeting... " />
-                <marker date="1482187541370" expanded="true" signature="1283:1352" ph="UPDATE Stude... " />
-                <marker date="1482187541370" expanded="true" signature="1532:1585" ph="UPDATE Meeti... " />
-                <marker date="1482187541370" expanded="true" signature="2077:2115" ph="SELECT * FRO... Meeting" />
-                <marker date="1482187541370" expanded="true" signature="2208:2246" ph="SELECT * FRO... Student" />
-                <marker date="1482187541370" expanded="true" signature="3807:3852" ph="SELECT * FRO... AdvisorMeeting" />
-                <marker date="1482187541370" expanded="true" signature="3807:3876" ph="SELECT * FRO... AdvisorMeeting" />
-                <marker date="1482187541370" expanded="true" signature="4003:4041" ph="SELECT * FRO... Advisor" />
-                <marker date="1482187541370" expanded="true" signature="4003:4078" ph="SELECT * FRO... Advisor" />
-                <marker date="1482187541370" expanded="true" signature="4299:4367" ph="..." />
-                <marker date="1482187541370" expanded="true" signature="4316:4367" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chooseGroupMeeting.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chooseGroupMeeting.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="63" column="7" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="457">
+              <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+              <folding>
+                <marker date="1482203552418" expanded="true" signature="316:377" ph="Select * FRO... StudentMeeting" />
+                <marker date="1482203552418" expanded="true" signature="623:750" ph="SELECT * FRO... Meeting" />
+                <marker date="1482203552418" expanded="true" signature="1112:1213" ph="INSERT INTO StudentMeeting... " />
+                <marker date="1482203552418" expanded="true" signature="1371:1440" ph="UPDATE Stude... " />
+                <marker date="1482203552418" expanded="true" signature="1640:1705" ph="UPDATE Meeti... " />
+                <marker date="1482203552418" expanded="true" signature="2195:2233" ph="SELECT * FRO... Meeting" />
+                <marker date="1482203552418" expanded="true" signature="2326:2364" ph="SELECT * FRO... Student" />
+                <marker date="1482203552418" expanded="true" signature="3925:3970" ph="SELECT * FRO... AdvisorMeeting" />
+                <marker date="1482203552418" expanded="true" signature="4125:4163" ph="SELECT * FRO... Advisor" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,6 +83,30 @@
               <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
               <folding>
                 <marker date="1482098922597" expanded="true" signature="217:256" ph="SELECT isSea... AdvisingSeason" />
+                <marker date="1482098922597" expanded="true" signature="1470:1514" ph="SELECT * FRO... Student" />
+                <marker date="1482098922597" expanded="true" signature="3411:3442" ph="..." />
+                <marker date="1482098922597" expanded="true" signature="5104:5135" ph="..." />
+                <marker date="1482098922597" expanded="true" signature="5506:5645" ph="INSERT INTO Student... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chooseIndividualMeeting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseIndividualMeeting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="125" selection-end-column="17" />
+              <folding>
+                <marker date="1482200350906" expanded="true" signature="321:382" ph="Select * FRO... StudentMeeting" />
+                <marker date="1482200350906" expanded="true" signature="628:737" ph="SELECT * FRO... Meeting" />
+                <marker date="1482200350906" expanded="true" signature="1043:1144" ph="INSERT INTO StudentMeeting... " />
+                <marker date="1482200350906" expanded="true" signature="1283:1352" ph="UPDATE Stude... " />
+                <marker date="1482200350906" expanded="true" signature="1532:1585" ph="UPDATE Meeti... " />
+                <marker date="1482200350906" expanded="true" signature="2077:2115" ph="SELECT * FRO... Meeting" />
+                <marker date="1482200350906" expanded="true" signature="2208:2246" ph="SELECT * FRO... Student" />
+                <marker date="1482200350906" expanded="true" signature="3807:3852" ph="SELECT * FRO... AdvisorMeeting" />
+                <marker date="1482200350906" expanded="true" signature="4003:4041" ph="SELECT * FRO... Advisor" />
               </folding>
             </state>
           </provider>
@@ -122,7 +135,6 @@
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/forms/createMeetingCalendar.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/student/cancelMeeting.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/forms/createMeeting.php" />
-        <option value="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/student/deleteMeeting.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/student/homePage.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/student/login.php" />
@@ -132,6 +144,7 @@
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/advisor/views/calendarHomepage.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/forms/deleteMeetingCalendar.php" />
         <option value="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseIndividualMeeting.php" />
+        <option value="$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php" />
       </list>
     </option>
   </component>
@@ -173,7 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,7 +365,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -432,11 +445,12 @@
       <workItem from="1482118712204" duration="10000" />
       <workItem from="1482124607945" duration="2779000" />
       <workItem from="1482186536538" duration="1605000" />
+      <workItem from="1482203455640" duration="125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41625000" />
+    <option name="totallyTimeSpent" value="41750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -513,7 +527,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1482203552418" expanded="true" signature="316:377" ph="Select * FRO... StudentMeeting" />
+            <marker date="1482203552418" expanded="true" signature="623:750" ph="SELECT * FRO... Meeting" />
+            <marker date="1482203552418" expanded="true" signature="1112:1213" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1482203552418" expanded="true" signature="1371:1440" ph="UPDATE Stude... " />
+            <marker date="1482203552418" expanded="true" signature="1640:1705" ph="UPDATE Meeti... " />
+            <marker date="1482203552418" expanded="true" signature="2195:2233" ph="SELECT * FRO... Meeting" />
+            <marker date="1482203552418" expanded="true" signature="2326:2364" ph="SELECT * FRO... Student" />
+            <marker date="1482203552418" expanded="true" signature="3925:3970" ph="SELECT * FRO... AdvisorMeeting" />
+            <marker date="1482203552418" expanded="true" signature="4125:4163" ph="SELECT * FRO... Advisor" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -545,19 +569,15 @@
         <state relative-caret-position="952">
           <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
           <folding>
-            <marker date="1482187541370" expanded="true" signature="321:382" ph="Select * FRO... StudentMeeting" />
-            <marker date="1482187541370" expanded="true" signature="628:737" ph="SELECT * FRO... Meeting" />
-            <marker date="1482187541370" expanded="true" signature="1043:1144" ph="INSERT INTO StudentMeeting... " />
-            <marker date="1482187541370" expanded="true" signature="1283:1352" ph="UPDATE Stude... " />
-            <marker date="1482187541370" expanded="true" signature="1532:1585" ph="UPDATE Meeti... " />
-            <marker date="1482187541370" expanded="true" signature="2077:2115" ph="SELECT * FRO... Meeting" />
-            <marker date="1482187541370" expanded="true" signature="2208:2246" ph="SELECT * FRO... Student" />
-            <marker date="1482187541370" expanded="true" signature="3807:3852" ph="SELECT * FRO... AdvisorMeeting" />
-            <marker date="1482187541370" expanded="true" signature="3807:3876" ph="SELECT * FRO... AdvisorMeeting" />
-            <marker date="1482187541370" expanded="true" signature="4003:4041" ph="SELECT * FRO... Advisor" />
-            <marker date="1482187541370" expanded="true" signature="4003:4078" ph="SELECT * FRO... Advisor" />
-            <marker date="1482187541370" expanded="true" signature="4299:4367" ph="..." />
-            <marker date="1482187541370" expanded="true" signature="4316:4367" ph="..." />
+            <marker date="1482200350906" expanded="true" signature="321:382" ph="Select * FRO... StudentMeeting" />
+            <marker date="1482200350906" expanded="true" signature="628:737" ph="SELECT * FRO... Meeting" />
+            <marker date="1482200350906" expanded="true" signature="1043:1144" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1482200350906" expanded="true" signature="1283:1352" ph="UPDATE Stude... " />
+            <marker date="1482200350906" expanded="true" signature="1532:1585" ph="UPDATE Meeti... " />
+            <marker date="1482200350906" expanded="true" signature="2077:2115" ph="SELECT * FRO... Meeting" />
+            <marker date="1482200350906" expanded="true" signature="2208:2246" ph="SELECT * FRO... Student" />
+            <marker date="1482200350906" expanded="true" signature="3807:3852" ph="SELECT * FRO... AdvisorMeeting" />
+            <marker date="1482200350906" expanded="true" signature="4003:4041" ph="SELECT * FRO... Advisor" />
           </folding>
         </state>
       </provider>
@@ -566,7 +586,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1482203552418" expanded="true" signature="316:377" ph="Select * FRO... StudentMeeting" />
+            <marker date="1482203552418" expanded="true" signature="623:750" ph="SELECT * FRO... Meeting" />
+            <marker date="1482203552418" expanded="true" signature="1112:1213" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1482203552418" expanded="true" signature="1371:1440" ph="UPDATE Stude... " />
+            <marker date="1482203552418" expanded="true" signature="1640:1705" ph="UPDATE Meeti... " />
+            <marker date="1482203552418" expanded="true" signature="2195:2233" ph="SELECT * FRO... Meeting" />
+            <marker date="1482203552418" expanded="true" signature="2326:2364" ph="SELECT * FRO... Student" />
+            <marker date="1482203552418" expanded="true" signature="3925:3970" ph="SELECT * FRO... AdvisorMeeting" />
+            <marker date="1482203552418" expanded="true" signature="4125:4163" ph="SELECT * FRO... Advisor" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -746,16 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding>
-            <marker date="1482098922597" expanded="true" signature="217:256" ph="SELECT isSea... AdvisingSeason" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/homePage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -796,7 +816,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/advisor/utils/forms/deleteMeetingCalendar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
+        <state relative-caret-position="731">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <marker date="1482179007532" expanded="true" signature="446:517" ph="DELETE FROM " />
@@ -808,32 +828,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php">
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseIndividualMeeting.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="63" column="7" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="510">
+          <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="125" selection-end-column="17" />
+          <folding>
+            <marker date="1482200350906" expanded="true" signature="321:382" ph="Select * FRO... StudentMeeting" />
+            <marker date="1482200350906" expanded="true" signature="628:737" ph="SELECT * FRO... Meeting" />
+            <marker date="1482200350906" expanded="true" signature="1043:1144" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1482200350906" expanded="true" signature="1283:1352" ph="UPDATE Stude... " />
+            <marker date="1482200350906" expanded="true" signature="1532:1585" ph="UPDATE Meeti... " />
+            <marker date="1482200350906" expanded="true" signature="2077:2115" ph="SELECT * FRO... Meeting" />
+            <marker date="1482200350906" expanded="true" signature="2208:2246" ph="SELECT * FRO... Student" />
+            <marker date="1482200350906" expanded="true" signature="3807:3852" ph="SELECT * FRO... AdvisorMeeting" />
+            <marker date="1482200350906" expanded="true" signature="4003:4041" ph="SELECT * FRO... Advisor" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseIndividualMeeting.php">
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="124" column="121" selection-start-line="124" selection-start-column="121" selection-end-line="124" selection-end-column="121" />
+        <state relative-caret-position="425">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding>
-            <marker date="1482187541370" expanded="true" signature="321:382" ph="Select * FRO... StudentMeeting" />
-            <marker date="1482187541370" expanded="true" signature="628:737" ph="SELECT * FRO... Meeting" />
-            <marker date="1482187541370" expanded="true" signature="1043:1144" ph="INSERT INTO StudentMeeting... " />
-            <marker date="1482187541370" expanded="true" signature="1283:1352" ph="UPDATE Stude... " />
-            <marker date="1482187541370" expanded="true" signature="1532:1585" ph="UPDATE Meeti... " />
-            <marker date="1482187541370" expanded="true" signature="2077:2115" ph="SELECT * FRO... Meeting" />
-            <marker date="1482187541370" expanded="true" signature="2208:2246" ph="SELECT * FRO... Student" />
-            <marker date="1482187541370" expanded="true" signature="3807:3852" ph="SELECT * FRO... AdvisorMeeting" />
-            <marker date="1482187541370" expanded="true" signature="3807:3876" ph="SELECT * FRO... AdvisorMeeting" />
-            <marker date="1482187541370" expanded="true" signature="4003:4041" ph="SELECT * FRO... Advisor" />
-            <marker date="1482187541370" expanded="true" signature="4003:4078" ph="SELECT * FRO... Advisor" />
-            <marker date="1482187541370" expanded="true" signature="4299:4367" ph="..." />
-            <marker date="1482187541370" expanded="true" signature="4316:4367" ph="..." />
+            <marker date="1482098922597" expanded="true" signature="217:256" ph="SELECT isSea... AdvisingSeason" />
+            <marker date="1482098922597" expanded="true" signature="1470:1514" ph="SELECT * FRO... Student" />
+            <marker date="1482098922597" expanded="true" signature="3411:3442" ph="..." />
+            <marker date="1482098922597" expanded="true" signature="5104:5135" ph="..." />
+            <marker date="1482098922597" expanded="true" signature="5506:5645" ph="INSERT INTO Student... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdvisingSite-master/src/student/chooseGroupMeeting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+          <folding>
+            <marker date="1482203552418" expanded="true" signature="316:377" ph="Select * FRO... StudentMeeting" />
+            <marker date="1482203552418" expanded="true" signature="623:750" ph="SELECT * FRO... Meeting" />
+            <marker date="1482203552418" expanded="true" signature="1112:1213" ph="INSERT INTO StudentMeeting... " />
+            <marker date="1482203552418" expanded="true" signature="1371:1440" ph="UPDATE Stude... " />
+            <marker date="1482203552418" expanded="true" signature="1640:1705" ph="UPDATE Meeti... " />
+            <marker date="1482203552418" expanded="true" signature="2195:2233" ph="SELECT * FRO... Meeting" />
+            <marker date="1482203552418" expanded="true" signature="2326:2364" ph="SELECT * FRO... Student" />
+            <marker date="1482203552418" expanded="true" signature="3925:3970" ph="SELECT * FRO... AdvisorMeeting" />
+            <marker date="1482203552418" expanded="true" signature="4125:4163" ph="SELECT * FRO... Advisor" />
           </folding>
         </state>
       </provider>

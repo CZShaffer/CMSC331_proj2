@@ -105,6 +105,12 @@ if (sizeof($allRows) == 0){
 }
 else{
 	while ($aRow = mysql_fetch_assoc($rs)) {
+
+        $getAdvisorAppointment = "SELECT * FROM AdvisorMeeting WHERE MeetingID=".$aRow["meetingID"].";";
+        $advisorAppoinment = mysql_fetch_assoc($COMMON->executeQuery($getAdvisorAppointment, $fileName));
+        $getAdvisor = "SELECT * FROM Advisor WHERE AdvisorID=".$advisorAppoinment["AdvisorID"].";";
+        $meetingAdvisor = mysql_fetch_assoc($COMMON->executeQuery($getAdvisor, $fileName));
+
     echo "<input type = 'radio' name='meeting' value='" . $aRow["meetingID"] . "'>";
 ?>
         <h4>Meeting</h4>
@@ -121,6 +127,9 @@ else{
             <li>
               Room Number: <?php echo htmlspecialchars($aRow["roomNumber"]) ?>
             </li>
+              <li>
+                  Session Leader: <?php echo htmlspecialchars($meetingAdvisor["firstName"]." ".$meetingAdvisor["lastName"])?>
+              </li>
           </ul>
 <?php
   }
