@@ -22,6 +22,7 @@ body {
 padding: 20px; 
 background-color: #eee;
 min-height:400px;
+width:100%;
 /*margin:auto;*/ 
 border-radius: 8px; 
 border-width:20px;
