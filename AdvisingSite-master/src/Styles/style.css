@@ -2,14 +2,55 @@ html {
     background-color:#F5CA5C;
 }
 
+@font-face {
+font-family: firaBold;
+src: url(fira-sans/FiraSans-SemiBold.otf);
+}
+@font-face {
+font-family: firaBook;
+src: url(fira-sans/FiraSans-Book.otf);
+}
+
+@font-face {
+font-family: firaLight;
+src: url(fira-sans/FiraSans-Light.otf);
+}
+@font-face {
+font-family: firaReg;
+src: url(fira-sans/FiraSans-Regular.otf);
+}
+@font-face {
+font-family: firaHev;
+src: url(fira-sans/FiraSans-Heavy.otf);
+}
+@font-face {
+font-family: firaUL;
+src: url(fira-sans/FiraSans-UltraLight.otf);
+}
+@font-face {
+font-family: sourceReg;
+src: url(source-sans-pro/SourceSansPro-Regular.otf);
+}
+@font-face {
+font-family: sourceBold;
+src: url(source-sans-pro/SourceSansPro-Semibold.otf);
+}
+@font-face {
+font-family: sourceLitI;
+src: url(source-sans-pro/SourceSansPro-LightIt.otf);
+}
+
+
+h1{
+    font-family: sourceBold;
+}
+
 body {
     max-width:1200px;
     margin: auto;
-    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: sourceReg;
     font-size: 13px;
     padding: 20px;
-    height:auto;
-    overflow:visible;
 }
 
 #content-container {
@@ -21,30 +62,29 @@ body {
 }
 
 #content{
-padding: 20px; 
-background-color: #eee;
-min-height:400px;
-
-margin:auto; 
-border-radius: 8px; 
-border-width:20px;
-border-color:#FFFFFF;
-background-size: 256px 256px; 
-background-position: top right; 
-background-repeat: no-repeat; 
-background-image: url('images/paw-bg.png');"
-height:auto;
-overflow:visible;
+    padding: 20px;
+    background-color: #eee;
+    min-height:400px;
+    width:960px
+    margin:auto;
+    border-radius: 8px;
+    border-width:20px;
+    border-color:#FFFFFF;
+    background-size: 256px 256px;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-image: url('images/paw-bg.png');
+    height:auto;
+    overflow:visible;
 }
-
 label {
-    display: inline-block;  
+    display: inline-block;
     float: left;
     clear: left;
     width: 135px;
     text-align: left;
 }
- 
+
 input {
     display: inline-block;
     float: left;
@@ -54,4 +94,6 @@ select{
     display: inline-block;
     float: left;
     width: 170px;
-}  
+}
+
+
