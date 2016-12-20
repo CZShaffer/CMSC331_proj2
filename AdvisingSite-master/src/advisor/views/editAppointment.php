@@ -7,7 +7,7 @@ if(!isset($_SESSION["HAS_LOGGED_IN"])){
 }
 
 include '../utils/dbconfig.php';
-include '../CommonMethods.php';
+include '../utils/CommonMethods.php';
 
 $COMMON = new Common(true);
 $filename = "homePage.php";
