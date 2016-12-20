@@ -156,7 +156,7 @@ public function findStudentsInMeeting($meetingID) {
             	<div class="modal-content">
               		<div class="modal-header">
                 			<span class="close"> x </span>
-                			<h2>Appoinments on ';
+                			<h2>Appointments on ';
 					echo $monthName; 
 					echo ' ';
 		
@@ -206,7 +206,7 @@ public function findStudentsInMeeting($meetingID) {
 
 						$studentsInfo = findStudentsInMeeting($appt["meetingID"]);
 						if(empty($studentsInfo)){
-							echo 'No Students Currently Scheduled';
+							echo 'No students currently scheduled';
 						}
 						else{
 							foreach ($studentsInfo as $studentInfo) {
