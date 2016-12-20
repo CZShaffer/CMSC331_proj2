@@ -111,7 +111,7 @@ if ($_POST) {
 
                     <br><br>
                     <label for="room">Meeting room</label>
-                    <input id="room" type="text" name="room" value="<?php echo (isset($room) ? $room : ''); ?>" required>
+                    <input id="room" type="text" name="room" required><?php echo (isset($room) ? $room : ''); ?>
 
                     <?php
                     // if group appointment
