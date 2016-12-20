@@ -12,7 +12,7 @@ $filename = "homePage.php";
 $conn = connectToDB();
 
 $meetingID="";
-if(!isset($_GET['advisorMeetingID'])) {
+if($_GET["advisorMeetingID"]) {
 $meetingID = $_GET["advisorMeetingID"];
 $_SESSION['meetingID'] = $meetingID;
 }
@@ -62,12 +62,10 @@ if ($_POST) {
             WHERE `meetingID`='$meetingID'";
   }
   
-  echo $sql;
-
   $rs = $conn->query($sql);
-//$rs = $COMMON->executequery($sql, $_SERVER["SCRIPT_NAME"]);
- //   header('Location: calendarHomepage.php?month='.$_SESSION["month"] .'&year=' .$_SESSION["year"]);
-  echo "<p style='color:red'>Appointment updated</p>";
+
+  header('Location: calendarHomepage.php?month='.$_SESSION["month"] .'&year=' .$_SESSION["year"]);
+//  echo "<p style='color:red'>Appointment updated</p>";
 }
 ?>
 
