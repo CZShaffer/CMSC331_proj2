@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+// redirect user to index.php if they haven't logged in
+if(!isset($_SESSION["HAS_LOGGED_IN"])){
+  header("Location: login.php");
+}
+
 include '../utils/dbconfig.php';
 $conn = connectToDB();
 $meetingID = $_GET['advisorMeetingID'];
