@@ -1,8 +1,5 @@
 html {
-/*background-image:url('images/dot-bg.png');
-    background-repeat:repeat;*/
     background-color:#F5CA5C;
-    
 }
 
 @font-face {
@@ -75,14 +72,12 @@ html {
 }
 
 body {
-
     max-width:1200px;
     margin: auto;
-/*    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     font-size: 13px;
     padding: 20px; 
-height:auto;
-overflow:visible;
+    height:auto;
+    overflow:visible;
 }
 
 #content-container {
@@ -91,28 +86,24 @@ overflow:visible;
     border-color:#FFFFFF;
     border-radius: 8px;
     margin: auto;
-   height:auto;
-overflow:visible;
+    height:auto;
+    overflow:visible;
 }
 
 #content{
-/*color:#FFFFFF;*/
-padding: 20px; 
-background-color: #eee;
-/*background-color:#888b8d;*/ 
-min-height:400px;
-   
-margin: auto; 
-border-radius: 8px; 
-border-width:20px;
-border-color:#FFFFFF;
-background-size: 256px 256px; 
-background-position: top right; 
-background-repeat: no-repeat; 
-background-image: url('paw-bg.png');
-
-height:auto;
-overflow:visible;
+    padding: 20px; 
+    background-color: #eee;
+    min-height:400px;
+    margin:auto; 
+    border-radius: 8px; 
+    border-width:20px;
+    border-color:#FFFFFF;
+    background-size: 256px 256px; 
+    background-position: top right; 
+    background-repeat: no-repeat; 
+    background-image: url('paw-bg.png');
+    height:auto;
+    overflow:visible;
 }
 
 h1 {
@@ -152,9 +143,8 @@ body {font-family: firaBold;}
     position: center;
     top: 20px;
     width: 700px;
-    /*height: 600px;*/
-height:auto;
-overflow:visible;
+    height:auto;
+    overflow:visible;
     margin-left: 90px;    
 }
 
