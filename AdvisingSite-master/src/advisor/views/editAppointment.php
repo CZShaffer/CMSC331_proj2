@@ -55,9 +55,8 @@ if ($_POST) {
             WHERE `meetingID`='$meetingID'";
   }
   $rs = $conn->query($sql);
- // header('Location: calendarHomepage.php?month='.$_SESSION["month"] .'&year=' .$_SESSION["year"]);
+  header('Location: calendarHomepage.php?month='.$_SESSION["month"] .'&year=' .$_SESSION["year"]);
   echo "<p style='color:red'>Appointment updated</p>";
-  echo $room;
 }
 ?>
 
