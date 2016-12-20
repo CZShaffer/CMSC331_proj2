@@ -14,6 +14,7 @@ $filename = "homePage.php";
 
 $conn = connectToDB();
 $meetingID = $_GET['advisorMeetingID'];
+$_SESSION['meetingID'] = $meetingID;
 //intval($advisorMeetingID);
 
 // get meetingID
@@ -44,6 +45,7 @@ if ($rs->num_rows > 0) {
 
 // if user edits appointment
 if ($_POST) {
+  $meetingID = $_SESSION['meetingID'];
   $start = $_POST["start"];
   $end = $_POST["end"];
   $building = $_POST["building"];
