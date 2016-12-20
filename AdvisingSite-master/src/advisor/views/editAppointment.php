@@ -17,6 +17,9 @@ $meetingID = $_GET["advisorMeetingID"];
 $_SESSION['meetingID'] = $meetingID;
 //intval($advisorMeetingID);
 
+echo $meetingID;
+echo $_SESSION['meetingID'];
+
 // get meetingID
 //$sql = "SELECT * FROM AdvisorMeeting WHERE AdvisorMeetingID = '$advisorMeetingID'";
 //$rs = $conn->query($sql);
