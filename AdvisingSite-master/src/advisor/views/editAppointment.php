@@ -7,21 +7,14 @@ if(!isset($_SESSION["HAS_LOGGED_IN"])){
 }
 
 include '../utils/dbconfig.php';
-//include '../utils/CommonMethods.php';
 
-//$COMMON = new Common(true);
 $filename = "homePage.php";
-
 $conn = connectToDB();
 
 if(!isset($_SESSION['meetingID'])) {
 $meetingID = $_GET["advisorMeetingID"];
 $_SESSION['meetingID'] = $meetingID;
 }
-//intval($advisorMeetingID);
-
-echo $meetingID;
-echo $_SESSION['meetingID'];
 
 // get meetingID
 //$sql = "SELECT * FROM AdvisorMeeting WHERE AdvisorMeetingID = '$advisorMeetingID'";
@@ -69,8 +62,8 @@ if ($_POST) {
   }
   
   echo $sql;
-  echo $_SESSION['meetingID'];
-//  $rs = $conn->query($sql);
+
+  $rs = $conn->query($sql);
 //$rs = $COMMON->executequery($sql, $_SERVER["SCRIPT_NAME"]);
  //   header('Location: calendarHomepage.php?month='.$_SESSION["month"] .'&year=' .$_SESSION["year"]);
   echo "<p style='color:red'>Appointment updated</p>";
