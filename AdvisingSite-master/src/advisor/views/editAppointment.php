@@ -4,7 +4,7 @@ session_start();
 include '../utils/dbconfig.php';
 $conn = connectToDB();
 $advisorMeetingID = $_GET['advisorMeetingID'];
-// intval($_SESSION['advisorMeetingID']);
+ intval($advisorMeetingID);
 
 // get meetingID
 $sql = "SELECT * FROM AdvisorMeeting WHERE AdvisorMeetingID = '$advisorMeetingID'";
