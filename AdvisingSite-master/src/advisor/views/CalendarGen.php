@@ -156,7 +156,7 @@ public function findStudentsInMeeting($meetingID) {
             	<div class="modal-content">
               		<div class="modal-header">
                 			<span class="close"> x </span>
-                			<h2>Appoinments On ';
+                			<h2>Appoinments on ';
 					echo $monthName; 
 					echo ' ';
 		
