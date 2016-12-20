@@ -13,7 +13,7 @@ include '../utils/dbconfig.php';
 $filename = "homePage.php";
 
 $conn = connectToDB();
-$meetingID = $_GET['advisorMeetingID'];
+$meetingID = $_GET["advisorMeetingID"];
 $_SESSION['meetingID'] = $meetingID;
 //intval($advisorMeetingID);
 
