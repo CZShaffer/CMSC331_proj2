@@ -12,7 +12,7 @@ $filename = "homePage.php";
 $conn = connectToDB();
 
 $meetingID="";
-if(!$_GET["advisorMeetingID"]) {
+if($_GET["advisorMeetingID"]) {
 $meetingID = $_GET["advisorMeetingID"];
 $_SESSION['meetingID'] = $meetingID;
 }
