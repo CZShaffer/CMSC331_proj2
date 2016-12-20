@@ -22,7 +22,7 @@ body {
 padding: 20px; 
 background-color: #eee;
 min-height:400px;
-margin:auto; 
+/*margin:auto;*/ 
 border-radius: 8px; 
 border-width:20px;
 border-color:#FFFFFF;
