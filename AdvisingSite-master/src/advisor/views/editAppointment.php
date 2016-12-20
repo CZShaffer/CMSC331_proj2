@@ -52,7 +52,7 @@ if ($_POST) {
   $room = $_POST["room"];
   $sql = "UPDATE Meeting
           SET `start`='$start', `end`='$end', `buildingName`='$building', `roomNumber`='$room'
-          WHERE `meetingID`='$meetingID'";
+          WHERE `meetingID`='$_SESSION[\'meetingID\']'";
   
   // add student limit to query if it is a group appointment
   if(isset($_POST["limit"])) {
