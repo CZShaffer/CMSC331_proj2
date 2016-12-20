@@ -11,23 +11,12 @@ include '../utils/dbconfig.php';
 $filename = "homePage.php";
 $conn = connectToDB();
 
+// get meeting ID from calendar
 $meetingID="";
 if($_GET["advisorMeetingID"]) {
 $meetingID = $_GET["advisorMeetingID"];
 $_SESSION['meetingID'] = $meetingID;
 }
-
-// get meetingID
-//$sql = "SELECT * FROM AdvisorMeeting WHERE AdvisorMeetingID = '$advisorMeetingID'";
-//$rs = $conn->query($sql);
-//$meetingID = -1;
-//if ($rs->num_rows > 0) {
-//  $row = $rs->fetch_assoc();
-//  $meetingID = $row['meetingID'];
-//}
-//else {
-//  echo "Meeting Not found";
-//}
 
 // get original meeting info
 $sql = "SELECT * FROM Meeting WHERE meetingID = $meetingID";
@@ -65,7 +54,6 @@ if ($_POST) {
   $rs = $conn->query($sql);
 
   header('Location: calendarHomepage.php?month='.$_SESSION["month"] .'&year=' .$_SESSION["year"]);
-//  echo "<p style='color:red'>Appointment updated</p>";
 }
 ?>
 
