@@ -52,7 +52,7 @@ if ($_POST) {
   $room = $_POST["room"];
   $sql = "UPDATE Meeting
           SET `start`='$start', `end`='$end', `buildingName`='$building', `roomNumber`='$room'
-          WHERE `meetingID`='$_SESSION['meetingID']'";
+          WHERE `meetingID`='$meetingID'";
   
   // add student limit to query if it is a group appointment
   if(isset($_POST["limit"])) {
@@ -63,6 +63,7 @@ if ($_POST) {
   }
   
   echo $sql;
+  echo $_SESSION['meetingID'];
 //  $rs = $conn->query($sql);
 //$rs = $COMMON->executequery($sql, $_SERVER["SCRIPT_NAME"]);
  //   header('Location: calendarHomepage.php?month='.$_SESSION["month"] .'&year=' .$_SESSION["year"]);
