@@ -3,20 +3,20 @@ session_start();
 
 include '../utils/dbconfig.php';
 $conn = connectToDB();
-$advisorMeetingID = $_GET['advisorMeetingID'];
- intval($advisorMeetingID);
+$meetingID = $_GET['advisorMeetingID'];
+//intval($advisorMeetingID);
 
 // get meetingID
-$sql = "SELECT * FROM AdvisorMeeting WHERE AdvisorMeetingID = '$advisorMeetingID'";
-$rs = $conn->query($sql);
-$meetingID = -1;
-if ($rs->num_rows > 0) {
-  $row = $rs->fetch_assoc();
-  $meetingID = $row['meetingID'];
-}
-else {
-  echo "Meeting Not found";
-}
+//$sql = "SELECT * FROM AdvisorMeeting WHERE AdvisorMeetingID = '$advisorMeetingID'";
+//$rs = $conn->query($sql);
+//$meetingID = -1;
+//if ($rs->num_rows > 0) {
+//  $row = $rs->fetch_assoc();
+//  $meetingID = $row['meetingID'];
+//}
+//else {
+//  echo "Meeting Not found";
+//}
 
 // get original meeting info
 $sql = "SELECT * FROM Meeting WHERE meetingID = $meetingID";
