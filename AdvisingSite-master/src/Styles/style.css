@@ -1,15 +1,17 @@
 html {
+/*background-image:url('images/dot-bg.png');
+    background-repeat:repeat;*/
     background-color:#F5CA5C;
+    
 }
 
 body {
+
     max-width:1200px;
     margin: auto;
-    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
-    padding: 20px;
-    height:auto;
-    overflow:visible;
+    padding: 20px; 
 }
 
 #content-container {
@@ -18,14 +20,17 @@ body {
     border-color:#FFFFFF;
     border-radius: 8px;
     margin: auto;
+   
 }
 
 #content{
+/*color:#FFFFFF;*/
 padding: 20px; 
 background-color: #eee;
+/*background-color:#888b8d;*/ 
 min-height:400px;
-
-margin:auto; 
+    width:960px
+margin: auto; 
 border-radius: 8px; 
 border-width:20px;
 border-color:#FFFFFF;
@@ -33,6 +38,7 @@ background-size: 256px 256px;
 background-position: top right; 
 background-repeat: no-repeat; 
 background-image: url('images/paw-bg.png');"
+
 height:auto;
 overflow:visible;
 }
